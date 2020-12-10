@@ -13,7 +13,7 @@
 
 .header {
   grid-area: h;
-  background-color: green;
+  background-color: rgb(8, 15, 8);
 }
 
 .header img{
