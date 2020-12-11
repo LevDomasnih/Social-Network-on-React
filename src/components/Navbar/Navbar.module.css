@@ -3,10 +3,12 @@
     background-color: brown;
 }
 
-.item {
+.item a {
     color: white;
+    text-decoration: none;
+    padding-left: 40px;
 }
 
-.item.active {
+.item a.activeLink {
     color: gold;
 }
