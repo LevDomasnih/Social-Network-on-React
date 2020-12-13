@@ -12,6 +12,11 @@
     color: gold;
 }
 
+.dialogsItems .active img {
+    width: 50px;
+    border-radius: 30px;
+}
+
 .messages {
     padding: 10px;
 }
@@ -19,3 +24,13 @@
 .messages .message {
     /*color: white;*/
 }
+
+
+.dialogsItems .active a {
+    padding-left: 10px;
+    padding-top: 15px;
+    position: absolute;
+    text-decoration: none;
+    color: red;
+}
+

@@ -1,0 +1,16 @@
+.friends img {
+    width: 60px;
+    border-radius: 30px;
+}
+
+.friends {
+    text-align: center;
+}
+
+.friends h3{
+    color: #ffd8d8;
+}
+
+.friendItem {
+    display: inline-block;
+}
