@@ -1,4 +1,4 @@
-import {rerenderEntireTree} from "../render";
+let rerenderEntireTree = null;
 
 let state = {
 
@@ -21,7 +21,7 @@ let state = {
             {
                 id: 1,
                 name: "Andrey",
-                avatar: "https://lh3.googleusercontent.com/proxy/UzqaLo7HhTVxipOG77A1RoGgCgrbkJmwTfxEXBzul8I87SMJKrGZm0aH2PspTL6gUXmEZfywpDrSE0hEdUg7TH9ELWwtASu2JVEa402EJY3ODje5QMqtUd9DouYpQzgP1cW3FHql58FbxAxZzacI1cGzlsUQWRrZLhDzj5k"
+                avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQyddo-97z_upyrInLR38dIrT__x3Ov1lijg&usqp=CAU"
             },
             {
                 id: 2,
@@ -54,7 +54,7 @@ let state = {
                 {
                     id: 1,
                     name: "Andrey",
-                    avatar: "https://lh3.googleusercontent.com/proxy/UzqaLo7HhTVxipOG77A1RoGgCgrbkJmwTfxEXBzul8I87SMJKrGZm0aH2PspTL6gUXmEZfywpDrSE0hEdUg7TH9ELWwtASu2JVEa402EJY3ODje5QMqtUd9DouYpQzgP1cW3FHql58FbxAxZzacI1cGzlsUQWRrZLhDzj5k"
+                    avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQyddo-97z_upyrInLR38dIrT__x3Ov1lijg&usqp=CAU"
                 },
                 {
                     id: 2,
@@ -72,7 +72,7 @@ let state = {
 window.state = state
 
 export const addPost = () => {
-    if(state.profilePage.newPostText === '') return;
+    if (state.profilePage.newPostText === '') return;
     let newPost = {
         id: 5,
         message: state.profilePage.newPostText,
@@ -88,6 +88,8 @@ export const updateNewPostText = (newText) => {
     rerenderEntireTree(state);
 }
 
-
+export const subscribe = (observer) => {
+    rerenderEntireTree = observer;
+}
 
 export default state;
