@@ -1,7 +1,7 @@
 const ADD_POST = 'ADD-POST';
-const ADD_MESSAGE = 'ADD-MESSAGE';
+const SEND_MESSAGE = 'SEND-MESSAGE';
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
-const ON_MESSAGE_CHANGE_ACTION_CREATOR = 'ON-MESSAGE-CHANGE-ACTION-CREATOR';
+const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT';
 
 let store = {
     _state: {
@@ -100,8 +100,8 @@ let store = {
             this._state.profilePage.newPostText = action.newText;
             this._callSubscriber(this._state);
         }
-        // ошибка
-        if (action.type === ADD_MESSAGE) {
+
+        if (action.type === SEND_MESSAGE) {
             if (this._state.dialogsPage.newMessageText === '') return;
             let newMessage = {
                 id: 5,
@@ -112,7 +112,7 @@ let store = {
             this._state.dialogsPage.newMessageText = '';
             this._callSubscriber(this._state);
         }
-        if (action.type === ON_MESSAGE_CHANGE_ACTION_CREATOR) {
+        if (action.type === UPDATE_NEW_MESSAGE_TEXT) {
             this._state.dialogsPage.newMessageText = action.newText;
             this._callSubscriber(this._state);
         }
@@ -122,8 +122,8 @@ let store = {
 export const addPostActionCreator = () => ({type: ADD_POST});
 export const updateNewPostTextActionCreator = (text) => ({type: UPDATE_NEW_POST_TEXT, newText: text});
 
-export const addMessageActionCreator = () => ({type: ADD_MESSAGE});
-export const onMessageChangeActionCreator = (text) => ({type: ON_MESSAGE_CHANGE_ACTION_CREATOR, newText: text});
+export const addMessageActionCreator = () => ({type: SEND_MESSAGE}); // rename
+export const onMessageChangeActionCreator = (text) => ({type: UPDATE_NEW_MESSAGE_TEXT, newText: text}); // rename
 
 
 window.store = store;
