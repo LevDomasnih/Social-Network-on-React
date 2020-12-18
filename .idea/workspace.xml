@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/StoreContext.jsx" afterDir="false" />
+    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v0.46.5">
+      <change afterPath="$PROJECT_DIR$/src/components/Users/Users.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Users/UsersContainer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Users/user.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/usersReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/dialogsReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/dialogsReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/profileReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profileReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reduxStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reduxStore.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,20 +29,21 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="7fade15b322293bc4c652df71e68ad62b86a20b7" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/App.js" root0="FORCE_HIGHLIGHTING" />
-  </component>
   <component name="ProjectId" id="1lSeM4vUsYQ4dFQ5vKkrl8fBZDi" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Dialogs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Users" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -41,14 +51,14 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Лев\my-app\src\components\Dialogs" />
-      <recent name="C:\Users\Лев\my-app\src\components\Profile\MyPosts\Post" />
+      <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\components\Users" />
+      <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\redux" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\components\Profile\MyPosts" />
       <recent name="C:\Users\Лев\my-app\src\components\Profile" />
       <recent name="C:\Users\Лев\my-app\src\components\Navbar" />
       <recent name="C:\Users\Лев\my-app\src\components\Header" />
@@ -66,7 +76,6 @@
       <method v="2" />
     </configuration>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -80,9 +89,6 @@
       <workItem from="1607594879147" duration="4679000" />
       <workItem from="1607618720539" duration="11000" />
       <workItem from="1608037687357" duration="104000" />
-      <workItem from="1608153366690" duration="118000" />
-      <workItem from="1608154721152" duration="1866000" />
-      <workItem from="1608295828661" duration="430000" />
     </task>
     <task id="LOCAL-00001" summary="v0.35.5">
       <created>1608037498250</created>
@@ -91,25 +97,51 @@
       <option name="project" value="LOCAL" />
       <updated>1608037498250</updated>
     </task>
-    <task id="LOCAL-00002" summary="v0.43">
-      <created>1608281711371</created>
+    <task id="LOCAL-00002" summary="v0.42">
+      <created>1608209517593</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1608281711371</updated>
+      <updated>1608209517593</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="v0.44 ADD Context API">
+      <created>1608300516209</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1608300516209</updated>
+    </task>
+    <task id="LOCAL-00004" summary="v0.46.5">
+      <created>1608319783774</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1608319783774</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/testEl" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -118,7 +150,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="v0.35.5" />
-    <MESSAGE value="v0.43" />
-    <option name="LAST_COMMIT_MESSAGE" value="v0.43" />
+    <MESSAGE value="v0.42" />
+    <MESSAGE value="v0.44 ADD Context API" />
+    <MESSAGE value="v0.46.5" />
+    <option name="LAST_COMMIT_MESSAGE" value="v0.46.5" />
   </component>
 </project>
