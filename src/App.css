@@ -12,6 +12,7 @@
 }
 
 .app-wrapper-content {
-  grid-area: c;
-  background-color: #5b5bcf;
+    grid-area: c;
+    background-color: #5b5bcf;
+    overflow: hidden;
 }
