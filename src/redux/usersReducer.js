@@ -1,5 +1,8 @@
+const FOLLOW = 'FOLLOW';
+const UNFOLLOW = 'UNFOLLOW';
+
 const SET_USERS = 'SET_USERS';
-const CHANGE_FOLLOW = 'CHANGE_FOLLOW';
+// const CHANGE_FOLLOW = 'CHANGE_FOLLOW';
 const SET_CURRENT_PAGE = 'SET_CURRENT_PAGE';
 const SET_TOTAL_USERS_COUNT = 'SET_TOTAL_USERS_COUNT';
 const TOGGLE_IS_FETCHING = 'TOGGLE_IS_FETCHING';
@@ -9,21 +12,41 @@ let initialState = {
     pageSize: 5,
     totalUsersCount: 0,
     currentPage: 1,
-    isFetching: false,
+    isFetching: true,
 }
 
 const usersReducer = (state = initialState, action) => {
     switch (action.type) {
-        case CHANGE_FOLLOW:
+        // case CHANGE_FOLLOW:
+        //     return {
+        //         ...state,
+        //         users: state.users.map((u) => {
+        //             if (u.id === action.userID) {
+        //                 return {...u, followed: !u.followed};
+        //             }
+        //             return u;
+        //         })
+        //     };
+        case FOLLOW:
             return {
                 ...state,
-                users: state.users.map((u) => {
-                    if (u.id === action.userID) {
-                        return {...u, followed: !u.followed};
+                users: state.users.map( u =>  {
+                    if (u.id === action.userId) {
+                        return {...u, followed: true}
                     }
                     return u;
                 })
-            };
+            }
+        case UNFOLLOW:
+            return {
+                ...state,
+                users: state.users.map( u =>  {
+                    if (u.id === action.userId) {
+                        return {...u, followed: false}
+                    }
+                    return u;
+                })
+            }
         case SET_USERS: {
             return {...state, users: action.users}
         }
@@ -42,7 +65,11 @@ const usersReducer = (state = initialState, action) => {
 }
 
 export default usersReducer;
-export const changeFollow = (userID) => ({type: CHANGE_FOLLOW, userID});
+
+export const follow = (userId) => ({type: FOLLOW, userId });
+export const unfollow = (userId) => ({type: UNFOLLOW, userId });
+
+// export const changeFollow = (userID) => ({type: CHANGE_FOLLOW, userID});
 export const setUsers = (users) => ({type: SET_USERS, users});
 export const setCurrentPage = (currentPage) => ({type: SET_CURRENT_PAGE, currentPage});
 export const setTotalUsersCount = (count) => ({type: SET_TOTAL_USERS_COUNT, count});

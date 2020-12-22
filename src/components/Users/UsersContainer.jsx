@@ -2,7 +2,8 @@ import React from 'react';
 import {connect} from "react-redux";
 import Users from "./Users";
 import {
-    changeFollow,
+    follow,
+    unfollow,
     setUsers,
     setCurrentPage,
     setTotalUsersCount,
@@ -14,7 +15,10 @@ import Preloader from "../common/Preloader/Preloader";
 class UsersContainer extends React.Component {
     componentDidMount() {
         this.props.toggleIsFetching(true);
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`)
+
+        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`,{
+            withCredentials: true,
+        })
             .then(response => {
                 this.props.toggleIsFetching(false);
                 this.props.setUsers(response.data.items);
@@ -25,7 +29,9 @@ class UsersContainer extends React.Component {
     onPageChanged = (page) => {
         this.props.setCurrentPage(page);
         this.props.toggleIsFetching(true);
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${page}&count=${this.props.pageSize}`)
+        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${page}&count=${this.props.pageSize}`,{
+            withCredentials: true,
+        })
             .then(response => {
                 this.props.toggleIsFetching(false);
                 this.props.setUsers(response.data.items);
@@ -41,7 +47,8 @@ class UsersContainer extends React.Component {
                    currentPage={this.props.currentPage}
                    onPageChanged={this.onPageChanged}
                    users={this.props.users}
-                   changeFollow={this.props.changeFollow}
+                   follow={this.props.follow}
+                   unfollow={this.props.unfollow}
             />
         </>
     }
@@ -58,7 +65,8 @@ let mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps, {
-    changeFollow,
+    follow,
+    unfollow,
     setUsers,
     setCurrentPage,
     setTotalUsersCount,
