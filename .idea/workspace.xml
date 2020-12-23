@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v0.61 add =&gt; login, cookie; refactor =&gt; Header">
+    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v0.62 add =&gt; follow/unfollow; refactor =&gt; Users">
+      <change afterPath="$PROJECT_DIR$/src/API/api.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Navbar/NavbarContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/HeaderContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/HeaderContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Users/Users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Users.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Users/UsersContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/sidebarReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/sidebarReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/usersReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/usersReducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +49,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Header" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Navbar" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -55,11 +61,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\components\Navbar" />
       <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\components\Header" />
       <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\redux" />
       <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\components\Profile" />
       <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\components\common\Preloader" />
-      <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\assets\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\components\Profile\MyPosts" />
@@ -100,6 +106,7 @@
       <workItem from="1608453433486" duration="14022000" />
       <workItem from="1608494473982" duration="7459000" />
       <workItem from="1608562412493" duration="1312000" />
+      <workItem from="1608748470705" duration="8162000" />
     </task>
     <task id="LOCAL-00001" summary="v0.35.5">
       <created>1608037498250</created>
@@ -157,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608650214133</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="v0.62 add =&gt; follow/unfollow; refactor =&gt; Users">
+      <created>1608668096247</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1608668096247</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,15 +210,35 @@
     <MESSAGE value="v0.55 refactor =&gt; pagination" />
     <MESSAGE value="v0.58 add =&gt; classnames to npm, preloader; refactor =&gt; Users" />
     <MESSAGE value="v0.61 add =&gt; login, cookie; refactor =&gt; Header" />
-    <option name="LAST_COMMIT_MESSAGE" value="v0.61 add =&gt; login, cookie; refactor =&gt; Header" />
+    <MESSAGE value="v0.62 add =&gt; follow/unfollow; refactor =&gt; Users" />
+    <option name="LAST_COMMIT_MESSAGE" value="v0.62 add =&gt; follow/unfollow; refactor =&gt; Users" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/Navbar/Navbar.jsx</url>
-          <line>26</line>
-          <option name="timeStamp" value="7" />
+          <url>file://$PROJECT_DIR$/src/redux/usersReducer.js</url>
+          <line>14</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/redux/usersReducer.js</url>
+          <line>13</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/redux/usersReducer.js</url>
+          <line>39</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/redux/usersReducer.js</url>
+          <line>72</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

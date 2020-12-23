@@ -1,11 +1,10 @@
 const FOLLOW = 'FOLLOW';
 const UNFOLLOW = 'UNFOLLOW';
-
 const SET_USERS = 'SET_USERS';
-// const CHANGE_FOLLOW = 'CHANGE_FOLLOW';
 const SET_CURRENT_PAGE = 'SET_CURRENT_PAGE';
 const SET_TOTAL_USERS_COUNT = 'SET_TOTAL_USERS_COUNT';
 const TOGGLE_IS_FETCHING = 'TOGGLE_IS_FETCHING';
+const TOGGLE_IS_FOLLOWING_PROGRESS = 'TOGGLE_IS_FOLLOWING_PROGRESS';
 
 let initialState = {
     users: [],
@@ -13,20 +12,11 @@ let initialState = {
     totalUsersCount: 0,
     currentPage: 1,
     isFetching: true,
+    followingInProgress: [],
 }
 
 const usersReducer = (state = initialState, action) => {
     switch (action.type) {
-        // case CHANGE_FOLLOW:
-        //     return {
-        //         ...state,
-        //         users: state.users.map((u) => {
-        //             if (u.id === action.userID) {
-        //                 return {...u, followed: !u.followed};
-        //             }
-        //             return u;
-        //         })
-        //     };
         case FOLLOW:
             return {
                 ...state,
@@ -47,6 +37,14 @@ const usersReducer = (state = initialState, action) => {
                     return u;
                 })
             }
+        case TOGGLE_IS_FOLLOWING_PROGRESS: {
+            return {
+                ...state,
+                followingInProgress: action.isFetching
+                    ? [...state.followingInProgress, action.userId]
+                    : state.followingInProgress.filter(id => id != action.userId)
+            }
+        }
         case SET_USERS: {
             return {...state, users: action.users}
         }
@@ -68,9 +66,8 @@ export default usersReducer;
 
 export const follow = (userId) => ({type: FOLLOW, userId });
 export const unfollow = (userId) => ({type: UNFOLLOW, userId });
-
-// export const changeFollow = (userID) => ({type: CHANGE_FOLLOW, userID});
 export const setUsers = (users) => ({type: SET_USERS, users});
 export const setCurrentPage = (currentPage) => ({type: SET_CURRENT_PAGE, currentPage});
 export const setTotalUsersCount = (count) => ({type: SET_TOTAL_USERS_COUNT, count});
 export const toggleIsFetching = (isFetching) => ({type: TOGGLE_IS_FETCHING, isFetching});
+export const toggleFollowingProgress = (isFetching, userId) => ({type: TOGGLE_IS_FOLLOWING_PROGRESS, isFetching, userId });
