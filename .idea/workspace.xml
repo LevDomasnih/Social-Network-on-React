@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v0.67 create =&gt; Login directory; use =&gt; Redirect of react-router-dom;&#10;add to npm =&gt; nothing ; refactor =&gt; authentication check in Profile and Dialogs">
-      <change afterPath="$PROJECT_DIR$/src/hoc/withAuthRedirect.js" afterDir="false" />
+    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v0.69 create =&gt; hoc directory, withAuthRedirect.js; use =&gt; High Order Component (HOC);&#10;add to npm =&gt; nothing ; refactor =&gt; authentication check in Profile and Dialogs by dint of HOC">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Dialogs/DialogsContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/DialogsContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Users/UsersContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersContainer.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +102,7 @@
       <workItem from="1608748470705" duration="9492000" />
       <workItem from="1608914689745" duration="2650000" />
       <workItem from="1609080883970" duration="11370000" />
-      <workItem from="1609174370704" duration="7665000" />
+      <workItem from="1609174370704" duration="9646000" />
     </task>
     <task id="LOCAL-00001" summary="v0.35.5">
       <created>1608037498250</created>
@@ -188,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609105647401</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="v0.69 create =&gt; hoc directory, withAuthRedirect.js; use =&gt; High Order Component (HOC);&#10;add to npm =&gt; nothing ; refactor =&gt; authentication check in Profile and Dialogs by dint of HOC">
+      <created>1609183407668</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1609183407668</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,7 +238,8 @@
     <MESSAGE value="v0.64 add =&gt; Api for request(DAL node); refactor =&gt; Friends in Navbar, button in Users" />
     <MESSAGE value="v0.66 add =&gt; redux-thunk to npm; refactor =&gt; UsersContainer, HeaderContainer(auth), ProfileContainer - Request has come to eponymous reducer" />
     <MESSAGE value="v0.67 create =&gt; Login directory; use =&gt; Redirect of react-router-dom;&#10;add to npm =&gt; nothing ; refactor =&gt; authentication check in Profile and Dialogs" />
-    <option name="LAST_COMMIT_MESSAGE" value="v0.67 create =&gt; Login directory; use =&gt; Redirect of react-router-dom;&#10;add to npm =&gt; nothing ; refactor =&gt; authentication check in Profile and Dialogs" />
+    <MESSAGE value="v0.69 create =&gt; hoc directory, withAuthRedirect.js; use =&gt; High Order Component (HOC);&#10;add to npm =&gt; nothing ; refactor =&gt; authentication check in Profile and Dialogs by dint of HOC" />
+    <option name="LAST_COMMIT_MESSAGE" value="v0.69 create =&gt; hoc directory, withAuthRedirect.js; use =&gt; High Order Component (HOC);&#10;add to npm =&gt; nothing ; refactor =&gt; authentication check in Profile and Dialogs by dint of HOC" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -257,43 +265,38 @@
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/Profile/ProfileContainer.jsx</url>
-          <line>28</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/Dialogs/DialogsContainer.jsx</url>
-          <line>12</line>
+          <line>13</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/Dialogs/DialogsContainer.jsx</url>
-          <line>17</line>
+          <line>18</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/Dialogs/DialogsContainer.jsx</url>
-          <line>13</line>
+          <line>14</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/Dialogs/DialogsContainer.jsx</url>
-          <line>14</line>
+          <line>15</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/Dialogs/DialogsContainer.jsx</url>
-          <line>15</line>
+          <line>16</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/Dialogs/DialogsContainer.jsx</url>
-          <line>16</line>
+          <line>17</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="24" />
         </line-breakpoint>
