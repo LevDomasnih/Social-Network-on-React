@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v0.74 use =&gt; componentDidUpdate;&#10;refactor =&gt; componentDidUpdate for user status;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; ProfileStatus.jsx">
+    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v0.75 use =&gt; redux-form;&#10;refactor =&gt; form for Login;&#10;add to npm =&gt; redux-form;&#10;create =&gt; nothing;&#10;edit =&gt; Login.jsx, reduxStore.js">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/DialogsContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/DialogsContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/Login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reduxStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reduxStore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar/Friends/Friends.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Friends/Friends.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPostsContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPostsContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/dialogsReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/dialogsReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/profileReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profileReducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +109,8 @@
       <workItem from="1609080883970" duration="11370000" />
       <workItem from="1609174370704" duration="14291000" />
       <workItem from="1609239796457" duration="531000" />
-      <workItem from="1609256118938" duration="11584000" />
+      <workItem from="1609256118938" duration="12232000" />
+      <workItem from="1609319475546" duration="8838000" />
     </task>
     <task id="LOCAL-00001" summary="v0.35.5">
       <created>1608037498250</created>
@@ -226,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609268958111</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="v0.75 use =&gt; redux-form;&#10;refactor =&gt; form for Login;&#10;add to npm =&gt; redux-form;&#10;create =&gt; nothing;&#10;edit =&gt; Login.jsx, reduxStore.js">
+      <created>1609277266510</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1609277266510</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,7 +287,8 @@
     <MESSAGE value="v0.71 use =&gt; local state, http put;&#10;refactor =&gt; put and get request for status;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; api, Profile.jsx, ProfileContainer.jsx, ProfileInfo.jsx, profileReducer.js, ProfileStatus.jsx" />
     <MESSAGE value="v0.73 use =&gt; local state, http put;&#10;refactor =&gt; put and get request for status;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; api, Profile.jsx, ProfileContainer.jsx, ProfileInfo.jsx, profileReducer.js, ProfileStatus.jsx" />
     <MESSAGE value="v0.74 use =&gt; componentDidUpdate;&#10;refactor =&gt; componentDidUpdate for user status;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; ProfileStatus.jsx" />
-    <option name="LAST_COMMIT_MESSAGE" value="v0.74 use =&gt; componentDidUpdate;&#10;refactor =&gt; componentDidUpdate for user status;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; ProfileStatus.jsx" />
+    <MESSAGE value="v0.75 use =&gt; redux-form;&#10;refactor =&gt; form for Login;&#10;add to npm =&gt; redux-form;&#10;create =&gt; nothing;&#10;edit =&gt; Login.jsx, reduxStore.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="v0.75 use =&gt; redux-form;&#10;refactor =&gt; form for Login;&#10;add to npm =&gt; redux-form;&#10;create =&gt; nothing;&#10;edit =&gt; Login.jsx, reduxStore.js" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -301,39 +314,8 @@
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/Dialogs/DialogsContainer.jsx</url>
-          <line>13</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/Dialogs/DialogsContainer.jsx</url>
-          <line>18</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/Dialogs/DialogsContainer.jsx</url>
-          <line>14</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/Dialogs/DialogsContainer.jsx</url>
-          <line>15</line>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/Dialogs/DialogsContainer.jsx</url>
-          <line>16</line>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/Dialogs/DialogsContainer.jsx</url>
-          <line>17</line>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.jsx</url>
           <line>23</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>

@@ -4,7 +4,7 @@ import classes from './Friends.module.css';
 const Friends = (props) => {
 
     const friends = props.friends.map((e) => (
-        <div className={classes.friendItem}>
+        <div key={e.id} className={classes.friendItem}>
             <img src={e.avatar} alt="" />
             <div>
                 {e.name}
