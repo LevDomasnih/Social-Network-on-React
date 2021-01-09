@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v0.78 use =&gt; login and logout API;&#10;refactor =&gt; login and logout for Login.jsx;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; api.js, authReducer.js, Header.jsx, HeaderContainer.jsx, Login.jsx">
+    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v0.79 use =&gt; stopSubmit (redux-form);&#10;refactor =&gt; stopSubmit for Login.jsx;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; authReducer.js, FormsControls.module.css, Login.jsx, ProfileContainer.jsx">
+      <change afterPath="$PROJECT_DIR$/src/redux/appReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/HeaderContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/HeaderContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/FormsControls/FormsControls.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/FormsControls/FormsControls.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Users/UsersContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/authReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/authReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reduxStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reduxStore.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +46,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../books-app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/redux" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -55,10 +58,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\redux" />
       <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\components\common\FormsControls" />
       <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\components\Navbar" />
       <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\components\Header" />
-      <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\redux" />
       <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\components\Profile" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -110,7 +113,7 @@
       <workItem from="1609971394925" duration="47000" />
       <workItem from="1610020938585" duration="11435000" />
       <workItem from="1610113407971" duration="1332000" />
-      <workItem from="1610184815227" duration="11130000" />
+      <workItem from="1610184815227" duration="16345000" />
     </task>
     <task id="LOCAL-00001" summary="v0.35.5">
       <created>1608037498250</created>
@@ -259,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610193468518</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="v0.79 use =&gt; stopSubmit (redux-form);&#10;refactor =&gt; stopSubmit for Login.jsx;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; authReducer.js, FormsControls.module.css, Login.jsx, ProfileContainer.jsx">
+      <created>1610209865361</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1610209865361</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,7 +322,8 @@
     <MESSAGE value="v0.76 use =&gt; redux-form;&#10;refactor =&gt; form for message of Dialogs and post of Profile, post add to top, many minor change;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; Dialogs.jsx, DialogsContainer.jsx, dialogsReducer.js, Friends.jsx, Login.jsx, MyPosts.jsx, MyPostsContainer.jsx, profileReducer.js" />
     <MESSAGE value="v0.77 use =&gt; validators from redux-form;&#10;refactor =&gt; validators for Post and Login;&#10;add to npm =&gt; nothing;&#10;create =&gt; FormsControls.js, FormsControls.module.css, validators.js;&#10;edit =&gt; Login.jsx, MyPosts.jsx" />
     <MESSAGE value="v0.78 use =&gt; login and logout API;&#10;refactor =&gt; login and logout for Login.jsx;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; api.js, authReducer.js, Header.jsx, HeaderContainer.jsx, Login.jsx" />
-    <option name="LAST_COMMIT_MESSAGE" value="v0.78 use =&gt; login and logout API;&#10;refactor =&gt; login and logout for Login.jsx;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; api.js, authReducer.js, Header.jsx, HeaderContainer.jsx, Login.jsx" />
+    <MESSAGE value="v0.79 use =&gt; stopSubmit (redux-form);&#10;refactor =&gt; stopSubmit for Login.jsx;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; authReducer.js, FormsControls.module.css, Login.jsx, ProfileContainer.jsx" />
+    <option name="LAST_COMMIT_MESSAGE" value="v0.79 use =&gt; stopSubmit (redux-form);&#10;refactor =&gt; stopSubmit for Login.jsx;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; authReducer.js, FormsControls.module.css, Login.jsx, ProfileContainer.jsx" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -9,7 +9,6 @@ import {
 } from "../../redux/usersReducer";
 import Preloader from "../common/Preloader/Preloader";
 import {compose} from "redux";
-import {withAuthRedirect} from "../../hoc/withAuthRedirect";
 
 class UsersContainer extends React.Component {
     componentDidMount() {
@@ -54,5 +53,4 @@ export default compose(
         unfollowUsers,
         followUsers,
     }),
-    withAuthRedirect,
-)(UsersContainer);
+    )(UsersContainer);
