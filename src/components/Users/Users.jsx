@@ -17,13 +17,9 @@ const Users = (props) => {
         let right = currentPage + 1;
         let center = currentPage;
 
-        if (center === 1) {
-            return [center, right, pages[pages.length - 1]];
-        } else if (center === pages[pages.length - 1]) {
-            return [pages[0], left, center]
-        } else {
-            return [pages[0], left, center, right, pages[pages.length - 1]];
-        }
+        if (center === 1) return [center, right, pages[pages.length - 1]];
+        else if (center === pages[pages.length - 1]) return [pages[0], left, center]
+        else  return [pages[0], left, center, right, pages[pages.length - 1]];
     }
     const pages = changeCountPagesOnPage(props.currentPage, props.totalUsersCount, props.pageSize)
 

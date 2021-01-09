@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v0.79 use =&gt; stopSubmit (redux-form);&#10;refactor =&gt; stopSubmit for Login.jsx;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; authReducer.js, FormsControls.module.css, Login.jsx, ProfileContainer.jsx">
-      <change afterPath="$PROJECT_DIR$/src/redux/appReducer.js" afterDir="false" />
+    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v0.80 use =&gt; Initialize App;&#10;refactor =&gt; Initialize App in App.js;&#10;add to npm =&gt; nothing;&#10;create =&gt; appReducer.js;&#10;edit =&gt; App.js, authReducer.js, HeaderContainer.jsx, ProfileContainer.jsx, reduxStore.js, UsersContainer.jsx">
+      <change afterPath="$PROJECT_DIR$/src/redux/usersSelectors.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/HeaderContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/HeaderContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Users/Users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Users.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Users/UsersContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/authReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/authReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reduxStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reduxStore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/usersReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/usersReducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +110,7 @@
       <workItem from="1609971394925" duration="47000" />
       <workItem from="1610020938585" duration="11435000" />
       <workItem from="1610113407971" duration="1332000" />
-      <workItem from="1610184815227" duration="16345000" />
+      <workItem from="1610184815227" duration="20495000" />
     </task>
     <task id="LOCAL-00001" summary="v0.35.5">
       <created>1608037498250</created>
@@ -269,7 +266,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610209865361</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="v0.80 use =&gt; Initialize App;&#10;refactor =&gt; Initialize App in App.js;&#10;add to npm =&gt; nothing;&#10;create =&gt; appReducer.js;&#10;edit =&gt; App.js, authReducer.js, HeaderContainer.jsx, ProfileContainer.jsx, reduxStore.js, UsersContainer.jsx">
+      <created>1610220313197</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1610220313197</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -323,7 +327,8 @@
     <MESSAGE value="v0.77 use =&gt; validators from redux-form;&#10;refactor =&gt; validators for Post and Login;&#10;add to npm =&gt; nothing;&#10;create =&gt; FormsControls.js, FormsControls.module.css, validators.js;&#10;edit =&gt; Login.jsx, MyPosts.jsx" />
     <MESSAGE value="v0.78 use =&gt; login and logout API;&#10;refactor =&gt; login and logout for Login.jsx;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; api.js, authReducer.js, Header.jsx, HeaderContainer.jsx, Login.jsx" />
     <MESSAGE value="v0.79 use =&gt; stopSubmit (redux-form);&#10;refactor =&gt; stopSubmit for Login.jsx;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; authReducer.js, FormsControls.module.css, Login.jsx, ProfileContainer.jsx" />
-    <option name="LAST_COMMIT_MESSAGE" value="v0.79 use =&gt; stopSubmit (redux-form);&#10;refactor =&gt; stopSubmit for Login.jsx;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; authReducer.js, FormsControls.module.css, Login.jsx, ProfileContainer.jsx" />
+    <MESSAGE value="v0.80 use =&gt; Initialize App;&#10;refactor =&gt; Initialize App in App.js;&#10;add to npm =&gt; nothing;&#10;create =&gt; appReducer.js;&#10;edit =&gt; App.js, authReducer.js, HeaderContainer.jsx, ProfileContainer.jsx, reduxStore.js, UsersContainer.jsx" />
+    <option name="LAST_COMMIT_MESSAGE" value="v0.80 use =&gt; Initialize App;&#10;refactor =&gt; Initialize App in App.js;&#10;add to npm =&gt; nothing;&#10;create =&gt; appReducer.js;&#10;edit =&gt; App.js, authReducer.js, HeaderContainer.jsx, ProfileContainer.jsx, reduxStore.js, UsersContainer.jsx" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -352,6 +357,12 @@
           <url>file://$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.jsx</url>
           <line>23</line>
           <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/redux/usersReducer.js</url>
+          <line>78</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
