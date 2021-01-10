@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v0.85 use =&gt; Hooks (useEffect);&#10;refactor =&gt; useEffect for ProfileStatus;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; ProfileStatusWithHooks.jsx">
+    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v0.87 use =&gt; React.memo;&#10;refactor =&gt; React.memo for Posts;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; MyPosts.jsx">
+      <change afterPath="$PROJECT_DIR$/src/redux/profileReducer.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileStatus.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/profileReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profileReducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,20 +44,21 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Profile/ProfileInfo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/redux" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\components\Profile\ProfileInfo" />
       <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\redux" />
+      <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\components\Profile\ProfileInfo" />
       <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\components\common\FormsControls" />
       <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\components\Navbar" />
       <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\components\Header" />
@@ -65,7 +70,72 @@
       <recent name="C:\Users\Лев\my-app\src\components\Header" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.run">
+    <configuration name="after deleting length of messages should be decrement" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/redux/profileReducer.test.js" />
+      <test-names>
+        <test-name value="after deleting length of messages should be decrement" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="after deleting length shouldn't be decrement if id is incorrect" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/redux/profileReducer.test.js" />
+      <test-names>
+        <test-name value="after deleting length shouldn't be decrement if id is incorrect" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="length of posts should be incremented" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/redux/profileReducer.test.js" />
+      <test-names>
+        <test-name value="length of posts should be incremented" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="message of new post should be correct" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/redux/profileReducer.test.js" />
+      <test-names>
+        <test-name value="message of new post should be correct" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="renders learn react link" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/App.test.js" />
+      <test-names>
+        <test-name value="renders learn react link" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="run" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -76,6 +146,15 @@
       <envs />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.after deleting length shouldn't be decrement if id is incorrect" />
+        <item itemvalue="Jest.after deleting length of messages should be decrement" />
+        <item itemvalue="Jest.message of new post should be correct" />
+        <item itemvalue="Jest.length of posts should be incremented" />
+        <item itemvalue="Jest.renders learn react link" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -108,7 +187,7 @@
       <workItem from="1610020938585" duration="11435000" />
       <workItem from="1610113407971" duration="1332000" />
       <workItem from="1610184815227" duration="23346000" />
-      <workItem from="1610280001373" duration="6465000" />
+      <workItem from="1610280001373" duration="11589000" />
     </task>
     <task id="LOCAL-00001" summary="v0.35.5">
       <created>1608037498250</created>
@@ -299,7 +378,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610288552036</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="v0.87 use =&gt; React.memo;&#10;refactor =&gt; React.memo for Posts;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; MyPosts.jsx">
+      <created>1610298427074</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1610298427074</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -330,7 +416,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="v0.46.5" />
     <MESSAGE value="v0.52 add =&gt; axios" />
     <MESSAGE value="v0.55 refactor =&gt; pagination" />
     <MESSAGE value="v0.58 add =&gt; classnames to npm, preloader; refactor =&gt; Users" />
@@ -355,7 +440,8 @@
     <MESSAGE value="v0.83 use =&gt; reselect (createSelector);&#10;refactor =&gt; reselect for UsersContainer.jsx;&#10;add to npm =&gt; reselect;&#10;create =&gt; nothing;&#10;edit =&gt; usersSelectors.js" />
     <MESSAGE value="v0.84 use =&gt; Hooks (useState);&#10;refactor =&gt; useState for ProfileStatus;&#10;add to npm =&gt; nothing;&#10;create =&gt; ProfileStatusWithHooks.jsx;&#10;edit =&gt; ProfileInfo.jsx, ProfileStatus.jsx" />
     <MESSAGE value="v0.85 use =&gt; Hooks (useEffect);&#10;refactor =&gt; useEffect for ProfileStatus;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; ProfileStatusWithHooks.jsx" />
-    <option name="LAST_COMMIT_MESSAGE" value="v0.85 use =&gt; Hooks (useEffect);&#10;refactor =&gt; useEffect for ProfileStatus;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; ProfileStatusWithHooks.jsx" />
+    <MESSAGE value="v0.87 use =&gt; React.memo;&#10;refactor =&gt; React.memo for Posts;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; MyPosts.jsx" />
+    <option name="LAST_COMMIT_MESSAGE" value="v0.87 use =&gt; React.memo;&#10;refactor =&gt; React.memo for Posts;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; MyPosts.jsx" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -379,11 +465,6 @@
           <url>file://$PROJECT_DIR$/src/redux/usersReducer.js</url>
           <line>74</line>
           <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.jsx</url>
-          <line>24</line>
-          <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/redux/usersReducer.js</url>
