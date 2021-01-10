@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v0.84 use =&gt; Hooks (useState);&#10;refactor =&gt; useState for ProfileStatus;&#10;add to npm =&gt; nothing;&#10;create =&gt; ProfileStatusWithHooks.jsx;&#10;edit =&gt; ProfileInfo.jsx, ProfileStatus.jsx">
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileStatusWithHooks.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileStatusWithHooks.jsx" afterDir="false" />
+    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v0.85 use =&gt; Hooks (useEffect);&#10;refactor =&gt; useEffect for ProfileStatus;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; ProfileStatusWithHooks.jsx">
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +108,7 @@
       <workItem from="1610020938585" duration="11435000" />
       <workItem from="1610113407971" duration="1332000" />
       <workItem from="1610184815227" duration="23346000" />
-      <workItem from="1610280001373" duration="3783000" />
+      <workItem from="1610280001373" duration="6465000" />
     </task>
     <task id="LOCAL-00001" summary="v0.35.5">
       <created>1608037498250</created>
@@ -290,7 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610286262603</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="v0.85 use =&gt; Hooks (useEffect);&#10;refactor =&gt; useEffect for ProfileStatus;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; ProfileStatusWithHooks.jsx">
+      <created>1610288552036</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1610288552036</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,7 +330,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="v0.44 ADD Context API" />
     <MESSAGE value="v0.46.5" />
     <MESSAGE value="v0.52 add =&gt; axios" />
     <MESSAGE value="v0.55 refactor =&gt; pagination" />
@@ -346,7 +354,8 @@
     <MESSAGE value="v0.81 use =&gt; reselect;&#10;refactor =&gt; reselect for UsersContainer.jsx;&#10;add to npm =&gt; nothing;&#10;create =&gt; usersSelectors.js;&#10;edit =&gt; Users.jsx, UsersContainer.jsx, usersReducer.js" />
     <MESSAGE value="v0.83 use =&gt; reselect (createSelector);&#10;refactor =&gt; reselect for UsersContainer.jsx;&#10;add to npm =&gt; reselect;&#10;create =&gt; nothing;&#10;edit =&gt; usersSelectors.js" />
     <MESSAGE value="v0.84 use =&gt; Hooks (useState);&#10;refactor =&gt; useState for ProfileStatus;&#10;add to npm =&gt; nothing;&#10;create =&gt; ProfileStatusWithHooks.jsx;&#10;edit =&gt; ProfileInfo.jsx, ProfileStatus.jsx" />
-    <option name="LAST_COMMIT_MESSAGE" value="v0.84 use =&gt; Hooks (useState);&#10;refactor =&gt; useState for ProfileStatus;&#10;add to npm =&gt; nothing;&#10;create =&gt; ProfileStatusWithHooks.jsx;&#10;edit =&gt; ProfileInfo.jsx, ProfileStatus.jsx" />
+    <MESSAGE value="v0.85 use =&gt; Hooks (useEffect);&#10;refactor =&gt; useEffect for ProfileStatus;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; ProfileStatusWithHooks.jsx" />
+    <option name="LAST_COMMIT_MESSAGE" value="v0.85 use =&gt; Hooks (useEffect);&#10;refactor =&gt; useEffect for ProfileStatus;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; ProfileStatusWithHooks.jsx" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
