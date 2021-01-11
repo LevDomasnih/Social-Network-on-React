@@ -1,20 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v0.89 use =&gt; Tests, Jest, tdd;&#10;refactor =&gt; Testing of Reducer;&#10;add to npm =&gt; nothing;&#10;create =&gt; profileReducer.test.js;&#10;delete =&gt; ProfileStatus.jsx, App.test.js;&#10;edit =&gt; ProfileInfo.jsx, profileReducer.js">
-      <change afterPath="$PROJECT_DIR$/src/components/common/Paginator/Paginator.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/Paginator/Paginator.module.css" afterDir="false" />
+    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v0.90 use =&gt; Redux-ducks, async/await;&#10;refactor =&gt; action on Redux-ducks, async/await instead then in reducers;&#10;add to npm =&gt; nothing;&#10;create =&gt; Paginator.jsx, Paginator.module.css;&#10;delete =&gt; nothing;&#10;edit =&gt; api.js,&#10;        appReducer.js,&#10;        authReducer.js,&#10;        dialogsReducer.js,&#10;        profileReducer.js,&#10;        user.module.css,&#10;        Users.jsx,&#10;        UsersContainer.jsx,&#10;        usersReducer.js">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/API/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Users/Users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Users.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Users/UsersContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Users/user.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/user.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/appReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/appReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/authReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/authReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/dialogsReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/dialogsReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/profileReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profileReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/usersReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/usersReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reduxStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reduxStore.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,7 +204,7 @@
       <workItem from="1610184815227" duration="23346000" />
       <workItem from="1610280001373" duration="12038000" />
       <workItem from="1610304656688" duration="3000" />
-      <workItem from="1610370292656" duration="7290000" />
+      <workItem from="1610370292656" duration="9366000" />
     </task>
     <task id="LOCAL-00001" summary="v0.35.5">
       <created>1608037498250</created>
@@ -419,7 +409,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610304238308</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="v0.90 use =&gt; Redux-ducks, async/await;&#10;refactor =&gt; action on Redux-ducks, async/await instead then in reducers;&#10;add to npm =&gt; nothing;&#10;create =&gt; Paginator.jsx, Paginator.module.css;&#10;delete =&gt; nothing;&#10;edit =&gt; api.js,&#10;        appReducer.js,&#10;        authReducer.js,&#10;        dialogsReducer.js,&#10;        profileReducer.js,&#10;        user.module.css,&#10;        Users.jsx,&#10;        UsersContainer.jsx,&#10;        usersReducer.js">
+      <created>1610396299418</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1610396299418</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -450,7 +447,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="v0.55 refactor =&gt; pagination" />
     <MESSAGE value="v0.58 add =&gt; classnames to npm, preloader; refactor =&gt; Users" />
     <MESSAGE value="v0.61 add =&gt; login, cookie; refactor =&gt; Header" />
     <MESSAGE value="v0.62 add =&gt; follow/unfollow; refactor =&gt; Users" />
@@ -475,7 +471,8 @@
     <MESSAGE value="v0.85 use =&gt; Hooks (useEffect);&#10;refactor =&gt; useEffect for ProfileStatus;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; ProfileStatusWithHooks.jsx" />
     <MESSAGE value="v0.87 use =&gt; React.memo;&#10;refactor =&gt; React.memo for Posts;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; MyPosts.jsx" />
     <MESSAGE value="v0.89 use =&gt; Tests, Jest, tdd;&#10;refactor =&gt; Testing of Reducer;&#10;add to npm =&gt; nothing;&#10;create =&gt; profileReducer.test.js;&#10;delete =&gt; ProfileStatus.jsx, App.test.js;&#10;edit =&gt; ProfileInfo.jsx, profileReducer.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="v0.89 use =&gt; Tests, Jest, tdd;&#10;refactor =&gt; Testing of Reducer;&#10;add to npm =&gt; nothing;&#10;create =&gt; profileReducer.test.js;&#10;delete =&gt; ProfileStatus.jsx, App.test.js;&#10;edit =&gt; ProfileInfo.jsx, profileReducer.js" />
+    <MESSAGE value="v0.90 use =&gt; Redux-ducks, async/await;&#10;refactor =&gt; action on Redux-ducks, async/await instead then in reducers;&#10;add to npm =&gt; nothing;&#10;create =&gt; Paginator.jsx, Paginator.module.css;&#10;delete =&gt; nothing;&#10;edit =&gt; api.js,&#10;        appReducer.js,&#10;        authReducer.js,&#10;        dialogsReducer.js,&#10;        profileReducer.js,&#10;        user.module.css,&#10;        Users.jsx,&#10;        UsersContainer.jsx,&#10;        usersReducer.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="v0.90 use =&gt; Redux-ducks, async/await;&#10;refactor =&gt; action on Redux-ducks, async/await instead then in reducers;&#10;add to npm =&gt; nothing;&#10;create =&gt; Paginator.jsx, Paginator.module.css;&#10;delete =&gt; nothing;&#10;edit =&gt; api.js,&#10;        appReducer.js,&#10;        authReducer.js,&#10;        dialogsReducer.js,&#10;        profileReducer.js,&#10;        user.module.css,&#10;        Users.jsx,&#10;        UsersContainer.jsx,&#10;        usersReducer.js" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

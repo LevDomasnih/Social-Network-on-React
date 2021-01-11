@@ -3,7 +3,7 @@ import dialogsReducer from "./dialogsReducer";
 import sidebarReducer from "./sidebarReducer";
 import usersReducer from "./usersReducer";
 import authReducer from "./authReducer";
-import { applyMiddleware } from "redux";
+import {applyMiddleware, compose} from "redux";
 import thunkMiddleware from "redux-thunk";
 import { reducer as formReducer } from 'redux-form'
 import { createStore, combineReducers } from"redux";
@@ -20,8 +20,10 @@ let reducers = combineReducers({
     form: formReducer,
 })
 
-let store = createStore(reducers, applyMiddleware(thunkMiddleware));
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(reducers, composeEnhancers(applyMiddleware(thunkMiddleware)));
 
-window.store = store;
+
+window.__store__ = store;
 
 export default store;
