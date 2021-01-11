@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v0.90 use =&gt; Redux-ducks, async/await;&#10;refactor =&gt; action on Redux-ducks, async/await instead then in reducers;&#10;add to npm =&gt; nothing;&#10;create =&gt; Paginator.jsx, Paginator.module.css;&#10;delete =&gt; nothing;&#10;edit =&gt; api.js,&#10;        appReducer.js,&#10;        authReducer.js,&#10;        dialogsReducer.js,&#10;        profileReducer.js,&#10;        user.module.css,&#10;        Users.jsx,&#10;        UsersContainer.jsx,&#10;        usersReducer.js">
+    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v0.91 use =&gt; Connections with Redux DevTools;&#10;refactor =&gt; Connect store with Redux DevTools;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; reduxStore.js">
+      <change afterPath="$PROJECT_DIR$/src/App.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileStatus.test.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reduxStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reduxStore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +71,34 @@
       <recent name="C:\Users\Лев\my-app\src\components\Header" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start">
+  <component name="RunManager" selected="Jest.ProfileStatus component">
+    <configuration name="ProfileStatus component" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileStatus.test.jsx" />
+      <test-names>
+        <test-name value="ProfileStatus component" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="ProfileStatus component.status from props should be in the state" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileStatus.test.jsx" />
+      <test-names>
+        <test-name value="ProfileStatus component" />
+        <test-name value="status from props should be in the state" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="after deleting length of messages should be decrement" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -93,33 +125,7 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="length of posts should be incremented" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/redux/profileReducer.test.js" />
-      <test-names>
-        <test-name value="length of posts should be incremented" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="message of new post should be correct" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/redux/profileReducer.test.js" />
-      <test-names>
-        <test-name value="message of new post should be correct" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="renders learn react link" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="renders without crashing" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
@@ -128,7 +134,7 @@
       <scope-kind value="TEST" />
       <test-file value="$PROJECT_DIR$/src/App.test.js" />
       <test-names>
-        <test-name value="renders learn react link" />
+        <test-name value="renders without crashing" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -155,19 +161,19 @@
     <list>
       <item itemvalue="Jest.after deleting length of messages should be decrement" />
       <item itemvalue="Jest.after deleting length shouldn't be decrement if id is incorrect" />
-      <item itemvalue="Jest.length of posts should be incremented" />
-      <item itemvalue="Jest.message of new post should be correct" />
-      <item itemvalue="Jest.renders learn react link" />
       <item itemvalue="npm.start" />
       <item itemvalue="npm.test" />
+      <item itemvalue="Jest.renders without crashing" />
+      <item itemvalue="Jest.ProfileStatus component" />
+      <item itemvalue="Jest.ProfileStatus component.status from props should be in the state" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.ProfileStatus component" />
+        <item itemvalue="Jest.ProfileStatus component.status from props should be in the state" />
+        <item itemvalue="Jest.renders without crashing" />
         <item itemvalue="Jest.after deleting length shouldn't be decrement if id is incorrect" />
         <item itemvalue="Jest.after deleting length of messages should be decrement" />
-        <item itemvalue="Jest.message of new post should be correct" />
-        <item itemvalue="Jest.length of posts should be incremented" />
-        <item itemvalue="Jest.renders learn react link" />
       </list>
     </recent_temporary>
   </component>
@@ -204,7 +210,7 @@
       <workItem from="1610184815227" duration="23346000" />
       <workItem from="1610280001373" duration="12038000" />
       <workItem from="1610304656688" duration="3000" />
-      <workItem from="1610370292656" duration="9366000" />
+      <workItem from="1610370292656" duration="11664000" />
     </task>
     <task id="LOCAL-00001" summary="v0.35.5">
       <created>1608037498250</created>
@@ -416,7 +422,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610396299418</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="v0.91 use =&gt; Connections with Redux DevTools;&#10;refactor =&gt; Connect store with Redux DevTools;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; reduxStore.js">
+      <created>1610398953914</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1610398953914</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -447,7 +460,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="v0.58 add =&gt; classnames to npm, preloader; refactor =&gt; Users" />
     <MESSAGE value="v0.61 add =&gt; login, cookie; refactor =&gt; Header" />
     <MESSAGE value="v0.62 add =&gt; follow/unfollow; refactor =&gt; Users" />
     <MESSAGE value="v0.64 add =&gt; Api for request(DAL node); refactor =&gt; Friends in Navbar, button in Users" />
@@ -472,7 +484,8 @@
     <MESSAGE value="v0.87 use =&gt; React.memo;&#10;refactor =&gt; React.memo for Posts;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; MyPosts.jsx" />
     <MESSAGE value="v0.89 use =&gt; Tests, Jest, tdd;&#10;refactor =&gt; Testing of Reducer;&#10;add to npm =&gt; nothing;&#10;create =&gt; profileReducer.test.js;&#10;delete =&gt; ProfileStatus.jsx, App.test.js;&#10;edit =&gt; ProfileInfo.jsx, profileReducer.js" />
     <MESSAGE value="v0.90 use =&gt; Redux-ducks, async/await;&#10;refactor =&gt; action on Redux-ducks, async/await instead then in reducers;&#10;add to npm =&gt; nothing;&#10;create =&gt; Paginator.jsx, Paginator.module.css;&#10;delete =&gt; nothing;&#10;edit =&gt; api.js,&#10;        appReducer.js,&#10;        authReducer.js,&#10;        dialogsReducer.js,&#10;        profileReducer.js,&#10;        user.module.css,&#10;        Users.jsx,&#10;        UsersContainer.jsx,&#10;        usersReducer.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="v0.90 use =&gt; Redux-ducks, async/await;&#10;refactor =&gt; action on Redux-ducks, async/await instead then in reducers;&#10;add to npm =&gt; nothing;&#10;create =&gt; Paginator.jsx, Paginator.module.css;&#10;delete =&gt; nothing;&#10;edit =&gt; api.js,&#10;        appReducer.js,&#10;        authReducer.js,&#10;        dialogsReducer.js,&#10;        profileReducer.js,&#10;        user.module.css,&#10;        Users.jsx,&#10;        UsersContainer.jsx,&#10;        usersReducer.js" />
+    <MESSAGE value="v0.91 use =&gt; Connections with Redux DevTools;&#10;refactor =&gt; Connect store with Redux DevTools;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; reduxStore.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="v0.91 use =&gt; Connections with Redux DevTools;&#10;refactor =&gt; Connect store with Redux DevTools;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; reduxStore.js" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
