@@ -1,7 +1,6 @@
-import {authAPI} from "../API/api";
 import {getAuthUserData} from "./authReducer";
 
-const INITIALIZED_SUCCESS = 'INITIALIZED_SUCCESS';
+const INITIALIZED_SUCCESS = 'my-app/appReducer/INITIALIZED_SUCCESS';
 
 let initialState = {
     initialized: false,
@@ -25,7 +24,7 @@ export const initializedSuccess = () => ({ type: INITIALIZED_SUCCESS });
 
 export const initializeApp = () => (dispatch) => {
     const promise = dispatch(getAuthUserData())
-    debugger
+    // debugger
     Promise.all([promise])
         .then(() => {
             dispatch(initializedSuccess())
