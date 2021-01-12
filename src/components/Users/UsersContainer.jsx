@@ -24,7 +24,6 @@ class UsersContainer extends React.Component {
     }
 
     onPageChanged = (page) => {
-        this.props.setCurrentPage(page);
         this.props.requestUsers(page, this.props.pageSize)
     }
 

@@ -10,7 +10,7 @@ const TOGGLE_IS_FOLLOWING_PROGRESS = 'my-app/usersReducer/TOGGLE_IS_FOLLOWING_PR
 
 let initialState = {
     users: [],
-    pageSize: 5,
+    pageSize: 10, // users on page (rename)!!!
     totalUsersCount: 0,
     currentPage: 1,
     isFetching: true,
@@ -80,7 +80,7 @@ export const toggleFollowingProgress = (isFetching, userId) => ({
 
 export const requestUsers = (page, pageSize) => async (dispatch) => {
     dispatch(toggleIsFetching(true));
-    // dispatch(setCurrentPage(page));
+    dispatch(setCurrentPage(page));
     const response = await usersAPI.getUsers(page, pageSize)
     dispatch(toggleIsFetching(false));
     dispatch(setUsers(response.items));
