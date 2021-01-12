@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v0.92 use =&gt; Testing Components;&#10;description =&gt; return App.test.js, Test Components;&#10;add to npm =&gt; react-test-renderer;&#10;create =&gt; App.test.js, ProfileStatus.test.jsx;&#10;delete =&gt; nothing;&#10;edit =&gt; App.js, index.js">
+    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v0.93 use =&gt; Paginator;&#10;description =&gt; refactor Paginator;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; Paginator.jsx&#10;        Paginator.module.css&#10;        Users.jsx&#10;        UsersContainer.jsx&#10;        usersReducer.js">
+      <change afterPath="$PROJECT_DIR$/src/hoc/withSuspense.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Users/Users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Users.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Users/UsersContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Paginator/Paginator.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Paginator/Paginator.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Paginator/Paginator.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Paginator/Paginator.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/usersReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/usersReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,7 +207,7 @@
       <workItem from="1610280001373" duration="12038000" />
       <workItem from="1610304656688" duration="3000" />
       <workItem from="1610370292656" duration="12750000" />
-      <workItem from="1610440193473" duration="7876000" />
+      <workItem from="1610440193473" duration="10109000" />
     </task>
     <task id="LOCAL-00001" summary="v0.35.5">
       <created>1608037498250</created>
@@ -436,7 +433,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610404700548</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="v0.93 use =&gt; Paginator;&#10;description =&gt; refactor Paginator;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; Paginator.jsx&#10;        Paginator.module.css&#10;        Users.jsx&#10;        UsersContainer.jsx&#10;        usersReducer.js">
+      <created>1610453544088</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1610453544088</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -467,7 +471,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="v0.62 add =&gt; follow/unfollow; refactor =&gt; Users" />
     <MESSAGE value="v0.64 add =&gt; Api for request(DAL node); refactor =&gt; Friends in Navbar, button in Users" />
     <MESSAGE value="v0.66 add =&gt; redux-thunk to npm; refactor =&gt; UsersContainer, HeaderContainer(auth), ProfileContainer - Request has come to eponymous reducer" />
     <MESSAGE value="v0.67 create =&gt; Login directory; use =&gt; Redirect of react-router-dom;&#10;add to npm =&gt; nothing ; refactor =&gt; authentication check in Profile and Dialogs" />
@@ -492,7 +495,8 @@
     <MESSAGE value="v0.90 use =&gt; Redux-ducks, async/await;&#10;refactor =&gt; action on Redux-ducks, async/await instead then in reducers;&#10;add to npm =&gt; nothing;&#10;create =&gt; Paginator.jsx, Paginator.module.css;&#10;delete =&gt; nothing;&#10;edit =&gt; api.js,&#10;        appReducer.js,&#10;        authReducer.js,&#10;        dialogsReducer.js,&#10;        profileReducer.js,&#10;        user.module.css,&#10;        Users.jsx,&#10;        UsersContainer.jsx,&#10;        usersReducer.js" />
     <MESSAGE value="v0.91 use =&gt; Connections with Redux DevTools;&#10;refactor =&gt; Connect store with Redux DevTools;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; reduxStore.js" />
     <MESSAGE value="v0.92 use =&gt; Testing Components;&#10;description =&gt; return App.test.js, Test Components;&#10;add to npm =&gt; react-test-renderer;&#10;create =&gt; App.test.js, ProfileStatus.test.jsx;&#10;delete =&gt; nothing;&#10;edit =&gt; App.js, index.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="v0.92 use =&gt; Testing Components;&#10;description =&gt; return App.test.js, Test Components;&#10;add to npm =&gt; react-test-renderer;&#10;create =&gt; App.test.js, ProfileStatus.test.jsx;&#10;delete =&gt; nothing;&#10;edit =&gt; App.js, index.js" />
+    <MESSAGE value="v0.93 use =&gt; Paginator;&#10;description =&gt; refactor Paginator;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; Paginator.jsx&#10;        Paginator.module.css&#10;        Users.jsx&#10;        UsersContainer.jsx&#10;        usersReducer.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="v0.93 use =&gt; Paginator;&#10;description =&gt; refactor Paginator;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; Paginator.jsx&#10;        Paginator.module.css&#10;        Users.jsx&#10;        UsersContainer.jsx&#10;        usersReducer.js" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
