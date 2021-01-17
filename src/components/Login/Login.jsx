@@ -9,6 +9,8 @@ import style from '../common/FormsControls/FormsControls.module.css'
 
 const maxLength = maxLengthCreator(30);
 
+//TODO add captcha 
+
 const LoginForm = (props) => {
     return (
         <form onSubmit={props.handleSubmit}>

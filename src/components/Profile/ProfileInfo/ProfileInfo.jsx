@@ -18,7 +18,7 @@ const ProfileInfo = (props) => {
             props.savePhoto(e.target.files[0])
         }
     }
-
+    //TODO update profile (edit profile)
     return (
         <div>
             <div>
@@ -31,15 +31,15 @@ const ProfileInfo = (props) => {
                 <ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus} /> {/*status*/}
 
                 <div>
-                    Name: {props.profile.fullName}
+                    <b>Name: </b>{props.profile.fullName}
                 </div>
                 <hr/>
                 <div>
-                    Description: {props.profile.aboutMe}
+                    <b>About me: </b>{props.profile.aboutMe}
                 </div>
                 <hr/>
                 <div>
-                    Contacts:
+                    <b>Contacts: </b>
                     {isEveryNull &&<ul>
                         {contacts.map(([key, value]) => {
                             return value != null ? <li>{key}: {value}</li> : null;
@@ -48,8 +48,8 @@ const ProfileInfo = (props) => {
                 </div>
                 <hr/>
                 <div>
-                    <br/>lookingForAJob: {props.profile.lookingForAJob ? "YES" : "NO"}
-                    <br/>lookingForAJobDescription: {props.profile.lookingForAJobDescription ? props.profile.lookingForAJobDescription : "NOPE"}
+                    <br/><b>lookingForAJob: </b>{props.profile.lookingForAJob ? "YES" : "NO"}
+                    <br/><b>lookingForAJobDescription: </b>{props.profile.lookingForAJobDescription ? props.profile.lookingForAJobDescription : "NOPE"}
                 </div>
 
             </div>

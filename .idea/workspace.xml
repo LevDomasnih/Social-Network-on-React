@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v0.94 use =&gt; React.lazy and React.Suspense;&#10;description =&gt; optimization of site loading, add new HOC;&#10;add to npm =&gt; nothing;&#10;create =&gt; withSuspense.js;&#10;delete =&gt; nothing;&#10;edit =&gt; App.js">
+    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v0.96 download avatar for user profile;&#10;use =&gt; nothing;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; api.js&#10;        App.js&#10;        Profile.jsx&#10;        ProfileContainer.jsx&#10;        ProfileInfo.jsx&#10;        ProfileInfo.module.css&#10;        profileReducer.js">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/API/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/Login.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/profileReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profileReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileStatusWithHooks.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileStatusWithHooks.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,7 +220,7 @@
       <workItem from="1610370292656" duration="12750000" />
       <workItem from="1610440193473" duration="12724000" />
       <workItem from="1610475122637" duration="16000" />
-      <workItem from="1610884842529" duration="4981000" />
+      <workItem from="1610884842529" duration="8681000" />
     </task>
     <task id="LOCAL-00001" summary="v0.35.5">
       <created>1608037498250</created>
@@ -462,7 +460,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610459008851</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="v0.96 download avatar for user profile;&#10;use =&gt; nothing;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; api.js&#10;        App.js&#10;        Profile.jsx&#10;        ProfileContainer.jsx&#10;        ProfileInfo.jsx&#10;        ProfileInfo.module.css&#10;        profileReducer.js">
+      <created>1610889942035</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1610889942035</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -493,7 +498,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="v0.66 add =&gt; redux-thunk to npm; refactor =&gt; UsersContainer, HeaderContainer(auth), ProfileContainer - Request has come to eponymous reducer" />
     <MESSAGE value="v0.67 create =&gt; Login directory; use =&gt; Redirect of react-router-dom;&#10;add to npm =&gt; nothing ; refactor =&gt; authentication check in Profile and Dialogs" />
     <MESSAGE value="v0.69 create =&gt; hoc directory, withAuthRedirect.js; use =&gt; High Order Component (HOC);&#10;add to npm =&gt; nothing ; refactor =&gt; authentication check in Profile and Dialogs by dint of HOC" />
     <MESSAGE value="v0.70 create =&gt; nothing; use =&gt; compose;&#10;add to npm =&gt; nothing; refactor =&gt; authentication check in Profile, Dialogs and Users by dint of HOC and compose" />
@@ -518,7 +522,8 @@
     <MESSAGE value="v0.92 use =&gt; Testing Components;&#10;description =&gt; return App.test.js, Test Components;&#10;add to npm =&gt; react-test-renderer;&#10;create =&gt; App.test.js, ProfileStatus.test.jsx;&#10;delete =&gt; nothing;&#10;edit =&gt; App.js, index.js" />
     <MESSAGE value="v0.93 use =&gt; Paginator;&#10;description =&gt; refactor Paginator;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; Paginator.jsx&#10;        Paginator.module.css&#10;        Users.jsx&#10;        UsersContainer.jsx&#10;        usersReducer.js" />
     <MESSAGE value="v0.94 use =&gt; React.lazy and React.Suspense;&#10;description =&gt; optimization of site loading, add new HOC;&#10;add to npm =&gt; nothing;&#10;create =&gt; withSuspense.js;&#10;delete =&gt; nothing;&#10;edit =&gt; App.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="v0.94 use =&gt; React.lazy and React.Suspense;&#10;description =&gt; optimization of site loading, add new HOC;&#10;add to npm =&gt; nothing;&#10;create =&gt; withSuspense.js;&#10;delete =&gt; nothing;&#10;edit =&gt; App.js" />
+    <MESSAGE value="v0.96 download avatar for user profile;&#10;use =&gt; nothing;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; api.js&#10;        App.js&#10;        Profile.jsx&#10;        ProfileContainer.jsx&#10;        ProfileInfo.jsx&#10;        ProfileInfo.module.css&#10;        profileReducer.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="v0.96 download avatar for user profile;&#10;use =&gt; nothing;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; api.js&#10;        App.js&#10;        Profile.jsx&#10;        ProfileContainer.jsx&#10;        ProfileInfo.jsx&#10;        ProfileInfo.module.css&#10;        profileReducer.js" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
