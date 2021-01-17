@@ -18,8 +18,6 @@ const ProfileContainer = React.lazy(() => import('./components/Profile/ProfileCo
 const UsersContainer = React.lazy(() => import('./components/Users/UsersContainer'));
 const Login = React.lazy(() => import('./components/Login/Login'));
 
-
-
 class App extends React.Component {
     componentDidMount() {
         this.props.initializeApp()

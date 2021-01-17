@@ -1,6 +1,7 @@
 import React from 'react';
-import classes from './ProfileInfo.module.css';
+import style from './ProfileInfo.module.css'
 import Preloader from "../../common/Preloader/Preloader";
+import userPhoto from '../../../assets/images/userPhoto.jpg'
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 
 const ProfileInfo = (props) => {
@@ -9,8 +10,14 @@ const ProfileInfo = (props) => {
     }
 
     const contacts = Object.entries(props.profile.contacts)
-    let isEveryNull = Object.values(props.profile.contacts);
-    isEveryNull = isEveryNull.some(elem => elem != null);
+    let isEveryNull = Object.values(props.profile.contacts)
+    isEveryNull = isEveryNull.some(elem => elem != null)
+
+    const onMainPhotoSelected = (e) => {
+        if (e.target.files.length) {
+            props.savePhoto(e.target.files[0])
+        }
+    }
 
     return (
         <div>
@@ -18,9 +25,9 @@ const ProfileInfo = (props) => {
                 <img
                     src='https://strana.ua/img/article/2625/70_main.jpeg'/>
             </div>
-            <div className={classes.descriptionBlock}>
-                <img src={props.profile.photos.large} />
-
+            <div className={style.descriptionBlock}>
+                <img src={props.profile.photos.large || userPhoto} className={style.mainPhoto} />
+                { props.isOwner && <input type={'file'} onChange={onMainPhotoSelected} /> }
                 <ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus} /> {/*status*/}
 
                 <div>
@@ -48,6 +55,6 @@ const ProfileInfo = (props) => {
             </div>
         </div>
     )
-};
+}
 
 export default ProfileInfo;

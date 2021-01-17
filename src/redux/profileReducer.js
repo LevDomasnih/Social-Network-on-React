@@ -1,9 +1,10 @@
-import {ProfileAPI} from "../API/api";
+import {ProfileAPI} from "../API/api"
 
-const ADD_POST = 'my-app/profileReducer/ADD-POST';
-const SET_USER_PROFILE = 'my-app/profileReducer/SET_USER_PROFILE';
-const SET_STATUS = 'my-app/profileReducer/SET_STATUS';
-const DELETE_POST = 'my-app/profileReducer/DELETE_POST';
+const ADD_POST = 'my-app/profileReducer/ADD-POST'
+const SET_USER_PROFILE = 'my-app/profileReducer/SET_USER_PROFILE'
+const SET_STATUS = 'my-app/profileReducer/SET_STATUS'
+const DELETE_POST = 'my-app/profileReducer/DELETE_POST'
+const SAVE_PHOTO_SUCCESS = 'SAVE_PHOTO_SUCCESS'
 
 
 let initialState = {
@@ -31,6 +32,9 @@ const profileReducer = (state = initialState, action) => {
             return {...state, status: action.status};
         case DELETE_POST:
             return {...state, posts: state.posts.filter(p => p.id != action.postId)}
+        case SAVE_PHOTO_SUCCESS:
+            debugger
+            return {...state, profile: {...state.profile, photos: action.photos}}
         default:
             return state;
     }
@@ -38,24 +42,32 @@ const profileReducer = (state = initialState, action) => {
 
 export default profileReducer;
 
-export const addPost = (newPost) => ({type: ADD_POST, newPost});
-export const setUsersProfile = (profile) => ({type: SET_USER_PROFILE, profile});
-export const setStatus = (status) => ({type: SET_STATUS, status});
+export const addPost = (newPost) => ({type: ADD_POST, newPost})
+export const setUsersProfile = (profile) => ({type: SET_USER_PROFILE, profile})
+export const setStatus = (status) => ({type: SET_STATUS, status})
 export const deletePost = (postId) => ({type: DELETE_POST, postId})
+export const savePhotoSuccess = (photos) => ({type: SAVE_PHOTO_SUCCESS, photos})
 
 
 export const getUserProfile = (userId) => async (dispatch) => {
     const response = await ProfileAPI.getUserProfile(userId)
-    dispatch(setUsersProfile(response));
+    dispatch(setUsersProfile(response))
 }
 
 export const getStatus = (userId) => async (dispatch) => {
     const response = await ProfileAPI.getStatus(userId)
-    dispatch(setStatus(response));
+    dispatch(setStatus(response))
 }
 
 export const updateStatus = (status) => async (dispatch) => {
     const response = await ProfileAPI.updateStatus(status)
-    if (response.resultCode !== 0) return;
-    dispatch(setStatus(status));
+    if (response.resultCode !== 0) return
+    dispatch(setStatus(status))
+}
+
+export const savePhoto = (file) => async (dispatch) => {
+    const response = await ProfileAPI.savePhoto(file)
+    if (response.resultCode !== 0) return
+
+    dispatch(savePhotoSuccess(response.data.photos))
 }
