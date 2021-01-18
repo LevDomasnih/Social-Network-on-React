@@ -1,4 +1,4 @@
-import profileReducer, {addPost, deletePost} from "./profileReducer.js";
+import profileReducer, {addPost, deletePost} from "./profileReducer.ts";
 import ReactDOM from "react-dom";
 import App from "../App";
 import React from "react";
