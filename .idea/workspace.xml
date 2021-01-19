@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v0.60.5 bug fix">
-      <change afterPath="$PROJECT_DIR$/src/types/types.ts" afterDir="false" />
+    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v1.00 description =&gt; fix routers;&#10;use =&gt; react-router, switch;&#10;add to npm =&gt; nothing;&#10;create =&gt; withSuspense.js;&#10;delete =&gt; nothing;&#10;edit =&gt; App.js&#10;        index.js&#10;        Login.jsx&#10;        ProfileInfo.jsx&#10;        ProfileStatusWithHooks.jsx">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPostsContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPostsContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileStatusWithHooks.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileStatusWithHooks.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Users/Users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Users.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Users/UsersContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Paginator/Paginator.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Paginator/Paginator.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/profileReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profileReducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/sidebarReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/sidebarReducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/usersReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/usersReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reduxStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reduxStore.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/sidebarReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/sidebarReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/usersReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/usersReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/usersSelectors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/usersSelectors.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/types.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +41,19 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/App.js" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="1lSeM4vUsYQ4dFQ5vKkrl8fBZDi" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -43,24 +66,25 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Profile" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../test-mobx" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="ts.external.directory.path" value="C:\Users\Лев\my-app\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="C:\Users\levdo\Documents\GitHub\my-app\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\components\Profile" />
-      <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\components\common\Preloader" />
-      <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\assets\images" />
-      <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\components\Users" />
       <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\redux" />
+      <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\components\Profile\ProfileInfo" />
+      <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\components\common\FormsControls" />
+      <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\components\Navbar" />
+      <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\components\Header" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\components\Profile\MyPosts" />
@@ -69,8 +93,74 @@
       <recent name="C:\Users\Лев\my-app\src\components\Header" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="run" type="js.build_tools.npm" nameIsGenerated="true">
+  <component name="RunManager" selected="npm.start">
+    <configuration name="ProfileStatus component" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileStatus.test.jsx" />
+      <test-names>
+        <test-name value="ProfileStatus component" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="ProfileStatus component.status from props should be in the state" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileStatus.test.jsx" />
+      <test-names>
+        <test-name value="ProfileStatus component" />
+        <test-name value="status from props should be in the state" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="after deleting length of messages should be decrement" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/redux/profileReducer.test.js" />
+      <test-names>
+        <test-name value="after deleting length of messages should be decrement" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="after deleting length shouldn't be decrement if id is incorrect" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/redux/profileReducer.test.js" />
+      <test-names>
+        <test-name value="after deleting length shouldn't be decrement if id is incorrect" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="renders without crashing" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/App.test.js" />
+      <test-names>
+        <test-name value="renders without crashing" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
@@ -80,6 +170,34 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="test" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Jest.after deleting length of messages should be decrement" />
+      <item itemvalue="Jest.after deleting length shouldn't be decrement if id is incorrect" />
+      <item itemvalue="Jest.renders without crashing" />
+      <item itemvalue="Jest.ProfileStatus component" />
+      <item itemvalue="Jest.ProfileStatus component.status from props should be in the state" />
+      <item itemvalue="npm.start" />
+      <item itemvalue="npm.test" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.ProfileStatus component" />
+        <item itemvalue="Jest.ProfileStatus component.status from props should be in the state" />
+        <item itemvalue="Jest.renders without crashing" />
+        <item itemvalue="Jest.after deleting length shouldn't be decrement if id is incorrect" />
+        <item itemvalue="Jest.after deleting length of messages should be decrement" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -100,8 +218,26 @@
       <workItem from="1608406836160" duration="9930000" />
       <workItem from="1608453433486" duration="14022000" />
       <workItem from="1608494473982" duration="7459000" />
-      <workItem from="1608562412493" duration="3483000" />
-      <workItem from="1611035363246" duration="2691000" />
+      <workItem from="1608562412493" duration="1312000" />
+      <workItem from="1608748470705" duration="9492000" />
+      <workItem from="1608914689745" duration="2650000" />
+      <workItem from="1609080883970" duration="11370000" />
+      <workItem from="1609174370704" duration="14291000" />
+      <workItem from="1609239796457" duration="531000" />
+      <workItem from="1609256118938" duration="12232000" />
+      <workItem from="1609319475546" duration="19315000" />
+      <workItem from="1609971394925" duration="47000" />
+      <workItem from="1610020938585" duration="11435000" />
+      <workItem from="1610113407971" duration="1332000" />
+      <workItem from="1610184815227" duration="23346000" />
+      <workItem from="1610280001373" duration="12038000" />
+      <workItem from="1610304656688" duration="3000" />
+      <workItem from="1610370292656" duration="12750000" />
+      <workItem from="1610440193473" duration="12724000" />
+      <workItem from="1610475122637" duration="16000" />
+      <workItem from="1610884842529" duration="10032000" />
+      <workItem from="1610993082626" duration="1284000" />
+      <workItem from="1610996188472" duration="3132000" />
     </task>
     <task id="LOCAL-00001" summary="v0.35.5">
       <created>1608037498250</created>
@@ -152,14 +288,210 @@
       <option name="project" value="LOCAL" />
       <updated>1608470199560</updated>
     </task>
-    <task id="LOCAL-00008" summary="v0.60.5 bug fix">
-      <created>1608576749398</created>
+    <task id="LOCAL-00008" summary="v0.61 add =&gt; login, cookie; refactor =&gt; Header">
+      <created>1608650214133</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1608576749398</updated>
+      <updated>1608650214133</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="v0.62 add =&gt; follow/unfollow; refactor =&gt; Users">
+      <created>1608668096247</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1608668096247</updated>
+    </task>
+    <task id="LOCAL-00010" summary="v0.64 add =&gt; Api for request(DAL node); refactor =&gt; Friends in Navbar, button in Users">
+      <created>1608758252118</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1608758252118</updated>
+    </task>
+    <task id="LOCAL-00011" summary="v0.66 add =&gt; redux-thunk to npm; refactor =&gt; UsersContainer, HeaderContainer(auth), ProfileContainer - Request has come to eponymous reducer">
+      <created>1609091346808</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1609091346808</updated>
+    </task>
+    <task id="LOCAL-00012" summary="v0.67 create =&gt; Login directory; use =&gt; Redirect of react-router-dom;&#10;add to npm =&gt; nothing ; refactor =&gt; authentication check in Profile and Dialogs">
+      <created>1609105647401</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1609105647401</updated>
+    </task>
+    <task id="LOCAL-00013" summary="v0.69 create =&gt; hoc directory, withAuthRedirect.js; use =&gt; High Order Component (HOC);&#10;add to npm =&gt; nothing ; refactor =&gt; authentication check in Profile and Dialogs by dint of HOC">
+      <created>1609183407668</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1609183407668</updated>
+    </task>
+    <task id="LOCAL-00014" summary="v0.70 create =&gt; nothing; use =&gt; compose;&#10;add to npm =&gt; nothing; refactor =&gt; authentication check in Profile, Dialogs and Users by dint of HOC and compose">
+      <created>1609185025388</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1609185025388</updated>
+    </task>
+    <task id="LOCAL-00015" summary="v0.71 create =&gt; ProfileStatus.jsx; edit =&gt; Dialogs.jsx, ProfileInfo.jsx; &#10;use =&gt; local state;&#10;add to npm =&gt; nothing; refactor =&gt; local state for ProfileStatus.jsx">
+      <created>1609191129338</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1609191129338</updated>
+    </task>
+    <task id="LOCAL-00016" summary="v0.73 use =&gt; local state, http put;&#10;refactor =&gt; put and get request for status;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; api, Profile.jsx, ProfileContainer.jsx, ProfileInfo.jsx, profileReducer.js, ProfileStatus.jsx">
+      <created>1609265205473</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1609265205473</updated>
+    </task>
+    <task id="LOCAL-00017" summary="v0.74 use =&gt; componentDidUpdate;&#10;refactor =&gt; componentDidUpdate for user status;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; ProfileStatus.jsx">
+      <created>1609268958111</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1609268958111</updated>
+    </task>
+    <task id="LOCAL-00018" summary="v0.75 use =&gt; redux-form;&#10;refactor =&gt; form for Login;&#10;add to npm =&gt; redux-form;&#10;create =&gt; nothing;&#10;edit =&gt; Login.jsx, reduxStore.js">
+      <created>1609277266510</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1609277266510</updated>
+    </task>
+    <task id="LOCAL-00019" summary="v0.76 use =&gt; redux-form;&#10;refactor =&gt; form for message of Dialogs and post of Profile, post add to top, many minor change;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; Dialogs.jsx, DialogsContainer.jsx, dialogsReducer.js, Friends.jsx, Login.jsx, MyPosts.jsx, MyPostsContainer.jsx, profileReducer.js">
+      <created>1609331666969</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1609331666969</updated>
+    </task>
+    <task id="LOCAL-00020" summary="v0.77 use =&gt; validators from redux-form;&#10;refactor =&gt; validators for Post and Login;&#10;add to npm =&gt; nothing;&#10;create =&gt; FormsControls.js, FormsControls.module.css, validators.js;&#10;edit =&gt; Login.jsx, MyPosts.jsx">
+      <created>1609349834724</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1609349834724</updated>
+    </task>
+    <task id="LOCAL-00021" summary="v0.78 use =&gt; login and logout API;&#10;refactor =&gt; login and logout for Login.jsx;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; api.js, authReducer.js, Header.jsx, HeaderContainer.jsx, Login.jsx">
+      <created>1610193468518</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1610193468518</updated>
+    </task>
+    <task id="LOCAL-00022" summary="v0.79 use =&gt; stopSubmit (redux-form);&#10;refactor =&gt; stopSubmit for Login.jsx;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; authReducer.js, FormsControls.module.css, Login.jsx, ProfileContainer.jsx">
+      <created>1610209865361</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1610209865361</updated>
+    </task>
+    <task id="LOCAL-00023" summary="v0.80 use =&gt; Initialize App;&#10;refactor =&gt; Initialize App in App.js;&#10;add to npm =&gt; nothing;&#10;create =&gt; appReducer.js;&#10;edit =&gt; App.js, authReducer.js, HeaderContainer.jsx, ProfileContainer.jsx, reduxStore.js, UsersContainer.jsx">
+      <created>1610220313197</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1610220313197</updated>
+    </task>
+    <task id="LOCAL-00024" summary="v0.81 use =&gt; reselect;&#10;refactor =&gt; reselect for UsersContainer.jsx;&#10;add to npm =&gt; nothing;&#10;create =&gt; usersSelectors.js;&#10;edit =&gt; Users.jsx, UsersContainer.jsx, usersReducer.js">
+      <created>1610229113935</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1610229113935</updated>
+    </task>
+    <task id="LOCAL-00025" summary="v0.83 use =&gt; reselect (createSelector);&#10;refactor =&gt; reselect for UsersContainer.jsx;&#10;add to npm =&gt; reselect;&#10;create =&gt; nothing;&#10;edit =&gt; usersSelectors.js">
+      <created>1610235606105</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1610235606105</updated>
+    </task>
+    <task id="LOCAL-00026" summary="v0.84 use =&gt; Hooks (useState);&#10;refactor =&gt; useState for ProfileStatus;&#10;add to npm =&gt; nothing;&#10;create =&gt; ProfileStatusWithHooks.jsx;&#10;edit =&gt; ProfileInfo.jsx, ProfileStatus.jsx">
+      <created>1610286262603</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1610286262603</updated>
+    </task>
+    <task id="LOCAL-00027" summary="v0.85 use =&gt; Hooks (useEffect);&#10;refactor =&gt; useEffect for ProfileStatus;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; ProfileStatusWithHooks.jsx">
+      <created>1610288552036</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1610288552036</updated>
+    </task>
+    <task id="LOCAL-00028" summary="v0.87 use =&gt; React.memo;&#10;refactor =&gt; React.memo for Posts;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; MyPosts.jsx">
+      <created>1610298427074</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1610298427074</updated>
+    </task>
+    <task id="LOCAL-00029" summary="v0.89 use =&gt; Tests, Jest, tdd;&#10;refactor =&gt; Testing of Reducer;&#10;add to npm =&gt; nothing;&#10;create =&gt; profileReducer.test.js;&#10;delete =&gt; ProfileStatus.jsx, App.test.js;&#10;edit =&gt; ProfileInfo.jsx, profileReducer.js">
+      <created>1610304238308</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1610304238308</updated>
+    </task>
+    <task id="LOCAL-00030" summary="v0.90 use =&gt; Redux-ducks, async/await;&#10;refactor =&gt; action on Redux-ducks, async/await instead then in reducers;&#10;add to npm =&gt; nothing;&#10;create =&gt; Paginator.jsx, Paginator.module.css;&#10;delete =&gt; nothing;&#10;edit =&gt; api.js,&#10;        appReducer.js,&#10;        authReducer.js,&#10;        dialogsReducer.js,&#10;        profileReducer.js,&#10;        user.module.css,&#10;        Users.jsx,&#10;        UsersContainer.jsx,&#10;        usersReducer.js">
+      <created>1610396299418</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1610396299418</updated>
+    </task>
+    <task id="LOCAL-00031" summary="v0.91 use =&gt; Connections with Redux DevTools;&#10;refactor =&gt; Connect store with Redux DevTools;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; reduxStore.js">
+      <created>1610398953914</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1610398953914</updated>
+    </task>
+    <task id="LOCAL-00032" summary="v0.92 use =&gt; Testing Components;&#10;description =&gt; return App.test.js, Test Components;&#10;add to npm =&gt; react-test-renderer;&#10;create =&gt; App.test.js, ProfileStatus.test.jsx;&#10;delete =&gt; nothing;&#10;edit =&gt; App.js, index.js">
+      <created>1610404700548</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1610404700548</updated>
+    </task>
+    <task id="LOCAL-00033" summary="v0.93 use =&gt; Paginator;&#10;description =&gt; refactor Paginator;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; Paginator.jsx&#10;        Paginator.module.css&#10;        Users.jsx&#10;        UsersContainer.jsx&#10;        usersReducer.js">
+      <created>1610453544088</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1610453544088</updated>
+    </task>
+    <task id="LOCAL-00034" summary="v0.94 use =&gt; React.lazy and React.Suspense;&#10;description =&gt; optimization of site loading, add new HOC;&#10;add to npm =&gt; nothing;&#10;create =&gt; withSuspense.js;&#10;delete =&gt; nothing;&#10;edit =&gt; App.js">
+      <created>1610459008851</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1610459008851</updated>
+    </task>
+    <task id="LOCAL-00035" summary="v0.96 download avatar for user profile;&#10;use =&gt; nothing;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; api.js&#10;        App.js&#10;        Profile.jsx&#10;        ProfileContainer.jsx&#10;        ProfileInfo.jsx&#10;        ProfileInfo.module.css&#10;        profileReducer.js">
+      <created>1610889942035</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1610889942035</updated>
+    </task>
+    <task id="LOCAL-00036" summary="v1.00 description =&gt; fix routers;&#10;use =&gt; react-router, switch;&#10;add to npm =&gt; nothing;&#10;create =&gt; withSuspense.js;&#10;delete =&gt; nothing;&#10;edit =&gt; App.js&#10;        index.js&#10;        Login.jsx&#10;        ProfileInfo.jsx&#10;        ProfileStatusWithHooks.jsx">
+      <created>1610894583633</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1610894583633</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,25 +522,31 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="v0.35.5" />
-    <MESSAGE value="v0.42" />
-    <MESSAGE value="v0.44 ADD Context API" />
-    <MESSAGE value="v0.46.5" />
-    <MESSAGE value="v0.52 add =&gt; axios" />
-    <MESSAGE value="v0.55 refactor =&gt; pagination" />
-    <MESSAGE value="v0.58 add =&gt; classnames to npm, preloader; refactor =&gt; Users" />
-    <MESSAGE value="v0.60.5 bug fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="v0.60.5 bug fix" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/Navbar/Navbar.jsx</url>
-          <line>26</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="v0.69 create =&gt; hoc directory, withAuthRedirect.js; use =&gt; High Order Component (HOC);&#10;add to npm =&gt; nothing ; refactor =&gt; authentication check in Profile and Dialogs by dint of HOC" />
+    <MESSAGE value="v0.70 create =&gt; nothing; use =&gt; compose;&#10;add to npm =&gt; nothing; refactor =&gt; authentication check in Profile, Dialogs and Users by dint of HOC and compose" />
+    <MESSAGE value="v0.71 create =&gt; ProfileStatus.jsx; edit =&gt; Dialogs.jsx, ProfileInfo.jsx; &#10;use =&gt; local state;&#10;add to npm =&gt; nothing; refactor =&gt; local state for ProfileStatus.jsx" />
+    <MESSAGE value="v0.71 use =&gt; local state, http put;&#10;refactor =&gt; put and get request for status;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; api, Profile.jsx, ProfileContainer.jsx, ProfileInfo.jsx, profileReducer.js, ProfileStatus.jsx" />
+    <MESSAGE value="v0.73 use =&gt; local state, http put;&#10;refactor =&gt; put and get request for status;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; api, Profile.jsx, ProfileContainer.jsx, ProfileInfo.jsx, profileReducer.js, ProfileStatus.jsx" />
+    <MESSAGE value="v0.74 use =&gt; componentDidUpdate;&#10;refactor =&gt; componentDidUpdate for user status;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; ProfileStatus.jsx" />
+    <MESSAGE value="v0.75 use =&gt; redux-form;&#10;refactor =&gt; form for Login;&#10;add to npm =&gt; redux-form;&#10;create =&gt; nothing;&#10;edit =&gt; Login.jsx, reduxStore.js" />
+    <MESSAGE value="v0.76 use =&gt; redux-form;&#10;refactor =&gt; form for message of Dialogs and post of Profile, post add to top, many minor change;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; Dialogs.jsx, DialogsContainer.jsx, dialogsReducer.js, Friends.jsx, Login.jsx, MyPosts.jsx, MyPostsContainer.jsx, profileReducer.js" />
+    <MESSAGE value="v0.77 use =&gt; validators from redux-form;&#10;refactor =&gt; validators for Post and Login;&#10;add to npm =&gt; nothing;&#10;create =&gt; FormsControls.js, FormsControls.module.css, validators.js;&#10;edit =&gt; Login.jsx, MyPosts.jsx" />
+    <MESSAGE value="v0.78 use =&gt; login and logout API;&#10;refactor =&gt; login and logout for Login.jsx;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; api.js, authReducer.js, Header.jsx, HeaderContainer.jsx, Login.jsx" />
+    <MESSAGE value="v0.79 use =&gt; stopSubmit (redux-form);&#10;refactor =&gt; stopSubmit for Login.jsx;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; authReducer.js, FormsControls.module.css, Login.jsx, ProfileContainer.jsx" />
+    <MESSAGE value="v0.80 use =&gt; Initialize App;&#10;refactor =&gt; Initialize App in App.js;&#10;add to npm =&gt; nothing;&#10;create =&gt; appReducer.js;&#10;edit =&gt; App.js, authReducer.js, HeaderContainer.jsx, ProfileContainer.jsx, reduxStore.js, UsersContainer.jsx" />
+    <MESSAGE value="v0.81 use =&gt; reselect;&#10;refactor =&gt; reselect for UsersContainer.jsx;&#10;add to npm =&gt; nothing;&#10;create =&gt; usersSelectors.js;&#10;edit =&gt; Users.jsx, UsersContainer.jsx, usersReducer.js" />
+    <MESSAGE value="v0.83 use =&gt; reselect (createSelector);&#10;refactor =&gt; reselect for UsersContainer.jsx;&#10;add to npm =&gt; reselect;&#10;create =&gt; nothing;&#10;edit =&gt; usersSelectors.js" />
+    <MESSAGE value="v0.84 use =&gt; Hooks (useState);&#10;refactor =&gt; useState for ProfileStatus;&#10;add to npm =&gt; nothing;&#10;create =&gt; ProfileStatusWithHooks.jsx;&#10;edit =&gt; ProfileInfo.jsx, ProfileStatus.jsx" />
+    <MESSAGE value="v0.85 use =&gt; Hooks (useEffect);&#10;refactor =&gt; useEffect for ProfileStatus;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; ProfileStatusWithHooks.jsx" />
+    <MESSAGE value="v0.87 use =&gt; React.memo;&#10;refactor =&gt; React.memo for Posts;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; MyPosts.jsx" />
+    <MESSAGE value="v0.89 use =&gt; Tests, Jest, tdd;&#10;refactor =&gt; Testing of Reducer;&#10;add to npm =&gt; nothing;&#10;create =&gt; profileReducer.test.js;&#10;delete =&gt; ProfileStatus.jsx, App.test.js;&#10;edit =&gt; ProfileInfo.jsx, profileReducer.js" />
+    <MESSAGE value="v0.90 use =&gt; Redux-ducks, async/await;&#10;refactor =&gt; action on Redux-ducks, async/await instead then in reducers;&#10;add to npm =&gt; nothing;&#10;create =&gt; Paginator.jsx, Paginator.module.css;&#10;delete =&gt; nothing;&#10;edit =&gt; api.js,&#10;        appReducer.js,&#10;        authReducer.js,&#10;        dialogsReducer.js,&#10;        profileReducer.js,&#10;        user.module.css,&#10;        Users.jsx,&#10;        UsersContainer.jsx,&#10;        usersReducer.js" />
+    <MESSAGE value="v0.91 use =&gt; Connections with Redux DevTools;&#10;refactor =&gt; Connect store with Redux DevTools;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; reduxStore.js" />
+    <MESSAGE value="v0.92 use =&gt; Testing Components;&#10;description =&gt; return App.test.js, Test Components;&#10;add to npm =&gt; react-test-renderer;&#10;create =&gt; App.test.js, ProfileStatus.test.jsx;&#10;delete =&gt; nothing;&#10;edit =&gt; App.js, index.js" />
+    <MESSAGE value="v0.93 use =&gt; Paginator;&#10;description =&gt; refactor Paginator;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; Paginator.jsx&#10;        Paginator.module.css&#10;        Users.jsx&#10;        UsersContainer.jsx&#10;        usersReducer.js" />
+    <MESSAGE value="v0.94 use =&gt; React.lazy and React.Suspense;&#10;description =&gt; optimization of site loading, add new HOC;&#10;add to npm =&gt; nothing;&#10;create =&gt; withSuspense.js;&#10;delete =&gt; nothing;&#10;edit =&gt; App.js" />
+    <MESSAGE value="v0.96 download avatar for user profile;&#10;use =&gt; nothing;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; api.js&#10;        App.js&#10;        Profile.jsx&#10;        ProfileContainer.jsx&#10;        ProfileInfo.jsx&#10;        ProfileInfo.module.css&#10;        profileReducer.js" />
+    <MESSAGE value="v1.00 description =&gt; fix routers;&#10;use =&gt; react-router, switch;&#10;add to npm =&gt; nothing;&#10;create =&gt; withSuspense.js;&#10;delete =&gt; nothing;&#10;edit =&gt; App.js&#10;        index.js&#10;        Login.jsx&#10;        ProfileInfo.jsx&#10;        ProfileStatusWithHooks.jsx" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.00 description =&gt; fix routers;&#10;use =&gt; react-router, switch;&#10;add to npm =&gt; nothing;&#10;create =&gt; withSuspense.js;&#10;delete =&gt; nothing;&#10;edit =&gt; App.js&#10;        index.js&#10;        Login.jsx&#10;        ProfileInfo.jsx&#10;        ProfileStatusWithHooks.jsx" />
   </component>
 </project>

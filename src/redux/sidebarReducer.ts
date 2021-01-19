@@ -19,7 +19,9 @@ let initialState = {
     ]
 }
 
-const sidebarReducer = (state = initialState, action) => {
+type InitialStateType = typeof initialState
+
+const sidebarReducer = (state = initialState, action: any) => {
     //      In progress
     return state;
 }

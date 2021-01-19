@@ -1,11 +1,12 @@
 import {ProfileAPI} from "../API/api"
+import {PostType, ProfileType, PhotosType} from "../types/types";
 
 const ADD_POST = 'my-app/profileReducer/ADD-POST'
 const SET_USER_PROFILE = 'my-app/profileReducer/SET_USER_PROFILE'
 const SET_STATUS = 'my-app/profileReducer/SET_STATUS'
 const DELETE_POST = 'my-app/profileReducer/DELETE_POST'
 const SAVE_PHOTO_SUCCESS = 'SAVE_PHOTO_SUCCESS'
-import {PostType, ProfileType, PhotosType} from "../types/types";
+
 
 let initialState = {
     posts: [

@@ -3,15 +3,28 @@ import classes from './user.module.css';
 import userPhoto from '../../assets/images/userPhoto.jpg';
 import {NavLink} from "react-router-dom";
 import Paginator from "../common/Paginator/Paginator";
+import {UserType} from "../../types/types";
 
-const Users = (props) => {
+type PropsType = {
+    totalUsersCount: number
+    pageSize: number
+    currentPage: number
+    onPageChanged: (pageNumber: number) => void
+    users: Array<UserType>
+    followingInProgress: Array<number>
+    unfollowUsers: (userId: number) => void
+    followUsers: (userId: number) => void
+}
+
+const Users: React.FC<PropsType> = ({currentPage, totalUsersCount, pageSize, onPageChanged, users,
+                                        ...props}) => {
     return (
         <div>
             <div>
-                <Paginator currentPage={props.currentPage} totalItemsCount={props.totalUsersCount}
-                           pageSize={props.pageSize} onPageChanged={props.onPageChanged}/>
+                <Paginator currentPage={currentPage} totalItemsCount={totalUsersCount}
+                           pageSize={pageSize} onPageChanged={onPageChanged}/>
             </div>
-            {props.users.map((u) => (
+            {users.map((u: any) => (
                     <div key={u.id}>
                     <span>
                         <div>

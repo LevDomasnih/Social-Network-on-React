@@ -5,8 +5,31 @@ import {withRouter} from 'react-router-dom';
 import {getStatus, getUserProfile, savePhoto, updateStatus} from "../../redux/profileReducer";
 import {withAuthRedirect} from "../../hoc/withAuthRedirect";
 import {compose} from "redux";
+import {ProfileType} from "../../types/types";
+import {AppStateType} from "../../redux/reduxStore";
 
-class ProfileContainer extends React.Component {
+type MapStatePropsType = {
+    profile: null | ProfileType
+    status: string
+    authorizedUserId: null | number
+    isAuth: boolean
+}
+
+type MapDispatchPropsType = {
+    getUserProfile: (userId: number) => void
+    getStatus: (userId: number) => void
+    updateStatus: (status: string) => void
+    savePhoto: (file: any) => void
+}
+
+type OwnPropsType = {
+    match: any
+    history: any
+}
+
+type PropsType = MapStatePropsType & MapDispatchPropsType & OwnPropsType
+
+class ProfileContainer extends React.Component<PropsType> {
 
     refreshProfile() {
         let userId = this.props.match.params.userId;
@@ -25,7 +48,7 @@ class ProfileContainer extends React.Component {
         this.refreshProfile()
     }
 
-    componentDidUpdate(prevProps, prevState, snapshot) {
+    componentDidUpdate(prevProps: PropsType, prevState: PropsType) {
         if (this.props.match.params.userId != prevProps.match.params.userId) {
             this.refreshProfile()
         }
@@ -41,7 +64,7 @@ class ProfileContainer extends React.Component {
     }
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state: AppStateType): MapStatePropsType => ({
     profile: state.profilePage.profile,
     status: state.profilePage.status,
     authorizedUserId: state.auth.userId,
@@ -49,7 +72,7 @@ const mapStateToProps = (state) => ({
 })
 
 export default compose(
-    connect(mapStateToProps, { getUserProfile, getStatus, updateStatus, savePhoto }),
+    connect<MapStatePropsType, MapDispatchPropsType, OwnPropsType, AppStateType>(mapStateToProps, { getUserProfile, getStatus, updateStatus, savePhoto }),
     withRouter,
     withAuthRedirect,
-)(ProfileContainer);
+)(ProfileContainer)

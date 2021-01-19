@@ -2,7 +2,6 @@ import React from 'react';
 import {connect} from "react-redux";
 import Users from "./Users";
 import {
-    setCurrentPage,
     requestUsers,
     unfollowUsers,
     followUsers,
@@ -17,14 +16,48 @@ import {
     getTotalUsersCount,
     getUsers
 } from "../../redux/usersSelectors";
+import {UserType} from "../../types/types";
+import {AppStateType} from "../../redux/reduxStore";
 
-class UsersContainer extends React.Component {
+type MapStatePropsType = {
+    users: Array<UserType>
+    pageSize: number
+    totalUsersCount: number
+    currentPage: number
+    isFetching: boolean
+    followingInProgress: Array<number>
+}
+
+type MapDispatchPropsType = {
+    requestUsers: (currentPage: number, pageSize: number) => void
+    unfollowUsers: (userId: number) => void
+    followUsers: (userId: number) => void
+}
+
+type OwnPropsType = {
+
+}
+
+type PropsType = MapStatePropsType & MapDispatchPropsType & OwnPropsType
+
+class UsersContainer extends React.Component<PropsType> {
     componentDidMount() {
-        this.props.requestUsers(this.props.currentPage, this.props.pageSize)
+        const {
+            requestUsers,
+            currentPage,
+            pageSize
+        } = this.props
+
+        requestUsers(currentPage, pageSize)
     }
 
-    onPageChanged = (page) => {
-        this.props.requestUsers(page, this.props.pageSize)
+    onPageChanged = (pageNumber: number) => {
+        const {
+            requestUsers,
+            pageSize
+        } = this.props
+
+        requestUsers(pageNumber, pageSize)
     }
 
     render() {
@@ -43,7 +76,7 @@ class UsersContainer extends React.Component {
     }
 }
 
-let mapStateToProps = (state) => {
+let mapStateToProps = (state: AppStateType): MapStatePropsType => {
     return {
         users: getUsers(state),
         pageSize: getPageSize(state),
@@ -55,8 +88,7 @@ let mapStateToProps = (state) => {
 }
 
 export default compose(
-    connect(mapStateToProps, {
-        setCurrentPage,
+    connect<MapStatePropsType, MapDispatchPropsType, OwnPropsType, AppStateType>(mapStateToProps, {
         requestUsers,
         unfollowUsers,
         followUsers,
