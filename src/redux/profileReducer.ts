@@ -5,37 +5,7 @@ const SET_USER_PROFILE = 'my-app/profileReducer/SET_USER_PROFILE'
 const SET_STATUS = 'my-app/profileReducer/SET_STATUS'
 const DELETE_POST = 'my-app/profileReducer/DELETE_POST'
 const SAVE_PHOTO_SUCCESS = 'SAVE_PHOTO_SUCCESS'
-
-type PostType = {
-    id: number
-    message: string
-    likesCount: number
-}
-
-export type ProfileType = {
-    userId: number
-    lookingForAJob: boolean
-    lookingForAJobDescription: string
-    fullName: string
-    contacts: ContactsType
-    photos: PhotosType
-}
-
-export type ContactsType = {
-    github: string
-    vk: string
-    facebook: string
-    instagram: string
-    twitter: string
-    website: string
-    youtube: string
-    mainLink: string
-}
-
-export type PhotosType = {
-    small: string | null
-    large: string | null
-}
+import {PostType, ProfileType, PhotosType} from "../types/types";
 
 let initialState = {
     posts: [
@@ -65,7 +35,7 @@ const profileReducer = (state = initialState, action: any) => {
             return {...state, posts: state.posts.filter(p => p.id != action.postId)}
         case SAVE_PHOTO_SUCCESS:
             debugger
-            return {...state, profile: {...state.profile, photos: action.photos}}
+            return {...state, profile: {...state.profile, photos: action.photos} as ProfileType}
         default:
             return state;
     }
@@ -77,7 +47,6 @@ type AddPostActionCreatorActionType = {
     type: typeof ADD_POST
     newPostText: string
 }
-
 export const addPost = (newPostText: string): AddPostActionCreatorActionType => ({type: ADD_POST, newPostText})
 type SetUserProfileActionType = {
     type: typeof SET_USER_PROFILE
