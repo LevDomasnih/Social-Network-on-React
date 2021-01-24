@@ -1,4 +1,4 @@
-import * as axios from "axios";
+import axios from "axios";
 
 const instance = axios.create({
     baseURL: 'https://social-network.samuraijs.com/api/1.0/',
@@ -14,31 +14,31 @@ export const usersAPI = {
             .then(response => response.data);
     },
 
-    followUsers(userId) {
+    followUsers(userId: number) {
         return instance.post(`follow/${userId}`)
             .then(response => response.data);
     },
 
-    unfollowUsers(userId) {
+    unfollowUsers(userId: number) {
         return instance.delete(`follow/${userId}`)
             .then(response => response.data);
     }
 };
 
 export const ProfileAPI = {
-    getUserProfile(userId) {
+    getUserProfile(userId: number) {
         return instance.get(`profile/` + userId)
             .then(response => response.data);
     },
-    getStatus(userId) {
+    getStatus(userId: number) {
         return instance.get(`profile/status/` + userId)
             .then(response => response.data);
     },
-    updateStatus(status) {
+    updateStatus(status: string) {
         return instance.put(`profile/status`, { status: status })
             .then(response => response.data);
     },
-    savePhoto(photoFile) {
+    savePhoto(photoFile: any) {
         const formData = new FormData()
         formData.append("image", photoFile)
 
@@ -49,15 +49,38 @@ export const ProfileAPI = {
         })
             .then(response => response.data);
     }
-};
+}
+
+export enum ResultCodesEnum {
+    Success = 0,
+    Error = 1
+}
+
+type MeResponseType = {
+    data: {
+        id: number
+        email: string
+        login: string
+    }
+    resultCode: ResultCodesEnum
+    messages: Array<string>
+}
+
+type LoginResponseType = {
+    data: {
+        userId: number
+    }
+    resultCode: ResultCodesEnum
+    messages: Array<string>
+}
 
 export const authAPI = {
     getAuthUserData() {
-        return instance.get(`auth/me`)
+        return instance.get<MeResponseType>(`auth/me`)
             .then(response => response.data);
     },
-    login(email, password, rememberMe = false) {
-        return instance.post(`auth/login`, { email, password, rememberMe })
+    login(email: string, password: string, rememberMe = false) {
+        return instance.post<LoginResponseType>(`auth/login`, { email, password, rememberMe })
             .then(response => response.data);
     },
     logout() {
