@@ -4,14 +4,21 @@ import Post from "./Post/Post";
 import {Field, reduxForm} from "redux-form";
 import {maxLengthCreator, required} from "../../../utils/validators/validators";
 import {Textarea} from "../../common/FormsControls/FormsControls";
+import {PostType} from "../../../types/types";
 
-const MyPosts = React.memo(props => {
+type PropsType = {
+    addPost: (values: string) => void
+    posts: Array<PostType>
+}
 
-    const postsElements = props.posts.map((p) => <Post message={p.message} likesCount={p.likesCount}
+
+const MyPosts: React.FC<PropsType> = React.memo(({addPost, posts}) => {
+
+    const postsElements = posts.map((p) => <Post message={p.message} likesCount={p.likesCount}
                                                        key={p.id}/>);
-
-    const addNewPost = (values) => {
-        props.addPost(values.newPost)
+    const addNewPost = (values: any) => {
+        debugger
+        addPost(values.newPost)
     };
 
     return (
@@ -29,9 +36,9 @@ const MyPosts = React.memo(props => {
 
 const maxLength = maxLengthCreator(10);
 
-const AddNewPostForm = (props) => {
+const AddNewPostForm = ({handleSubmit}: any) => {
     return (
-        <form onSubmit={props.handleSubmit}>
+        <form onSubmit={handleSubmit}>
             <div>
                 <Field component={Textarea} name='newPost' placeholder='Enter you post...' validate={[required, maxLength]} />
             </div>

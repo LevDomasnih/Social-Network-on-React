@@ -47,7 +47,7 @@ let initialState = {
     ] as Array<DialogsType>,
 }
 
-export type InitialStateType = typeof initialState
+type InitialStateType = typeof initialState
 
 const dialogsReducer = (state = initialState, action: any): InitialStateType => {
     switch (action.type) {

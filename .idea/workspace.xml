@@ -1,25 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v1.00 description =&gt; fix routers;&#10;use =&gt; react-router, switch;&#10;add to npm =&gt; nothing;&#10;create =&gt; withSuspense.js;&#10;delete =&gt; nothing;&#10;edit =&gt; App.js&#10;        index.js&#10;        Login.jsx&#10;        ProfileInfo.jsx&#10;        ProfileStatusWithHooks.jsx">
+    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v1.05 description =&gt; MORE TS;&#10;use =&gt; TypeScript;&#10;add to npm =&gt; nothing;&#10;create =&gt; types.ts;&#10;delete =&gt; nothing;&#10;edit =&gt; Default Changelist&#10;        MyPostsContainer.tsx&#10;        Paginator.tsx&#10;        Profile.tsx&#10;        ProfileContainer.tsx&#10;        ProfileInfo.tsx&#10;        profileReducer.ts&#10;        ProfileStatusWithHooks.tsx&#10;        reduxStore.ts&#10;        sidebarReducer.ts&#10;        Users.tsx&#10;        UsersContainer.tsx&#10;        usersReducer.ts&#10;        usersSelectors.ts">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPostsContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPostsContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileStatusWithHooks.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileStatusWithHooks.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Users/Users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Users.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Users/UsersContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Paginator/Paginator.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Paginator/Paginator.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/appReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/appReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/authReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/authReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/dialogsReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/dialogsReducer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/profileReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profileReducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reduxStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reduxStore.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/sidebarReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/sidebarReducer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/usersReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/usersReducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/usersSelectors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/usersSelectors.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/types.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,6 +229,8 @@
       <workItem from="1610884842529" duration="10032000" />
       <workItem from="1610993082626" duration="1284000" />
       <workItem from="1610996188472" duration="3132000" />
+      <workItem from="1611383647489" duration="4677000" />
+      <workItem from="1611512467007" duration="622000" />
     </task>
     <task id="LOCAL-00001" summary="v0.35.5">
       <created>1608037498250</created>
@@ -491,7 +484,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610894583633</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="v1.05 description =&gt; MORE TS;&#10;use =&gt; TypeScript;&#10;add to npm =&gt; nothing;&#10;create =&gt; types.ts;&#10;delete =&gt; nothing;&#10;edit =&gt; Default Changelist&#10;        MyPostsContainer.tsx&#10;        Paginator.tsx&#10;        Profile.tsx&#10;        ProfileContainer.tsx&#10;        ProfileInfo.tsx&#10;        profileReducer.ts&#10;        ProfileStatusWithHooks.tsx&#10;        reduxStore.ts&#10;        sidebarReducer.ts&#10;        Users.tsx&#10;        UsersContainer.tsx&#10;        usersReducer.ts&#10;        usersSelectors.ts">
+      <created>1611087822642</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1611087822642</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -522,7 +522,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="v0.69 create =&gt; hoc directory, withAuthRedirect.js; use =&gt; High Order Component (HOC);&#10;add to npm =&gt; nothing ; refactor =&gt; authentication check in Profile and Dialogs by dint of HOC" />
     <MESSAGE value="v0.70 create =&gt; nothing; use =&gt; compose;&#10;add to npm =&gt; nothing; refactor =&gt; authentication check in Profile, Dialogs and Users by dint of HOC and compose" />
     <MESSAGE value="v0.71 create =&gt; ProfileStatus.jsx; edit =&gt; Dialogs.jsx, ProfileInfo.jsx; &#10;use =&gt; local state;&#10;add to npm =&gt; nothing; refactor =&gt; local state for ProfileStatus.jsx" />
     <MESSAGE value="v0.71 use =&gt; local state, http put;&#10;refactor =&gt; put and get request for status;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; api, Profile.jsx, ProfileContainer.jsx, ProfileInfo.jsx, profileReducer.js, ProfileStatus.jsx" />
@@ -547,6 +546,7 @@
     <MESSAGE value="v0.94 use =&gt; React.lazy and React.Suspense;&#10;description =&gt; optimization of site loading, add new HOC;&#10;add to npm =&gt; nothing;&#10;create =&gt; withSuspense.js;&#10;delete =&gt; nothing;&#10;edit =&gt; App.js" />
     <MESSAGE value="v0.96 download avatar for user profile;&#10;use =&gt; nothing;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; api.js&#10;        App.js&#10;        Profile.jsx&#10;        ProfileContainer.jsx&#10;        ProfileInfo.jsx&#10;        ProfileInfo.module.css&#10;        profileReducer.js" />
     <MESSAGE value="v1.00 description =&gt; fix routers;&#10;use =&gt; react-router, switch;&#10;add to npm =&gt; nothing;&#10;create =&gt; withSuspense.js;&#10;delete =&gt; nothing;&#10;edit =&gt; App.js&#10;        index.js&#10;        Login.jsx&#10;        ProfileInfo.jsx&#10;        ProfileStatusWithHooks.jsx" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1.00 description =&gt; fix routers;&#10;use =&gt; react-router, switch;&#10;add to npm =&gt; nothing;&#10;create =&gt; withSuspense.js;&#10;delete =&gt; nothing;&#10;edit =&gt; App.js&#10;        index.js&#10;        Login.jsx&#10;        ProfileInfo.jsx&#10;        ProfileStatusWithHooks.jsx" />
+    <MESSAGE value="v1.05 description =&gt; MORE TS;&#10;use =&gt; TypeScript;&#10;add to npm =&gt; nothing;&#10;create =&gt; types.ts;&#10;delete =&gt; nothing;&#10;edit =&gt; Default Changelist&#10;        MyPostsContainer.tsx&#10;        Paginator.tsx&#10;        Profile.tsx&#10;        ProfileContainer.tsx&#10;        ProfileInfo.tsx&#10;        profileReducer.ts&#10;        ProfileStatusWithHooks.tsx&#10;        reduxStore.ts&#10;        sidebarReducer.ts&#10;        Users.tsx&#10;        UsersContainer.tsx&#10;        usersReducer.ts&#10;        usersSelectors.ts" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.05 description =&gt; MORE TS;&#10;use =&gt; TypeScript;&#10;add to npm =&gt; nothing;&#10;create =&gt; types.ts;&#10;delete =&gt; nothing;&#10;edit =&gt; Default Changelist&#10;        MyPostsContainer.tsx&#10;        Paginator.tsx&#10;        Profile.tsx&#10;        ProfileContainer.tsx&#10;        ProfileInfo.tsx&#10;        profileReducer.ts&#10;        ProfileStatusWithHooks.tsx&#10;        reduxStore.ts&#10;        sidebarReducer.ts&#10;        Users.tsx&#10;        UsersContainer.tsx&#10;        usersReducer.ts&#10;        usersSelectors.ts" />
   </component>
 </project>
