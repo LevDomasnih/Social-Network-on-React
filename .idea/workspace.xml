@@ -1,11 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v1.06 description =&gt; AND MORE TS&#10;use =&gt; TypeScript&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing&#10;delete =&gt; nothing&#10;edit =&gt; appReducer.ts&#10;        authReducer.ts&#10;        dialogsReducer.ts&#10;        MyPosts.tsx&#10;        profileReducer.ts&#10;        sidebarReducer.ts&#10;        usersReducer.ts&#10;        UsersContainer.tsx&#10;        usersReducer.ts&#10;        usersSelectors.ts">
+    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v1.09 description =&gt; TS ON User&#10;use =&gt; TypeScript, Generic&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing&#10;delete =&gt; nothing&#10;edit =&gt; reduxStore.ts&#10;        usersReducer.ts">
+      <change afterPath="$PROJECT_DIR$/src/API/authAPI.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/API/profileAPI.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/API/usersAPI.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/API/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/API/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/DialogsContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/DialogsContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPostsContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPostsContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/appReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/appReducer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/authReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/authReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/dialogsReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/dialogsReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/profileReducer.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profileReducer.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/profileReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profileReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reduxStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reduxStore.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/sidebarReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/sidebarReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/usersReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/usersReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/types.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,9 +53,6 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/App.js" root0="FORCE_HIGHLIGHTING" />
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedIndex" value="1" />
-  </component>
   <component name="ProjectId" id="1lSeM4vUsYQ4dFQ5vKkrl8fBZDi" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="false" id="Update" />
@@ -52,7 +64,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../test-mobx" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../math-task" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -77,6 +89,11 @@
       <recent name="C:\Users\Лев\my-app\src\components\Profile" />
       <recent name="C:\Users\Лев\my-app\src\components\Navbar" />
       <recent name="C:\Users\Лев\my-app\src\components\Header" />
+    </key>
+    <key name="es6.move.members.recent.items">
+      <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\API\authAPI.ts" />
+      <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\API\profileAPI.ts" />
+      <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\API\usersAPI.ts" />
     </key>
   </component>
   <component name="RunManager" selected="npm.start">
@@ -225,7 +242,13 @@
       <workItem from="1610993082626" duration="1284000" />
       <workItem from="1610996188472" duration="3132000" />
       <workItem from="1611383647489" duration="4677000" />
-      <workItem from="1611512467007" duration="1933000" />
+      <workItem from="1611512467007" duration="2352000" />
+      <workItem from="1612035256375" duration="20000" />
+      <workItem from="1615041678755" duration="2863000" />
+      <workItem from="1620143654868" duration="669000" />
+      <workItem from="1620635408586" duration="13137000" />
+      <workItem from="1620760839741" duration="2197000" />
+      <workItem from="1620842254922" duration="7387000" />
     </task>
     <task id="LOCAL-00001" summary="v0.35.5">
       <created>1608037498250</created>
@@ -493,7 +516,28 @@
       <option name="project" value="LOCAL" />
       <updated>1611517137730</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="v1.07 description =&gt; TS ON API&#10;use =&gt; TypeScript, enum&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing&#10;delete =&gt; nothing&#10;edit =&gt; api.ts&#10;        authReducer.ts">
+      <created>1611519280860</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1611519280860</updated>
+    </task>
+    <task id="LOCAL-00040" summary="v1.08 description =&gt; TS ON Login + Generic&#10;use =&gt; TypeScript, Generic&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing&#10;delete =&gt; nothing&#10;edit =&gt; FormsControls.tsx&#10;        Login.tsx&#10;        validators.ts">
+      <created>1620644345112</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1620644345112</updated>
+    </task>
+    <task id="LOCAL-00041" summary="v1.09 description =&gt; TS ON User&#10;use =&gt; TypeScript, Generic&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing&#10;delete =&gt; nothing&#10;edit =&gt; reduxStore.ts&#10;        usersReducer.ts">
+      <created>1620653341081</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1620653341081</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -524,9 +568,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="v0.71 create =&gt; ProfileStatus.jsx; edit =&gt; Dialogs.jsx, ProfileInfo.jsx; &#10;use =&gt; local state;&#10;add to npm =&gt; nothing; refactor =&gt; local state for ProfileStatus.jsx" />
-    <MESSAGE value="v0.71 use =&gt; local state, http put;&#10;refactor =&gt; put and get request for status;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; api, Profile.jsx, ProfileContainer.jsx, ProfileInfo.jsx, profileReducer.js, ProfileStatus.jsx" />
-    <MESSAGE value="v0.73 use =&gt; local state, http put;&#10;refactor =&gt; put and get request for status;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; api, Profile.jsx, ProfileContainer.jsx, ProfileInfo.jsx, profileReducer.js, ProfileStatus.jsx" />
     <MESSAGE value="v0.74 use =&gt; componentDidUpdate;&#10;refactor =&gt; componentDidUpdate for user status;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; ProfileStatus.jsx" />
     <MESSAGE value="v0.75 use =&gt; redux-form;&#10;refactor =&gt; form for Login;&#10;add to npm =&gt; redux-form;&#10;create =&gt; nothing;&#10;edit =&gt; Login.jsx, reduxStore.js" />
     <MESSAGE value="v0.76 use =&gt; redux-form;&#10;refactor =&gt; form for message of Dialogs and post of Profile, post add to top, many minor change;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; Dialogs.jsx, DialogsContainer.jsx, dialogsReducer.js, Friends.jsx, Login.jsx, MyPosts.jsx, MyPostsContainer.jsx, profileReducer.js" />
@@ -549,6 +590,9 @@
     <MESSAGE value="v1.00 description =&gt; fix routers;&#10;use =&gt; react-router, switch;&#10;add to npm =&gt; nothing;&#10;create =&gt; withSuspense.js;&#10;delete =&gt; nothing;&#10;edit =&gt; App.js&#10;        index.js&#10;        Login.jsx&#10;        ProfileInfo.jsx&#10;        ProfileStatusWithHooks.jsx" />
     <MESSAGE value="v1.05 description =&gt; MORE TS;&#10;use =&gt; TypeScript;&#10;add to npm =&gt; nothing;&#10;create =&gt; types.ts;&#10;delete =&gt; nothing;&#10;edit =&gt; Default Changelist&#10;        MyPostsContainer.tsx&#10;        Paginator.tsx&#10;        Profile.tsx&#10;        ProfileContainer.tsx&#10;        ProfileInfo.tsx&#10;        profileReducer.ts&#10;        ProfileStatusWithHooks.tsx&#10;        reduxStore.ts&#10;        sidebarReducer.ts&#10;        Users.tsx&#10;        UsersContainer.tsx&#10;        usersReducer.ts&#10;        usersSelectors.ts" />
     <MESSAGE value="v1.06 description =&gt; AND MORE TS&#10;use =&gt; TypeScript&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing&#10;delete =&gt; nothing&#10;edit =&gt; appReducer.ts&#10;        authReducer.ts&#10;        dialogsReducer.ts&#10;        MyPosts.tsx&#10;        profileReducer.ts&#10;        sidebarReducer.ts&#10;        usersReducer.ts&#10;        UsersContainer.tsx&#10;        usersReducer.ts&#10;        usersSelectors.ts" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1.06 description =&gt; AND MORE TS&#10;use =&gt; TypeScript&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing&#10;delete =&gt; nothing&#10;edit =&gt; appReducer.ts&#10;        authReducer.ts&#10;        dialogsReducer.ts&#10;        MyPosts.tsx&#10;        profileReducer.ts&#10;        sidebarReducer.ts&#10;        usersReducer.ts&#10;        UsersContainer.tsx&#10;        usersReducer.ts&#10;        usersSelectors.ts" />
+    <MESSAGE value="v1.07 description =&gt; TS ON API&#10;use =&gt; TypeScript, enum&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing&#10;delete =&gt; nothing&#10;edit =&gt; api.ts&#10;        authReducer.ts" />
+    <MESSAGE value="v1.08 description =&gt; TS ON Login + Generic&#10;use =&gt; TypeScript, Generic&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing&#10;delete =&gt; nothing&#10;edit =&gt; FormsControls.tsx&#10;        Login.tsx&#10;        validators.ts" />
+    <MESSAGE value="v1.09 description =&gt; TS ON User&#10;use =&gt; TypeScript, Generic&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing&#10;delete =&gt; nothing&#10;edit =&gt; reduxStore.ts&#10;        usersReducer.ts" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.09 description =&gt; TS ON User&#10;use =&gt; TypeScript, Generic&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing&#10;delete =&gt; nothing&#10;edit =&gt; reduxStore.ts&#10;        usersReducer.ts" />
   </component>
 </project>
