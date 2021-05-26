@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {ComponentType} from 'react';
 import Profile from "./Profile";
 import {connect} from "react-redux";
 import {withRouter} from 'react-router-dom';
@@ -71,7 +71,7 @@ const mapStateToProps = (state: AppStateType): MapStatePropsType => ({
     isAuth: state.auth.isAuth,
 })
 
-export default compose(
+export default compose<ComponentType>(
     connect<MapStatePropsType, MapDispatchPropsType, OwnPropsType, AppStateType>(mapStateToProps, { getUserProfile, getStatus, updateStatus, savePhoto }),
     withRouter,
     withAuthRedirect,

@@ -10,7 +10,7 @@ import {connect, Provider} from "react-redux";
 import {compose} from "redux";
 import {initializeApp} from "./redux/appReducer";
 import Preloader from "./components/common/Preloader/Preloader";
-import store from "./redux/reduxStore";
+import store, {AppStateType} from "./redux/reduxStore";
 import {withSuspense} from "./hoc/withSuspense";
 
 const DialogsContainer = React.lazy(() => import('./components/Dialogs/DialogsContainer'));
@@ -18,7 +18,12 @@ const ProfileContainer = React.lazy(() => import('./components/Profile/ProfileCo
 const UsersContainer = React.lazy(() => import('./components/Users/UsersContainer'));
 const Login = React.lazy(() => import('./components/Login/Login'));
 
-class App extends React.Component {
+type MapPropsType = ReturnType<typeof mapStateToProps>
+type DispatchPropsType = {
+    initializeApp: () => void
+}
+
+class App extends React.Component<MapPropsType & DispatchPropsType> {
     componentDidMount() {
         this.props.initializeApp()
     }
@@ -52,15 +57,15 @@ class App extends React.Component {
     }
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state: AppStateType) => ({
     initialized: state.app.initialized,
 })
 
-let AppContainer = compose(
+let AppContainer = compose<React.ComponentType>(
     withRouter,
     connect(mapStateToProps, {initializeApp}))(App);
 
-const SocialNetworkApp = (props) => {
+const SocialNetworkApp: React.FC = () => {
     return <BrowserRouter>
         <Provider store={store}>
             <AppContainer/>

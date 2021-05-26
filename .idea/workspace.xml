@@ -1,26 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v1.09 description =&gt; TS ON User&#10;use =&gt; TypeScript, Generic&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing&#10;delete =&gt; nothing&#10;edit =&gt; reduxStore.ts&#10;        usersReducer.ts">
-      <change afterPath="$PROJECT_DIR$/src/API/authAPI.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/API/profileAPI.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/API/usersAPI.ts" afterDir="false" />
+    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v1.10 description =&gt; Migrate on TS&#10;use =&gt; TypeScript, Generic&#10;add to npm =&gt; nothing;&#10;create =&gt; authAPI.ts&#10;          profileAPI.ts&#10;          usersAPI.ts&#10;delete =&gt; store.js&#10;edit =&gt; api.ts&#10;        appReducer.ts&#10;        authReducer.ts&#10;        DialogsContainer.jsx&#10;        dialogsReducer.ts&#10;        Login.tsx&#10;        MyPostsContainer.tsx&#10;        profileReducer.test.ts&#10;        profileReducer.ts&#10;        reduxStore.ts&#10;        sidebarReducer.ts&#10;        types.ts&#10;        usersReducer.ts">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/API/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/DialogsContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/DialogsContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/DialogsContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/DialogsContainer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPostsContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPostsContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/appReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/appReducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/authReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/authReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/dialogsReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/dialogsReducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/profileReducer.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profileReducer.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/profileReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profileReducer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/reduxStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reduxStore.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/sidebarReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/sidebarReducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/usersReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/usersReducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/types.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +42,7 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/App.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/App.tsx" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1lSeM4vUsYQ4dFQ5vKkrl8fBZDi" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -64,7 +55,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../math-task" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../react-native-demo" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -248,7 +239,9 @@
       <workItem from="1620143654868" duration="669000" />
       <workItem from="1620635408586" duration="13137000" />
       <workItem from="1620760839741" duration="2197000" />
-      <workItem from="1620842254922" duration="7387000" />
+      <workItem from="1620842254922" duration="8356000" />
+      <workItem from="1621275471007" duration="17000" />
+      <workItem from="1622052297200" duration="6712000" />
     </task>
     <task id="LOCAL-00001" summary="v0.35.5">
       <created>1608037498250</created>
@@ -537,11 +530,28 @@
       <option name="project" value="LOCAL" />
       <updated>1620653341081</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="v1.10 description =&gt; Migrate on TS&#10;use =&gt; TypeScript, Generic&#10;add to npm =&gt; nothing;&#10;create =&gt; authAPI.ts&#10;          profileAPI.ts&#10;          usersAPI.ts&#10;delete =&gt; store.js&#10;edit =&gt; api.ts&#10;        appReducer.ts&#10;        authReducer.ts&#10;        DialogsContainer.jsx&#10;        dialogsReducer.ts&#10;        Login.tsx&#10;        MyPostsContainer.tsx&#10;        profileReducer.test.ts&#10;        profileReducer.ts&#10;        reduxStore.ts&#10;        sidebarReducer.ts&#10;        types.ts&#10;        usersReducer.ts">
+      <created>1620850342829</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1620850342829</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -568,7 +578,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="v0.74 use =&gt; componentDidUpdate;&#10;refactor =&gt; componentDidUpdate for user status;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; ProfileStatus.jsx" />
     <MESSAGE value="v0.75 use =&gt; redux-form;&#10;refactor =&gt; form for Login;&#10;add to npm =&gt; redux-form;&#10;create =&gt; nothing;&#10;edit =&gt; Login.jsx, reduxStore.js" />
     <MESSAGE value="v0.76 use =&gt; redux-form;&#10;refactor =&gt; form for message of Dialogs and post of Profile, post add to top, many minor change;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; Dialogs.jsx, DialogsContainer.jsx, dialogsReducer.js, Friends.jsx, Login.jsx, MyPosts.jsx, MyPostsContainer.jsx, profileReducer.js" />
     <MESSAGE value="v0.77 use =&gt; validators from redux-form;&#10;refactor =&gt; validators for Post and Login;&#10;add to npm =&gt; nothing;&#10;create =&gt; FormsControls.js, FormsControls.module.css, validators.js;&#10;edit =&gt; Login.jsx, MyPosts.jsx" />
@@ -593,6 +602,7 @@
     <MESSAGE value="v1.07 description =&gt; TS ON API&#10;use =&gt; TypeScript, enum&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing&#10;delete =&gt; nothing&#10;edit =&gt; api.ts&#10;        authReducer.ts" />
     <MESSAGE value="v1.08 description =&gt; TS ON Login + Generic&#10;use =&gt; TypeScript, Generic&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing&#10;delete =&gt; nothing&#10;edit =&gt; FormsControls.tsx&#10;        Login.tsx&#10;        validators.ts" />
     <MESSAGE value="v1.09 description =&gt; TS ON User&#10;use =&gt; TypeScript, Generic&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing&#10;delete =&gt; nothing&#10;edit =&gt; reduxStore.ts&#10;        usersReducer.ts" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1.09 description =&gt; TS ON User&#10;use =&gt; TypeScript, Generic&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing&#10;delete =&gt; nothing&#10;edit =&gt; reduxStore.ts&#10;        usersReducer.ts" />
+    <MESSAGE value="v1.10 description =&gt; Migrate on TS&#10;use =&gt; TypeScript, Generic&#10;add to npm =&gt; nothing;&#10;create =&gt; authAPI.ts&#10;          profileAPI.ts&#10;          usersAPI.ts&#10;delete =&gt; store.js&#10;edit =&gt; api.ts&#10;        appReducer.ts&#10;        authReducer.ts&#10;        DialogsContainer.jsx&#10;        dialogsReducer.ts&#10;        Login.tsx&#10;        MyPostsContainer.tsx&#10;        profileReducer.test.ts&#10;        profileReducer.ts&#10;        reduxStore.ts&#10;        sidebarReducer.ts&#10;        types.ts&#10;        usersReducer.ts" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.10 description =&gt; Migrate on TS&#10;use =&gt; TypeScript, Generic&#10;add to npm =&gt; nothing;&#10;create =&gt; authAPI.ts&#10;          profileAPI.ts&#10;          usersAPI.ts&#10;delete =&gt; store.js&#10;edit =&gt; api.ts&#10;        appReducer.ts&#10;        authReducer.ts&#10;        DialogsContainer.jsx&#10;        dialogsReducer.ts&#10;        Login.tsx&#10;        MyPostsContainer.tsx&#10;        profileReducer.test.ts&#10;        profileReducer.ts&#10;        reduxStore.ts&#10;        sidebarReducer.ts&#10;        types.ts&#10;        usersReducer.ts" />
   </component>
 </project>

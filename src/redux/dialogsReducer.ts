@@ -47,7 +47,7 @@ let initialState = {
     ] as Array<DialogsType>,
 }
 
-type dialogsReducerType = typeof initialState
+export type dialogsReducerType = typeof initialState
 type ActionsType = ActionType
 
 const dialogsReducer = (state = initialState, action: ActionsType): dialogsReducerType => {

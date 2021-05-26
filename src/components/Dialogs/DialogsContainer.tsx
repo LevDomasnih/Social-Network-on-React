@@ -1,18 +1,18 @@
-import React from 'react';
 import {actions} from "../../redux/dialogsReducer";
 import Dialogs from "./Dialogs";
 import {connect} from "react-redux";
 import {withAuthRedirect} from "../../hoc/withAuthRedirect";
 import {compose} from "redux";
+import {AppStateType} from "../../redux/reduxStore";
+import {ComponentType} from "react";
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state: AppStateType) => {
     return {
         dialogsPage: state.dialogsPage,
-        isAuth: state.auth.isAuth,
     }
 }
 
-export default compose(
+export default compose<ComponentType>(
     connect(mapStateToProps, {
         sendMessage: actions.sendMessage
     }),
