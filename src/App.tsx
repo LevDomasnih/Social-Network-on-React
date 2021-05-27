@@ -40,15 +40,21 @@ class App extends React.Component<MapPropsType & DispatchPropsType> {
                 <div className='app-wrapper-content'>
                     <Switch>
                         <Route path='/' exact><Redirect to='/profile'/></Route>
-                        <Route path='/profile/:userId?'
-                               render={withSuspense(ProfileContainer)}/>
-                        <Route path='/dialogs'
-                               render={withSuspense(DialogsContainer)}/>
-                        <Route path='/users' render={withSuspense(UsersContainer)}/>
+                        <Route path='/profile/:userId?'>
+                            {withSuspense(ProfileContainer)}
+                        </Route>
+                        <Route path='/dialogs'>
+                            {withSuspense(DialogsContainer)}
+                        </Route>
+                        <Route path='/users'>
+                            {withSuspense(UsersContainer)}
+                        </Route>
                         <Route path='/news' render={() => <News/>}/>
                         <Route path='/music' render={() => <Music/>}/>
                         <Route path='/settings' render={() => <Settings/>}/>
-                        <Route path='/login' render={withSuspense(Login)}/>
+                        <Route path='/login' >
+                            {withSuspense(Login)}
+                        </Route>
                         <Route path='*' render={() => <div>404 NOT FOUND</div>}/>
                     </Switch>
                 </div>

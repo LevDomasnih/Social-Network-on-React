@@ -1,8 +1,8 @@
-import React from 'react';
 import {connect} from "react-redux";
 import Navbar from "./Navbar";
+import {AppStateType} from "../../redux/reduxStore";
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state: AppStateType) => ({
     friends: state.sidebar.friends,
 })
 

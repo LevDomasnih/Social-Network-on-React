@@ -13,7 +13,7 @@ describe("ProfileStatus component", () => {
         const component = create(<ProfileStatusWithHooks status="Hello!!!" />);
         const root = component.root;
         expect(() => {
-            let input = root.findByType("Hello!!!");
+            let input = root.findByType("span");
         }).toThrow();
     });
 

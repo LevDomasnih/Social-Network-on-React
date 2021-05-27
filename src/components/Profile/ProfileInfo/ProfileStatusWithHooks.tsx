@@ -1,7 +1,7 @@
 import React, {useState, useEffect, ChangeEvent} from 'react';
-
+//TODO BAG ?
 type PropsType = {
-    updateStatus: (newStatus: string) => void
+    updateStatus?: (newStatus: string) => void
     status: string
 }
 
@@ -20,7 +20,7 @@ const ProfileStatusWithHooks: React.FC<PropsType> = (props) => {
 
     const deactivateEditMode = () => {
         setEditMode(false);
-        props.updateStatus(status)
+        props.updateStatus?.(status)
     }
 
     const onStatusChange = (e: ChangeEvent<HTMLInputElement>) => {

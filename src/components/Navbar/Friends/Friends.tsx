@@ -1,7 +1,12 @@
-import React from 'react';
+import {FC} from 'react';
 import classes from './Friends.module.css';
+import {friend} from "../../../redux/sidebarReducer";
 
-const Friends = (props) => {
+type PropsType = {
+    friends: Array<friend>
+}
+
+const Friends: FC<PropsType> = (props) => {
 
     const friends = props.friends.map((e) => (
         <div key={e.id} className={classes.friendItem}>

@@ -14,7 +14,7 @@ type MapDispatchPropsType = {
 
 type OwnPropsType = {}
 
-let mapStateToProps = (state: AppStateType): MapStatePropsType => {
+let mapStateToProps = (state: AppStateType) => {
     return {
         posts: state.profilePage.posts,
     }

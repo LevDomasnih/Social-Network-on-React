@@ -19,6 +19,14 @@ let initialState = {
     ]
 }
 
+export type friend = {
+    id: number
+    name: string
+    avatar: string
+}
+
+export type sidebarReducerType = typeof initialState
+
 type InitialStateType = typeof initialState
 
 const sidebarReducer = (state = initialState, action: {}): InitialStateType => {

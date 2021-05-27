@@ -1,7 +1,7 @@
 import React, {ComponentType} from 'react';
 import Profile from "./Profile";
 import {connect} from "react-redux";
-import {withRouter} from 'react-router-dom';
+import {RouteComponentProps, withRouter} from 'react-router-dom';
 import {getStatus, getUserProfile, savePhoto, updateStatus} from "../../redux/profileReducer";
 import {withAuthRedirect} from "../../hoc/withAuthRedirect";
 import {compose} from "redux";
@@ -19,20 +19,19 @@ type MapDispatchPropsType = {
     getUserProfile: (userId: number) => void
     getStatus: (userId: number) => void
     updateStatus: (status: string) => void
-    savePhoto: (file: any) => void
+    savePhoto: (file: File) => void
 }
 
 type OwnPropsType = {
-    match: any
-    history: any
+    userId: string
 }
 
-type PropsType = MapStatePropsType & MapDispatchPropsType & OwnPropsType
+export type PropsType = MapStatePropsType & MapDispatchPropsType & RouteComponentProps<OwnPropsType>
 
 class ProfileContainer extends React.Component<PropsType> {
 
     refreshProfile() {
-        let userId = this.props.match.params.userId;
+        let userId: number | null = +this.props.match.params.userId;
         if (!userId) {
             userId = this.props.authorizedUserId;
             if (!userId) {
@@ -40,8 +39,12 @@ class ProfileContainer extends React.Component<PropsType> {
             }
         }
 
-        this.props.getUserProfile(userId);
-        this.props.getStatus(userId);
+        if(!userId) {
+            console.error("Id was a number")
+        } else {
+            this.props.getUserProfile(userId);
+            this.props.getStatus(userId);
+        }
     }
 
     componentDidMount() {
@@ -49,7 +52,7 @@ class ProfileContainer extends React.Component<PropsType> {
     }
 
     componentDidUpdate(prevProps: PropsType, prevState: PropsType) {
-        if (this.props.match.params.userId != prevProps.match.params.userId) {
+        if (this.props.match.params.userId !== prevProps.match.params.userId) {
             this.refreshProfile()
         }
     }

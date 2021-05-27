@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {ComponentType} from 'react';
 import {connect} from "react-redux";
 import Users from "./Users";
 import {
@@ -38,7 +38,7 @@ type OwnPropsType = {
 
 }
 
-type PropsType = MapStatePropsType & MapDispatchPropsType & OwnPropsType
+export type PropsType = MapStatePropsType & MapDispatchPropsType & OwnPropsType
 
 class UsersContainer extends React.Component<PropsType> {
     componentDidMount() {
@@ -87,7 +87,7 @@ let mapStateToProps = (state: AppStateType): MapStatePropsType => {
     }
 }
 
-export default compose(
+export default compose<ComponentType>(
     connect<MapStatePropsType, MapDispatchPropsType, OwnPropsType, AppStateType>(mapStateToProps, {
         requestUsers,
         unfollowUsers,
