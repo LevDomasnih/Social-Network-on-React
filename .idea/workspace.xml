@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v1.11 description =&gt; All TS;&#10;use =&gt; TypeScript, Generic;&#10;add to npm =&gt; @types/react-test-renderer;&#10;create =&gt; AddNewPostForm.tsx&#10;          User.tsx;&#10;delete =&gt; store.js&#10;edit =&gt; Users.tsx&#10;        UsersContainer.tsx&#10;        withAuthRedirect.tsx&#10;        withSuspense.tsx&#10;        App.test.tsx&#10;        App.tsx&#10;        DialogItem.tsx&#10;        FormsControls.tsx&#10;        Friends.tsx&#10;        Header.tsx&#10;        HeaderContainer.tsx&#10;        index.tsx&#10;        Login.tsx&#10;        MessageItem.tsx&#10;        Music.tsx&#10;        MyPosts.tsx&#10;        MyPostsContainer.tsx&#10;        Navbar.tsx&#10;        NavbarContainer.tsx&#10;        News.tsx&#10;        Post.tsx&#10;        Preloader.tsx&#10;        Profile.tsx&#10;        profileAPI.ts&#10;        ProfileContainer.tsx&#10;        ProfileInfo.tsx&#10;        ProfileStatus.test.tsx&#10;        ProfileStatusWithHooks.tsx&#10;        Settings.tsx&#10;        sidebarReducer.ts">
+    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v1.11.5 description =&gt; Fix tests;&#10;use =&gt; Jest, react-test-renderer;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; ProfileStatus.test.tsx&#10;        ProfileStatusWithHooks.tsx">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/usersReducer.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/usersReducer.thunks.test.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileStatus.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileStatus.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileStatusWithHooks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileStatusWithHooks.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/usersReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/usersReducer.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,8 +52,9 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../react-native-demo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/redux" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -60,16 +63,17 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.TypeScript" />
     <property name="ts.external.directory.path" value="C:\Users\User\WebstormProjects\Social-Network-on-React\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\WebstormProjects\Social-Network-on-React\src\redux" />
       <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\redux" />
       <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\components\Profile\ProfileInfo" />
       <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\components\common\FormsControls" />
       <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\components\Navbar" />
-      <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\components\Header" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\components\Profile\MyPosts" />
@@ -84,7 +88,7 @@
       <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\API\usersAPI.ts" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.ProfileStatus component">
+  <component name="RunManager" selected="Jest.follow success">
     <configuration name="ProfileStatus component" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -98,56 +102,57 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="ProfileStatus component.after creation &lt;input&gt; shouldn't be displayed" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="follow success" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileStatus.test.tsx" />
+      <test-file value="$PROJECT_DIR$/src/redux/usersReducer.thunks.test.ts" />
       <test-names>
-        <test-name value="ProfileStatus component" />
-        <test-name value="after creation &lt;input&gt; shouldn't be displayed" />
+        <test-name value="follow success" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="ProfileStatus component.after creation &lt;span&gt; should contains correct status" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="success unfollow thunk" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileStatus.test.tsx" />
+      <test-file value="$PROJECT_DIR$/src/redux/usersReducer.thunks.test.ts" />
       <test-names>
-        <test-name value="ProfileStatus component" />
-        <test-name value="after creation &lt;span&gt; should contains correct status" />
+        <test-name value="success unfollow thunk" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="ProfileStatus component.status from props should be in the state" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="usersReducer test (1)" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/redux/usersReducer.thunks.test.ts" />
+      <test-names>
+        <test-name value="usersReducer test" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="usersReducer test.follow success" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileStatus.test.tsx" />
+      <test-file value="$PROJECT_DIR$/src/redux/usersReducer.thunks.test.ts" />
       <test-names>
-        <test-name value="ProfileStatus component" />
-        <test-name value="status from props should be in the state" />
+        <test-name value="usersReducer test" />
+        <test-name value="follow success" />
       </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="ProfileStatus.test.tsx" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST_FILE" />
-      <test-file value="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileStatus.test.tsx" />
       <method v="2" />
     </configuration>
     <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
@@ -173,19 +178,19 @@
     <list>
       <item itemvalue="npm.start" />
       <item itemvalue="npm.test" />
-      <item itemvalue="Jest.ProfileStatus component.after creation &lt;input&gt; shouldn't be displayed" />
-      <item itemvalue="Jest.ProfileStatus.test.tsx" />
-      <item itemvalue="Jest.ProfileStatus component.status from props should be in the state" />
-      <item itemvalue="Jest.ProfileStatus component.after creation &lt;span&gt; should contains correct status" />
       <item itemvalue="Jest.ProfileStatus component" />
+      <item itemvalue="Jest.usersReducer test (1)" />
+      <item itemvalue="Jest.usersReducer test.follow success" />
+      <item itemvalue="Jest.follow success" />
+      <item itemvalue="Jest.success unfollow thunk" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.follow success" />
+        <item itemvalue="Jest.success unfollow thunk" />
         <item itemvalue="Jest.ProfileStatus component" />
-        <item itemvalue="Jest.ProfileStatus component.after creation &lt;span&gt; should contains correct status" />
-        <item itemvalue="Jest.ProfileStatus component.status from props should be in the state" />
-        <item itemvalue="Jest.ProfileStatus.test.tsx" />
-        <item itemvalue="Jest.ProfileStatus component.after creation &lt;input&gt; shouldn't be displayed" />
+        <item itemvalue="Jest.usersReducer test.follow success" />
+        <item itemvalue="Jest.usersReducer test (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -240,7 +245,7 @@
       <workItem from="1622052297200" duration="6712000" />
       <workItem from="1622093140917" duration="6449000" />
       <workItem from="1622101714520" duration="18016000" />
-      <workItem from="1622182217001" duration="4985000" />
+      <workItem from="1622182217001" duration="15994000" />
     </task>
     <task id="LOCAL-00001" summary="v0.35.5">
       <created>1608037498250</created>
@@ -543,7 +548,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622120473877</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="v1.11.5 description =&gt; Fix tests;&#10;use =&gt; Jest, react-test-renderer;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; ProfileStatus.test.tsx&#10;        ProfileStatusWithHooks.tsx">
+      <created>1622187375554</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1622187375554</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -584,8 +596,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="v0.76 use =&gt; redux-form;&#10;refactor =&gt; form for message of Dialogs and post of Profile, post add to top, many minor change;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; Dialogs.jsx, DialogsContainer.jsx, dialogsReducer.js, Friends.jsx, Login.jsx, MyPosts.jsx, MyPostsContainer.jsx, profileReducer.js" />
-    <MESSAGE value="v0.77 use =&gt; validators from redux-form;&#10;refactor =&gt; validators for Post and Login;&#10;add to npm =&gt; nothing;&#10;create =&gt; FormsControls.js, FormsControls.module.css, validators.js;&#10;edit =&gt; Login.jsx, MyPosts.jsx" />
     <MESSAGE value="v0.78 use =&gt; login and logout API;&#10;refactor =&gt; login and logout for Login.jsx;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; api.js, authReducer.js, Header.jsx, HeaderContainer.jsx, Login.jsx" />
     <MESSAGE value="v0.79 use =&gt; stopSubmit (redux-form);&#10;refactor =&gt; stopSubmit for Login.jsx;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; authReducer.js, FormsControls.module.css, Login.jsx, ProfileContainer.jsx" />
     <MESSAGE value="v0.80 use =&gt; Initialize App;&#10;refactor =&gt; Initialize App in App.js;&#10;add to npm =&gt; nothing;&#10;create =&gt; appReducer.js;&#10;edit =&gt; App.js, authReducer.js, HeaderContainer.jsx, ProfileContainer.jsx, reduxStore.js, UsersContainer.jsx" />
@@ -609,6 +619,26 @@
     <MESSAGE value="v1.09 description =&gt; TS ON User&#10;use =&gt; TypeScript, Generic&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing&#10;delete =&gt; nothing&#10;edit =&gt; reduxStore.ts&#10;        usersReducer.ts" />
     <MESSAGE value="v1.10 description =&gt; Migrate on TS&#10;use =&gt; TypeScript, Generic&#10;add to npm =&gt; nothing;&#10;create =&gt; authAPI.ts&#10;          profileAPI.ts&#10;          usersAPI.ts&#10;delete =&gt; store.js&#10;edit =&gt; api.ts&#10;        appReducer.ts&#10;        authReducer.ts&#10;        DialogsContainer.jsx&#10;        dialogsReducer.ts&#10;        Login.tsx&#10;        MyPostsContainer.tsx&#10;        profileReducer.test.ts&#10;        profileReducer.ts&#10;        reduxStore.ts&#10;        sidebarReducer.ts&#10;        types.ts&#10;        usersReducer.ts" />
     <MESSAGE value="v1.11 description =&gt; All TS;&#10;use =&gt; TypeScript, Generic;&#10;add to npm =&gt; @types/react-test-renderer;&#10;create =&gt; AddNewPostForm.tsx&#10;          User.tsx;&#10;delete =&gt; store.js&#10;edit =&gt; Users.tsx&#10;        UsersContainer.tsx&#10;        withAuthRedirect.tsx&#10;        withSuspense.tsx&#10;        App.test.tsx&#10;        App.tsx&#10;        DialogItem.tsx&#10;        FormsControls.tsx&#10;        Friends.tsx&#10;        Header.tsx&#10;        HeaderContainer.tsx&#10;        index.tsx&#10;        Login.tsx&#10;        MessageItem.tsx&#10;        Music.tsx&#10;        MyPosts.tsx&#10;        MyPostsContainer.tsx&#10;        Navbar.tsx&#10;        NavbarContainer.tsx&#10;        News.tsx&#10;        Post.tsx&#10;        Preloader.tsx&#10;        Profile.tsx&#10;        profileAPI.ts&#10;        ProfileContainer.tsx&#10;        ProfileInfo.tsx&#10;        ProfileStatus.test.tsx&#10;        ProfileStatusWithHooks.tsx&#10;        Settings.tsx&#10;        sidebarReducer.ts" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1.11 description =&gt; All TS;&#10;use =&gt; TypeScript, Generic;&#10;add to npm =&gt; @types/react-test-renderer;&#10;create =&gt; AddNewPostForm.tsx&#10;          User.tsx;&#10;delete =&gt; store.js&#10;edit =&gt; Users.tsx&#10;        UsersContainer.tsx&#10;        withAuthRedirect.tsx&#10;        withSuspense.tsx&#10;        App.test.tsx&#10;        App.tsx&#10;        DialogItem.tsx&#10;        FormsControls.tsx&#10;        Friends.tsx&#10;        Header.tsx&#10;        HeaderContainer.tsx&#10;        index.tsx&#10;        Login.tsx&#10;        MessageItem.tsx&#10;        Music.tsx&#10;        MyPosts.tsx&#10;        MyPostsContainer.tsx&#10;        Navbar.tsx&#10;        NavbarContainer.tsx&#10;        News.tsx&#10;        Post.tsx&#10;        Preloader.tsx&#10;        Profile.tsx&#10;        profileAPI.ts&#10;        ProfileContainer.tsx&#10;        ProfileInfo.tsx&#10;        ProfileStatus.test.tsx&#10;        ProfileStatusWithHooks.tsx&#10;        Settings.tsx&#10;        sidebarReducer.ts" />
+    <MESSAGE value="v1.11.5 description =&gt; Refactor tests;&#10;use =&gt; Jest, react-test-renderer;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; ProfileStatus.test.tsx&#10;        ProfileStatusWithHooks.tsx" />
+    <MESSAGE value="v1.11.5 description =&gt; Fix tests;&#10;use =&gt; Jest, react-test-renderer;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; ProfileStatus.test.tsx&#10;        ProfileStatusWithHooks.tsx" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.11.5 description =&gt; Fix tests;&#10;use =&gt; Jest, react-test-renderer;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; ProfileStatus.test.tsx&#10;        ProfileStatusWithHooks.tsx" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/redux/usersReducer.thunks.test.ts</url>
+          <line>28</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/redux/usersReducer.thunks.test.ts</url>
+          <line>30</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
