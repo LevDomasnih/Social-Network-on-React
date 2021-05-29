@@ -1,4 +1,4 @@
-import { followUsers } from "./usersReducer"
+import {actions, followUsers, unfollowUsers} from "./usersReducer"
 import { usersAPI } from "../API/usersAPI"
 import { ResponseType, ResultCodesEnum } from "../API/api"
 
@@ -15,21 +15,73 @@ beforeEach(() => {
     userAPIMock.unfollowUsers.mockClear()
 })
 
-const result: ResponseType = {
+const resultSuccess: ResponseType = {
     data: {},
     messages: [],
     resultCode: ResultCodesEnum.Success,
 }
 
-userAPIMock.followUsers.mockReturnValue(Promise.resolve(result))
+const resultError: ResponseType = {
+    data: {},
+    messages: [],
+    resultCode: ResultCodesEnum.Error,
+}
 
-test("follow success", async () => {
-    const thunk = await followUsers(2)
+describe('follow-unfollow success', () => {
 
-    await thunk(dispatchMock, getStateMock, {})
+    test("follow success", async () => {
+        userAPIMock.followUsers.mockReturnValue(Promise.resolve(resultSuccess))
 
-    expect(dispatchMock).toBeCalledTimes(3)
+        const thunk = await followUsers(1)
+
+        await thunk(dispatchMock, getStateMock, {})
+
+        expect(dispatchMock).toBeCalledTimes(3)
+        expect(dispatchMock).toHaveBeenNthCalledWith(1, actions.toggleFollowingProgress(true, 1))
+        expect(dispatchMock).toHaveBeenNthCalledWith(2, actions.follow(1))
+        expect(dispatchMock).toHaveBeenNthCalledWith(3, actions.toggleFollowingProgress(false, 1))
+    })
+
+    test("unfollow success", async () => {
+        userAPIMock.unfollowUsers.mockReturnValue(Promise.resolve(resultSuccess))
+
+        const thunk = await unfollowUsers(1)
+
+        await thunk(dispatchMock, getStateMock, {})
+
+        expect(dispatchMock).toBeCalledTimes(3)
+        expect(dispatchMock).toHaveBeenNthCalledWith(1, actions.toggleFollowingProgress(true, 1))
+        expect(dispatchMock).toHaveBeenNthCalledWith(2, actions.unfollow(1))
+        expect(dispatchMock).toHaveBeenNthCalledWith(3, actions.toggleFollowingProgress(false, 1))
+    })
+
 })
 
+describe('follow-unfollow error', () => {
 
-// TODO ref, not work :(
+    test("follow error", async () => {
+        userAPIMock.followUsers.mockReturnValue(Promise.resolve(resultError))
+
+        const thunk = await followUsers(1)
+
+        await thunk(dispatchMock, getStateMock, {})
+
+        expect(dispatchMock).toBeCalledTimes(2)
+        expect(dispatchMock).toHaveBeenNthCalledWith(1, actions.toggleFollowingProgress(true, 1))
+        expect(dispatchMock).toHaveBeenNthCalledWith(2, actions.toggleFollowingProgress(false, 1))
+    })
+
+    test("unfollow error", async () => {
+        userAPIMock.unfollowUsers.mockReturnValue(Promise.resolve(resultError))
+
+        const thunk = await unfollowUsers(1)
+
+        await thunk(dispatchMock, getStateMock, {})
+
+        expect(dispatchMock).toBeCalledTimes(2)
+        expect(dispatchMock).toHaveBeenNthCalledWith(1, actions.toggleFollowingProgress(true, 1))
+        expect(dispatchMock).toHaveBeenNthCalledWith(2, actions.toggleFollowingProgress(false, 1))
+    })
+
+})
+
