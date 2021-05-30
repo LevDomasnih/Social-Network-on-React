@@ -1,4 +1,4 @@
-import React, {useState, useEffect, ChangeEvent} from 'react';
+import React, {ChangeEvent, useEffect, useState} from 'react';
 //TODO BAG ?
 type PropsType = {
     updateStatus?: (newStatus: string) => void
@@ -6,11 +6,10 @@ type PropsType = {
 }
 
 const ProfileStatusWithHooks: React.FC<PropsType> = (props) => {
-
     let [editMode, setEditMode] = useState(false);
     let [status, setStatus] = useState(props.status);
 
-    useEffect( () => {
+    useEffect(() => {
         setStatus(props.status);
     }, [props.status]);
 
@@ -31,9 +30,9 @@ const ProfileStatusWithHooks: React.FC<PropsType> = (props) => {
         <div>
             <b>Status: </b>
             {!editMode ?
-                <span onDoubleClick={ activateEditMode } >{props.status || 'No status'}</span> :
-                <input onChange={ onStatusChange }
-                       onBlur={ deactivateEditMode }
+                <span onDoubleClick={activateEditMode}>{props.status || 'No status'}</span> :
+                <input onChange={onStatusChange}
+                       onBlur={deactivateEditMode}
                        autoFocus={true} value={status}
                 />
             }

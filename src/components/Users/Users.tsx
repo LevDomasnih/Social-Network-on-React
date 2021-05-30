@@ -48,7 +48,6 @@ const Users: React.FC<PropsType> = () => {
         const query: QueryParamsType = {}
 
         if(!!filter.term) query.term = filter.term
-        debugger
         if(filter.friend !== null) query.friend = String(filter.friend)
         if(currentPage !== 1) query.page = String(currentPage)
 
