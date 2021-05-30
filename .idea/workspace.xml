@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v1.12.5 description =&gt; Fix thunk test&#10;use =&gt; Jest, mock, &#10;add to npm =&gt; nothing;&#10;create =&gt; nothing&#10;delete =&gt; nothing&#10;edit =&gt; usersReducer.thunks.test.ts">
-      <change afterPath="$PROJECT_DIR$/src/components/Users/UsersSearchForm.tsx" afterDir="false" />
+    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v1.13 description =&gt; Add formik&#10;use =&gt; Formik, &#10;add to npm =&gt; Formik;&#10;create =&gt; UsersSearchForm.tsx;&#10;delete =&gt; nothing&#10;edit =&gt; Users.tsx&#10;        usersAPI.ts&#10;        UsersContainer.tsx&#10;        usersReducer.test.ts&#10;        usersReducer.ts&#10;        usersSelectors.ts">
+      <change afterPath="$PROJECT_DIR$/src/components/Login/LoginForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/API/usersAPI.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/usersAPI.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/Login.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Users/Users.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Users.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/usersReducer.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/usersReducer.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/usersReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/usersReducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/usersSelectors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/usersSelectors.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersPage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,11 +87,11 @@
       <recent name="C:\Users\Лев\my-app\src\components\Header" />
     </key>
     <key name="es6.move.members.recent.items">
+      <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\components\Login\LoginForm.tsx" />
       <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\components\Users\UsersSearchForm.tsx" />
       <recent name="C:\Users\User\WebstormProjects\Social-Network-on-React\src\components\Profile\MyPosts\AddNewPostForm.tsx" />
       <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\API\authAPI.ts" />
       <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\API\profileAPI.ts" />
-      <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\API\usersAPI.ts" />
     </key>
   </component>
   <component name="RunManager" selected="npm.start">
@@ -257,7 +254,7 @@
       <workItem from="1622101714520" duration="18016000" />
       <workItem from="1622182217001" duration="15994000" />
       <workItem from="1622303838492" duration="8423000" />
-      <workItem from="1622360749075" duration="4622000" />
+      <workItem from="1622360749075" duration="9277000" />
     </task>
     <task id="LOCAL-00001" summary="v0.35.5">
       <created>1608037498250</created>
@@ -574,7 +571,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622308997890</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="v1.13 description =&gt; Add formik&#10;use =&gt; Formik, &#10;add to npm =&gt; Formik;&#10;create =&gt; UsersSearchForm.tsx;&#10;delete =&gt; nothing&#10;edit =&gt; Users.tsx&#10;        usersAPI.ts&#10;        UsersContainer.tsx&#10;        usersReducer.test.ts&#10;        usersReducer.ts&#10;        usersSelectors.ts">
+      <created>1622365625168</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1622365625168</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -615,7 +619,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="v0.79 use =&gt; stopSubmit (redux-form);&#10;refactor =&gt; stopSubmit for Login.jsx;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; authReducer.js, FormsControls.module.css, Login.jsx, ProfileContainer.jsx" />
     <MESSAGE value="v0.80 use =&gt; Initialize App;&#10;refactor =&gt; Initialize App in App.js;&#10;add to npm =&gt; nothing;&#10;create =&gt; appReducer.js;&#10;edit =&gt; App.js, authReducer.js, HeaderContainer.jsx, ProfileContainer.jsx, reduxStore.js, UsersContainer.jsx" />
     <MESSAGE value="v0.81 use =&gt; reselect;&#10;refactor =&gt; reselect for UsersContainer.jsx;&#10;add to npm =&gt; nothing;&#10;create =&gt; usersSelectors.js;&#10;edit =&gt; Users.jsx, UsersContainer.jsx, usersReducer.js" />
     <MESSAGE value="v0.83 use =&gt; reselect (createSelector);&#10;refactor =&gt; reselect for UsersContainer.jsx;&#10;add to npm =&gt; reselect;&#10;create =&gt; nothing;&#10;edit =&gt; usersSelectors.js" />
@@ -640,6 +643,7 @@
     <MESSAGE value="v1.11.5 description =&gt; Refactor tests;&#10;use =&gt; Jest, react-test-renderer;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; ProfileStatus.test.tsx&#10;        ProfileStatusWithHooks.tsx" />
     <MESSAGE value="v1.11.5 description =&gt; Fix tests;&#10;use =&gt; Jest, react-test-renderer;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; ProfileStatus.test.tsx&#10;        ProfileStatusWithHooks.tsx" />
     <MESSAGE value="v1.12.5 description =&gt; Fix thunk test&#10;use =&gt; Jest, mock, &#10;add to npm =&gt; nothing;&#10;create =&gt; nothing&#10;delete =&gt; nothing&#10;edit =&gt; usersReducer.thunks.test.ts" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1.12.5 description =&gt; Fix thunk test&#10;use =&gt; Jest, mock, &#10;add to npm =&gt; nothing;&#10;create =&gt; nothing&#10;delete =&gt; nothing&#10;edit =&gt; usersReducer.thunks.test.ts" />
+    <MESSAGE value="v1.13 description =&gt; Add formik&#10;use =&gt; Formik, &#10;add to npm =&gt; Formik;&#10;create =&gt; UsersSearchForm.tsx;&#10;delete =&gt; nothing&#10;edit =&gt; Users.tsx&#10;        usersAPI.ts&#10;        UsersContainer.tsx&#10;        usersReducer.test.ts&#10;        usersReducer.ts&#10;        usersSelectors.ts" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.13 description =&gt; Add formik&#10;use =&gt; Formik, &#10;add to npm =&gt; Formik;&#10;create =&gt; UsersSearchForm.tsx;&#10;delete =&gt; nothing&#10;edit =&gt; Users.tsx&#10;        usersAPI.ts&#10;        UsersContainer.tsx&#10;        usersReducer.test.ts&#10;        usersReducer.ts&#10;        usersSelectors.ts" />
   </component>
 </project>
