@@ -10,8 +10,13 @@ let initialState = {
     currentPage: 1,
     isFetching: true,
     followingInProgress: [] as Array<number>,
+    filter: {
+        term: '',
+        friend: null as null | boolean
+    }
 }
 export type usersStateType = typeof initialState
+export type FilterType = typeof initialState.filter
 
 type ActionsTypes = ActionTypes
 
@@ -43,7 +48,7 @@ const usersReducer = (state = initialState, action: ActionsTypes): usersStateTyp
                 ...state,
                 followingInProgress: action.isFetching
                     ? [...state.followingInProgress, action.userId]
-                    : state.followingInProgress.filter(id => id != action.userId),
+                    : state.followingInProgress.filter(id => id !== action.userId),
             }
         }
         case "SET_USERS": {
@@ -58,6 +63,8 @@ const usersReducer = (state = initialState, action: ActionsTypes): usersStateTyp
         case "TOGGLE_IS_FETCHING": {
             return { ...state, isFetching: action.isFetching }
         }
+        case "SET_FILTER":
+            return {...state, filter: action.payload}
         default:
             return state
     }
@@ -71,6 +78,7 @@ export const actions = {
     follow: (userId: number) => ({ type: "FOLLOW", userId } as const),
     unfollow: (userId: number) => ({ type: "UNFOLLOW", userId } as const),
     setUsers: (users: Array<UserType>) => ({ type: "SET_USERS", users } as const),
+    setFilter: (filter: FilterType) => ({ type: "SET_FILTER", payload: filter } as const),
     setCurrentPage: (currentPage: number) => ({
         type: "SET_CURRENT_PAGE",
         currentPage,
@@ -92,10 +100,13 @@ export const actions = {
 
 type ThunkType = BaseThunkType<ActionsTypes>
 
-export const requestUsers = (pageNumber: number, pageSize: number): ThunkType => async (dispatch) => {
+export const requestUsers = (pageNumber: number, pageSize: number, filter: FilterType): ThunkType => async (dispatch) => {
     dispatch(actions.toggleIsFetching(true))
     dispatch(actions.setCurrentPage(pageNumber))
-    const response = await usersAPI.getUsers(pageNumber, pageSize)
+    dispatch(actions.setFilter(filter))
+
+    const response = await usersAPI.getUsers(pageNumber, pageSize, filter.term, filter.friend)
+
     dispatch(actions.toggleIsFetching(false))
     dispatch(actions.setUsers(response.items))
     dispatch(actions.setTotalUsersCount(response.totalCount))

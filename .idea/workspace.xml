@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v1.10.3 description =&gt; Migrate on TS&#10;use =&gt; TypeScript, ComponentType, &#10;add to npm =&gt; nothing;&#10;create =&gt; nothing&#10;delete =&gt; nothing&#10;edit =&gt; App.tsx&#10;        Dialogs.tsx&#10;        DialogsContainer.tsx&#10;        dialogsReducer.ts&#10;        MyPostsContainer.tsx&#10;        ProfileContainer.tsx&#10;        reduxStore.ts&#10;        usersReducer.ts">
+    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v1.12.5 description =&gt; Fix thunk test&#10;use =&gt; Jest, mock, &#10;add to npm =&gt; nothing;&#10;create =&gt; nothing&#10;delete =&gt; nothing&#10;edit =&gt; usersReducer.thunks.test.ts">
+      <change afterPath="$PROJECT_DIR$/src/components/Users/UsersSearchForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/usersReducer.thunks.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/usersReducer.thunks.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/API/usersAPI.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/usersAPI.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Users/Users.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Users.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/usersReducer.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/usersReducer.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/usersReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/usersReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/usersSelectors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/usersSelectors.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +44,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/App.tsx" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="1lSeM4vUsYQ4dFQ5vKkrl8fBZDi" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -78,13 +90,14 @@
       <recent name="C:\Users\Лев\my-app\src\components\Header" />
     </key>
     <key name="es6.move.members.recent.items">
+      <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\components\Users\UsersSearchForm.tsx" />
       <recent name="C:\Users\User\WebstormProjects\Social-Network-on-React\src\components\Profile\MyPosts\AddNewPostForm.tsx" />
       <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\API\authAPI.ts" />
       <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\API\profileAPI.ts" />
       <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\API\usersAPI.ts" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.follow-unfollow error">
+  <component name="RunManager" selected="npm.start">
     <configuration name="follow success" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -174,12 +187,12 @@
     </configuration>
     <list>
       <item itemvalue="Jest.follow success" />
-      <item itemvalue="npm.start" />
-      <item itemvalue="npm.test" />
       <item itemvalue="Jest.follow unfollow" />
       <item itemvalue="Jest.follow unfollow.unfollow success" />
       <item itemvalue="Jest.follow-unfollow error" />
       <item itemvalue="Jest.follow-unfollow error.follow error" />
+      <item itemvalue="npm.start" />
+      <item itemvalue="npm.test" />
     </list>
     <recent_temporary>
       <list>
@@ -243,7 +256,8 @@
       <workItem from="1622093140917" duration="6449000" />
       <workItem from="1622101714520" duration="18016000" />
       <workItem from="1622182217001" duration="15994000" />
-      <workItem from="1622303838492" duration="2339000" />
+      <workItem from="1622303838492" duration="8423000" />
+      <workItem from="1622360749075" duration="4622000" />
     </task>
     <task id="LOCAL-00001" summary="v0.35.5">
       <created>1608037498250</created>
@@ -553,7 +567,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622187375554</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="v1.12.5 description =&gt; Fix thunk test&#10;use =&gt; Jest, mock, &#10;add to npm =&gt; nothing;&#10;create =&gt; nothing&#10;delete =&gt; nothing&#10;edit =&gt; usersReducer.thunks.test.ts">
+      <created>1622308997890</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1622308997890</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -594,7 +615,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="v0.78 use =&gt; login and logout API;&#10;refactor =&gt; login and logout for Login.jsx;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; api.js, authReducer.js, Header.jsx, HeaderContainer.jsx, Login.jsx" />
     <MESSAGE value="v0.79 use =&gt; stopSubmit (redux-form);&#10;refactor =&gt; stopSubmit for Login.jsx;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; authReducer.js, FormsControls.module.css, Login.jsx, ProfileContainer.jsx" />
     <MESSAGE value="v0.80 use =&gt; Initialize App;&#10;refactor =&gt; Initialize App in App.js;&#10;add to npm =&gt; nothing;&#10;create =&gt; appReducer.js;&#10;edit =&gt; App.js, authReducer.js, HeaderContainer.jsx, ProfileContainer.jsx, reduxStore.js, UsersContainer.jsx" />
     <MESSAGE value="v0.81 use =&gt; reselect;&#10;refactor =&gt; reselect for UsersContainer.jsx;&#10;add to npm =&gt; nothing;&#10;create =&gt; usersSelectors.js;&#10;edit =&gt; Users.jsx, UsersContainer.jsx, usersReducer.js" />
@@ -619,18 +639,7 @@
     <MESSAGE value="v1.11 description =&gt; All TS;&#10;use =&gt; TypeScript, Generic;&#10;add to npm =&gt; @types/react-test-renderer;&#10;create =&gt; AddNewPostForm.tsx&#10;          User.tsx;&#10;delete =&gt; store.js&#10;edit =&gt; Users.tsx&#10;        UsersContainer.tsx&#10;        withAuthRedirect.tsx&#10;        withSuspense.tsx&#10;        App.test.tsx&#10;        App.tsx&#10;        DialogItem.tsx&#10;        FormsControls.tsx&#10;        Friends.tsx&#10;        Header.tsx&#10;        HeaderContainer.tsx&#10;        index.tsx&#10;        Login.tsx&#10;        MessageItem.tsx&#10;        Music.tsx&#10;        MyPosts.tsx&#10;        MyPostsContainer.tsx&#10;        Navbar.tsx&#10;        NavbarContainer.tsx&#10;        News.tsx&#10;        Post.tsx&#10;        Preloader.tsx&#10;        Profile.tsx&#10;        profileAPI.ts&#10;        ProfileContainer.tsx&#10;        ProfileInfo.tsx&#10;        ProfileStatus.test.tsx&#10;        ProfileStatusWithHooks.tsx&#10;        Settings.tsx&#10;        sidebarReducer.ts" />
     <MESSAGE value="v1.11.5 description =&gt; Refactor tests;&#10;use =&gt; Jest, react-test-renderer;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; ProfileStatus.test.tsx&#10;        ProfileStatusWithHooks.tsx" />
     <MESSAGE value="v1.11.5 description =&gt; Fix tests;&#10;use =&gt; Jest, react-test-renderer;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; ProfileStatus.test.tsx&#10;        ProfileStatusWithHooks.tsx" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1.11.5 description =&gt; Fix tests;&#10;use =&gt; Jest, react-test-renderer;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; ProfileStatus.test.tsx&#10;        ProfileStatusWithHooks.tsx" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/redux/usersReducer.ts</url>
-          <line>106</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="v1.12.5 description =&gt; Fix thunk test&#10;use =&gt; Jest, mock, &#10;add to npm =&gt; nothing;&#10;create =&gt; nothing&#10;delete =&gt; nothing&#10;edit =&gt; usersReducer.thunks.test.ts" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.12.5 description =&gt; Fix thunk test&#10;use =&gt; Jest, mock, &#10;add to npm =&gt; nothing;&#10;create =&gt; nothing&#10;delete =&gt; nothing&#10;edit =&gt; usersReducer.thunks.test.ts" />
   </component>
 </project>
