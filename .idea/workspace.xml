@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v1.13 description =&gt; Add formik&#10;use =&gt; Formik, &#10;add to npm =&gt; Formik;&#10;create =&gt; UsersSearchForm.tsx;&#10;delete =&gt; nothing&#10;edit =&gt; Users.tsx&#10;        usersAPI.ts&#10;        UsersContainer.tsx&#10;        usersReducer.test.ts&#10;        usersReducer.ts&#10;        usersSelectors.ts">
-      <change afterPath="$PROJECT_DIR$/src/components/Login/LoginForm.tsx" afterDir="false" />
+    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v1.14 description =&gt; Refactoring to hook &#10;use =&gt; useDispatch, useSelector; &#10;add to npm =&gt; nothing;&#10;create =&gt; LoginForm.tsx;&#10;delete =&gt; nothing&#10;edit =&gt; App.tsx&#10;        Dialogs.tsx&#10;        Login.tsx&#10;        Users.tsx&#10;        UsersPage.tsx">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/Login.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Users/Users.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Users.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Users/UsersContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Users/UsersSearchForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersSearchForm.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -254,7 +250,7 @@
       <workItem from="1622101714520" duration="18016000" />
       <workItem from="1622182217001" duration="15994000" />
       <workItem from="1622303838492" duration="8423000" />
-      <workItem from="1622360749075" duration="9277000" />
+      <workItem from="1622360749075" duration="15827000" />
     </task>
     <task id="LOCAL-00001" summary="v0.35.5">
       <created>1608037498250</created>
@@ -578,7 +574,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622365625168</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="v1.14 description =&gt; Refactoring to hook &#10;use =&gt; useDispatch, useSelector; &#10;add to npm =&gt; nothing;&#10;create =&gt; LoginForm.tsx;&#10;delete =&gt; nothing&#10;edit =&gt; App.tsx&#10;        Dialogs.tsx&#10;        Login.tsx&#10;        Users.tsx&#10;        UsersPage.tsx">
+      <created>1622371271623</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1622371271623</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -619,7 +622,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="v0.80 use =&gt; Initialize App;&#10;refactor =&gt; Initialize App in App.js;&#10;add to npm =&gt; nothing;&#10;create =&gt; appReducer.js;&#10;edit =&gt; App.js, authReducer.js, HeaderContainer.jsx, ProfileContainer.jsx, reduxStore.js, UsersContainer.jsx" />
     <MESSAGE value="v0.81 use =&gt; reselect;&#10;refactor =&gt; reselect for UsersContainer.jsx;&#10;add to npm =&gt; nothing;&#10;create =&gt; usersSelectors.js;&#10;edit =&gt; Users.jsx, UsersContainer.jsx, usersReducer.js" />
     <MESSAGE value="v0.83 use =&gt; reselect (createSelector);&#10;refactor =&gt; reselect for UsersContainer.jsx;&#10;add to npm =&gt; reselect;&#10;create =&gt; nothing;&#10;edit =&gt; usersSelectors.js" />
     <MESSAGE value="v0.84 use =&gt; Hooks (useState);&#10;refactor =&gt; useState for ProfileStatus;&#10;add to npm =&gt; nothing;&#10;create =&gt; ProfileStatusWithHooks.jsx;&#10;edit =&gt; ProfileInfo.jsx, ProfileStatus.jsx" />
@@ -644,6 +646,7 @@
     <MESSAGE value="v1.11.5 description =&gt; Fix tests;&#10;use =&gt; Jest, react-test-renderer;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; ProfileStatus.test.tsx&#10;        ProfileStatusWithHooks.tsx" />
     <MESSAGE value="v1.12.5 description =&gt; Fix thunk test&#10;use =&gt; Jest, mock, &#10;add to npm =&gt; nothing;&#10;create =&gt; nothing&#10;delete =&gt; nothing&#10;edit =&gt; usersReducer.thunks.test.ts" />
     <MESSAGE value="v1.13 description =&gt; Add formik&#10;use =&gt; Formik, &#10;add to npm =&gt; Formik;&#10;create =&gt; UsersSearchForm.tsx;&#10;delete =&gt; nothing&#10;edit =&gt; Users.tsx&#10;        usersAPI.ts&#10;        UsersContainer.tsx&#10;        usersReducer.test.ts&#10;        usersReducer.ts&#10;        usersSelectors.ts" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1.13 description =&gt; Add formik&#10;use =&gt; Formik, &#10;add to npm =&gt; Formik;&#10;create =&gt; UsersSearchForm.tsx;&#10;delete =&gt; nothing&#10;edit =&gt; Users.tsx&#10;        usersAPI.ts&#10;        UsersContainer.tsx&#10;        usersReducer.test.ts&#10;        usersReducer.ts&#10;        usersSelectors.ts" />
+    <MESSAGE value="v1.14 description =&gt; Refactoring to hook &#10;use =&gt; useDispatch, useSelector; &#10;add to npm =&gt; nothing;&#10;create =&gt; LoginForm.tsx;&#10;delete =&gt; nothing&#10;edit =&gt; App.tsx&#10;        Dialogs.tsx&#10;        Login.tsx&#10;        Users.tsx&#10;        UsersPage.tsx" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.14 description =&gt; Refactoring to hook &#10;use =&gt; useDispatch, useSelector; &#10;add to npm =&gt; nothing;&#10;create =&gt; LoginForm.tsx;&#10;delete =&gt; nothing&#10;edit =&gt; App.tsx&#10;        Dialogs.tsx&#10;        Login.tsx&#10;        Users.tsx&#10;        UsersPage.tsx" />
   </component>
 </project>
