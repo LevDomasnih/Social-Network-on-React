@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v1.12 description =&gt; Add tests;&#10;use =&gt; Jest;&#10;add to npm =&gt; nothing;&#10;create =&gt; usersReducer.test.ts&#10;          usersReducer.thunks.test.ts;&#10;delete =&gt; nothing;&#10;edit =&gt; usersReducer.ts">
-      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v1.17 description =&gt; Add Antd;&#10;use =&gt; Antd;&#10;add to npm =&gt; Antd;&#10;create =&gt; usersReducer.test.ts&#10;          usersReducer.thunks.test.ts;&#10;delete =&gt; HeaderContainer.tsx;&#10;edit =&gt; App.tsx&#10;        AppHeader.tsx&#10;        index.tsx">
+      <change afterPath="$PROJECT_DIR$/src/components/Login/Login.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/AppHeader.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/HeaderContainer.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +61,7 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.TypeScript" />
     <property name="ts.external.directory.path" value="C:\Users\User\WebstormProjects\Social-Network-on-React\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -92,60 +89,33 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.test">
-    <configuration name="follow unfollow" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="App" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/src/redux/usersReducer.thunks.test.ts" />
+      <test-file value="$PROJECT_DIR$/src/components/Login/Login.test.tsx" />
       <test-names>
-        <test-name value="follow unfollow" />
+        <test-name value="App" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="follow-unfollow error" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="Authorized" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/src/redux/usersReducer.thunks.test.ts" />
+      <test-file value="$PROJECT_DIR$/src/components/Login/Login.test.tsx" />
       <test-names>
-        <test-name value="follow-unfollow error" />
+        <test-name value="Authorized" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="follow-unfollow error.follow error" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/redux/usersReducer.thunks.test.ts" />
-      <test-names>
-        <test-name value="follow-unfollow error" />
-        <test-name value="follow error" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="renders without crashing" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/App.test.tsx" />
-      <test-names>
-        <test-name value="renders without crashing" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="t" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="Authorized.User authorized" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
@@ -154,7 +124,36 @@
       <scope-kind value="TEST" />
       <test-file value="$PROJECT_DIR$/src/components/Login/Login.test.tsx" />
       <test-names>
-        <test-name value="t" />
+        <test-name value="Authorized" />
+        <test-name value="User authorized" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Authorized.User not authorized and go auth" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/components/Login/Login.test.tsx" />
+      <test-names>
+        <test-name value="Authorized" />
+        <test-name value="User not authorized and go auth" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Authorized.User not authorized" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/components/Login/Login.test.tsx" />
+      <test-names>
+        <test-name value="Authorized" />
+        <test-name value="User not authorized" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -179,21 +178,21 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Jest.follow unfollow" />
-      <item itemvalue="Jest.follow-unfollow error" />
-      <item itemvalue="Jest.follow-unfollow error.follow error" />
-      <item itemvalue="Jest.t" />
       <item itemvalue="npm.start" />
       <item itemvalue="npm.test" />
-      <item itemvalue="Jest.renders without crashing" />
+      <item itemvalue="Jest.App" />
+      <item itemvalue="Jest.Authorized" />
+      <item itemvalue="Jest.Authorized.User not authorized" />
+      <item itemvalue="Jest.Authorized.User authorized" />
+      <item itemvalue="Jest.Authorized.User not authorized and go auth" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Jest.renders without crashing" />
-        <item itemvalue="Jest.t" />
-        <item itemvalue="Jest.follow-unfollow error" />
-        <item itemvalue="Jest.follow-unfollow error.follow error" />
-        <item itemvalue="Jest.follow unfollow" />
+        <item itemvalue="Jest.Authorized" />
+        <item itemvalue="Jest.Authorized.User not authorized and go auth" />
+        <item itemvalue="Jest.Authorized.User not authorized" />
+        <item itemvalue="Jest.Authorized.User authorized" />
+        <item itemvalue="Jest.App" />
       </list>
     </recent_temporary>
   </component>
@@ -251,7 +250,7 @@
       <workItem from="1622182217001" duration="15994000" />
       <workItem from="1622303838492" duration="8423000" />
       <workItem from="1622360749075" duration="19462000" />
-      <workItem from="1622447111539" duration="1615000" />
+      <workItem from="1622447111539" duration="15190000" />
     </task>
     <task id="LOCAL-00001" summary="v0.35.5">
       <created>1608037498250</created>
@@ -589,7 +588,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622379315715</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="v1.17 description =&gt; Add Antd;&#10;use =&gt; Antd;&#10;add to npm =&gt; Antd;&#10;create =&gt; usersReducer.test.ts&#10;          usersReducer.thunks.test.ts;&#10;delete =&gt; HeaderContainer.tsx;&#10;edit =&gt; App.tsx&#10;        AppHeader.tsx&#10;        index.tsx">
+      <created>1622448880567</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1622448880567</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -630,7 +636,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="v0.83 use =&gt; reselect (createSelector);&#10;refactor =&gt; reselect for UsersContainer.jsx;&#10;add to npm =&gt; reselect;&#10;create =&gt; nothing;&#10;edit =&gt; usersSelectors.js" />
     <MESSAGE value="v0.84 use =&gt; Hooks (useState);&#10;refactor =&gt; useState for ProfileStatus;&#10;add to npm =&gt; nothing;&#10;create =&gt; ProfileStatusWithHooks.jsx;&#10;edit =&gt; ProfileInfo.jsx, ProfileStatus.jsx" />
     <MESSAGE value="v0.85 use =&gt; Hooks (useEffect);&#10;refactor =&gt; useEffect for ProfileStatus;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; ProfileStatusWithHooks.jsx" />
     <MESSAGE value="v0.87 use =&gt; React.memo;&#10;refactor =&gt; React.memo for Posts;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; MyPosts.jsx" />
@@ -655,6 +660,7 @@
     <MESSAGE value="v1.13 description =&gt; Add formik&#10;use =&gt; Formik, &#10;add to npm =&gt; Formik;&#10;create =&gt; UsersSearchForm.tsx;&#10;delete =&gt; nothing&#10;edit =&gt; Users.tsx&#10;        usersAPI.ts&#10;        UsersContainer.tsx&#10;        usersReducer.test.ts&#10;        usersReducer.ts&#10;        usersSelectors.ts" />
     <MESSAGE value="v1.14 description =&gt; Refactoring to hook &#10;use =&gt; useDispatch, useSelector; &#10;add to npm =&gt; nothing;&#10;create =&gt; LoginForm.tsx;&#10;delete =&gt; nothing&#10;edit =&gt; App.tsx&#10;        Dialogs.tsx&#10;        Login.tsx&#10;        Users.tsx&#10;        UsersPage.tsx" />
     <MESSAGE value="v1.15 description =&gt; users on URI&#10;use =&gt; useHistory, filter, search, query string; &#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing&#10;edit =&gt; Users.tsx&#10;        UsersSearchForm.tsx" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1.15 description =&gt; users on URI&#10;use =&gt; useHistory, filter, search, query string; &#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing&#10;edit =&gt; Users.tsx&#10;        UsersSearchForm.tsx" />
+    <MESSAGE value="v1.17 description =&gt; Add Antd;&#10;use =&gt; Antd;&#10;add to npm =&gt; Antd;&#10;create =&gt; usersReducer.test.ts&#10;          usersReducer.thunks.test.ts;&#10;delete =&gt; HeaderContainer.tsx;&#10;edit =&gt; App.tsx&#10;        AppHeader.tsx&#10;        index.tsx" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.17 description =&gt; Add Antd;&#10;use =&gt; Antd;&#10;add to npm =&gt; Antd;&#10;create =&gt; usersReducer.test.ts&#10;          usersReducer.thunks.test.ts;&#10;delete =&gt; HeaderContainer.tsx;&#10;edit =&gt; App.tsx&#10;        AppHeader.tsx&#10;        index.tsx" />
   </component>
 </project>
