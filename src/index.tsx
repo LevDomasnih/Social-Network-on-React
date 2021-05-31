@@ -4,7 +4,8 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import SocialNetworkApp from "./App";
 
-ReactDOM.render(<SocialNetworkApp/>, document.getElementById('root'));
+
+ReactDOM.render(<SocialNetworkApp />, document.getElementById('root'));
 
 //TODO try-catch
 
