@@ -4,14 +4,14 @@ import userPhoto from "../../assets/images/userPhoto.jpg";
 import classes from "./user.module.css";
 import {UserType} from "../../types/types";
 
-type PropsType = {
+export type UserPropsType = {
     user: UserType
     followingInProgress: Array<number>
     unfollowUsers: (userId: number) => void
     followUsers: (userId: number) => void
 }
 
-const User: React.FC<PropsType> = ({followUsers, followingInProgress, unfollowUsers, user}) => (
+const User: React.FC<UserPropsType> = ({followUsers, followingInProgress, unfollowUsers, user}) => (
     <div key={user.id}>
             <span>
                 <div>
@@ -23,14 +23,10 @@ const User: React.FC<PropsType> = ({followUsers, followingInProgress, unfollowUs
                 <div>
                     {user.followed
                         ? <button disabled={followingInProgress.some(id => id === user.id)}
-                                  onClick={() => {
-                                      unfollowUsers(user.id)
-                                  }}>Unfollow</button>
+                                  onClick={() => unfollowUsers(user.id)}>Unfollow</button>
 
                         : <button disabled={followingInProgress.some(id => id === user.id)}
-                                  onClick={() => {
-                                      followUsers(user.id)
-                                  }}>Follow</button>
+                                  onClick={() => followUsers(user.id)}>Follow</button>
                     }
                 </div>
             </span>
