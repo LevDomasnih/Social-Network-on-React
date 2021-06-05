@@ -1,19 +1,18 @@
 import {FilterType} from "../../redux/usersReducer";
 import React, {FC} from "react";
-import {Field, Form, Formik, FormikHelpers} from "formik";
-import {useSelector} from "react-redux";
-import {getUsersFilter} from "../../redux/usersSelectors";
+import {Form, Input, Select} from 'antd';
+import {useHistory} from "react-router-dom";
+import queryString from "querystring";
+import {QueryParamsType} from "./Users";
 
-const usersSearchFromValidate = (values: any) => {
-    const errors = {}
-    return errors
-}
+const {Option} = Select;
 
-type FriendType = "true" | "false" | "null";
-
-type FormType = {
-    term: string
-    friend: FriendType
+interface FieldData {
+    name: string | number | (string | number)[];
+    value?: any;
+    touched?: boolean;
+    validating?: boolean;
+    errors?: string[];
 }
 
 type UsersSearchFormPropsType = {
@@ -21,40 +20,45 @@ type UsersSearchFormPropsType = {
 }
 export const UsersSearchForm: FC<UsersSearchFormPropsType> = ({onFilterChanged}) => {
 
-    const {term, friend} = useSelector(getUsersFilter)
+    const history = useHistory()
+    const parsed = queryString.parse(history.location.search.substr(1)) as QueryParamsType
 
-    const submit = ({friend, term}: FormType, {setSubmitting}: FormikHelpers<any>) => {
+    const handleChange: (field: Array<FieldData>, fields: Array<FieldData>) => void = (_, form) => {
+        const term: string = form[0].value
+        const friend: string = form[1].value
         const filter: FilterType = {
             term: term,
-            friend: friend === "null" ? null : friend == "true"
+            friend: friend === "all" ? null : friend == "true"
         }
         onFilterChanged(filter)
-        setSubmitting(false)
     }
 
     return (
         <div>
-            <Formik
-                enableReinitialize
-                initialValues={{term: term, friend: String(friend) as FriendType}}
-                validate={usersSearchFromValidate}
-                onSubmit={submit}
-            >
-                {({isSubmitting}) => (
-                    <Form>
-                        <Field type="text" name="term"/>
-                        <Field name="friend" as={"select"}>
-                            <option value={"null"}>All</option>
-                            <option value={"true"}>Followed</option>
-                            <option value={"false"}>Unfollowed</option>
-                        </Field>
-
-                        <button type="submit" disabled={isSubmitting}>
-                            Submit
-                        </button>
-                    </Form>
-                )}
-            </Formik>
+            <Form onFieldsChange={handleChange}>
+                <Input.Group compact>
+                    <Form.Item
+                        name='term'
+                        noStyle
+                        rules={[{required: true, message: 'Street is required'}]}
+                        initialValue={parsed.term}
+                    >
+                        <Input style={{width: '75%'}} placeholder="Search"/>
+                    </Form.Item>
+                    <Form.Item
+                        name='friend'
+                        noStyle
+                        rules={[{required: true}]}
+                        initialValue={parsed.friend || 'all'}
+                    >
+                        <Select placeholder="All">
+                            <Option value="all">All</Option>
+                            <Option value="true">Followed</Option>
+                            <Option value="false">Unfollowed</Option>
+                        </Select>
+                    </Form.Item>
+                </Input.Group>
+            </Form>
         </div>
     )
 }

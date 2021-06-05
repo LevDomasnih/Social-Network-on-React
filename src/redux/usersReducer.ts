@@ -63,8 +63,12 @@ const usersReducer = (state = initialState, action: ActionsTypes): usersStateTyp
         case "TOGGLE_IS_FETCHING": {
             return { ...state, isFetching: action.isFetching }
         }
-        case "SET_FILTER":
+        case "SET_FILTER": {
             return {...state, filter: action.payload}
+        }
+        case "SET_PAGE_SIZE": {
+            return {...state, pageSize: action.pageSize}
+        }
         default:
             return state
     }
@@ -96,6 +100,7 @@ export const actions = {
         isFetching,
         userId,
     } as const),
+    setPageSize: (pageSize: number) => ({type: "SET_PAGE_SIZE", pageSize} as const)
 }
 
 type ThunkType = BaseThunkType<ActionsTypes>
@@ -104,6 +109,7 @@ export const requestUsers = (pageNumber: number, pageSize: number, filter: Filte
     dispatch(actions.toggleIsFetching(true))
     dispatch(actions.setCurrentPage(pageNumber))
     dispatch(actions.setFilter(filter))
+    dispatch(actions.setPageSize(pageSize))
 
     const response = await usersAPI.getUsers(pageNumber, pageSize, filter.term, filter.friend)
 

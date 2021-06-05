@@ -1,8 +1,8 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
-import userPhoto from "../../assets/images/userPhoto.jpg";
-import classes from "./user.module.css";
 import {UserType} from "../../types/types";
+import {Avatar, Button, Col, Divider, Image, Row} from "antd";
+import {UserOutlined} from "@ant-design/icons";
 
 export type UserPropsType = {
     user: UserType
@@ -12,35 +12,31 @@ export type UserPropsType = {
 }
 
 const User: React.FC<UserPropsType> = ({followUsers, followingInProgress, unfollowUsers, user}) => (
-    <div key={user.id}>
-            <span>
-                <div>
-                    <NavLink to={'/profile' + `/${user.id}`}>
-                        <img src={user.photos.small != null ? user.photos.small : userPhoto}
-                             className={classes.userPhoto}/>
-                    </NavLink>
-                </div>
-                <div>
-                    {user.followed
-                        ? <button disabled={followingInProgress.some(id => id === user.id)}
-                                  onClick={() => unfollowUsers(user.id)}>Unfollow</button>
+    <Row key={user.id}>
+        <Col span={3}>
+            <NavLink to={'/profile' + `/${user.id}`}>
+                {user.photos.small == null ?
+                    <Avatar size={80} icon={<UserOutlined/>}/> :
+                    <Avatar size={80} src={<Image src={user.photos.small}/>}/>
+                }
+            </NavLink>
+        </Col>
+        <Col span={17}>
+            <div>{user.name}</div>
+            <div>{user.status}</div>
+            <div>Country, City</div>
+        </Col>
+        <Col span={2} offset={2}>
+            {user.followed
+                ? <Button disabled={followingInProgress.some(id => id === user.id)}
+                          onClick={() => unfollowUsers(user.id)}>Unfollow</Button>
 
-                        : <button disabled={followingInProgress.some(id => id === user.id)}
-                                  onClick={() => followUsers(user.id)}>Follow</button>
-                    }
-                </div>
-            </span>
-        <span>
-                <span>
-                    <div>{user.name}</div>
-                    <div>{user.status}</div>
-                </span>
-                <span>
-                    <div>{"u.location.city"}</div>
-                    <div>{"u.location.country"}</div>
-                </span>
-            </span>
-    </div>
+                : <Button disabled={followingInProgress.some(id => id === user.id)}
+                          onClick={() => followUsers(user.id)}>Follow</Button>
+            }
+        </Col>
+        <Divider/>
+    </Row>
 )
 
 export default User

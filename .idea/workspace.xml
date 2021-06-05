@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v1.17.5 description =&gt; Test for Login;&#10;use =&gt; Jest;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; HeaderContainer.tsx;&#10;edit =&gt; Login.test.tsx">
-      <change afterPath="$PROJECT_DIR$/src/components/Users/User.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Users/User.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/User.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Users/Users.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Users.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Users/UsersSearchForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersSearchForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Users/user.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/user.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/usersReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/usersReducer.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +51,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -56,15 +59,17 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Users" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.standard" value="" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.TypeScript" />
-    <property name="ts.external.directory.path" value="C:\Users\User\WebstormProjects\Social-Network-on-React\node_modules\typescript\lib" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -89,7 +94,7 @@
       <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\API\profileAPI.ts" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.User test">
+  <component name="RunManager" selected="npm.start">
     <configuration name="Authorized" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -117,17 +122,17 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="Authorized.User not authorized and go auth" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="ProfileStatus component.after creation &lt;input&gt; shouldn't be displayed" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/components/Login/Login.test.tsx" />
+      <test-file value="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileStatus.test.tsx" />
       <test-names>
-        <test-name value="Authorized" />
-        <test-name value="User not authorized and go auth" />
+        <test-name value="ProfileStatus component" />
+        <test-name value="after creation &lt;input&gt; shouldn't be displayed" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -181,19 +186,19 @@
     <list>
       <item itemvalue="Jest.Authorized" />
       <item itemvalue="Jest.Authorized.User authorized" />
-      <item itemvalue="Jest.Authorized.User not authorized and go auth" />
-      <item itemvalue="npm.start" />
-      <item itemvalue="npm.test" />
       <item itemvalue="Jest.User test.follow" />
       <item itemvalue="Jest.User test" />
+      <item itemvalue="Jest.ProfileStatus component.after creation &lt;input&gt; shouldn't be displayed" />
+      <item itemvalue="npm.start" />
+      <item itemvalue="npm.test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.ProfileStatus component.after creation &lt;input&gt; shouldn't be displayed" />
         <item itemvalue="Jest.User test" />
         <item itemvalue="Jest.User test.follow" />
         <item itemvalue="Jest.Authorized.User authorized" />
         <item itemvalue="Jest.Authorized" />
-        <item itemvalue="Jest.Authorized.User not authorized and go auth" />
       </list>
     </recent_temporary>
   </component>
@@ -254,20 +259,8 @@
       <workItem from="1622447111539" duration="15888000" />
       <workItem from="1622540289080" duration="1241000" />
       <workItem from="1622611933127" duration="7715000" />
-    </task>
-    <task id="LOCAL-00002" summary="v0.42">
-      <created>1608209517593</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1608209517593</updated>
-    </task>
-    <task id="LOCAL-00003" summary="v0.44 ADD Context API">
-      <created>1608300516209</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1608300516209</updated>
+      <workItem from="1622661083157" duration="3149000" />
+      <workItem from="1622752380869" duration="30571000" />
     </task>
     <task id="LOCAL-00004" summary="v0.46.5">
       <created>1608319783774</created>
@@ -598,7 +591,21 @@
       <option name="project" value="LOCAL" />
       <updated>1622469002322</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="v1.17.7 description =&gt; fix profile status;&#10;use =&gt; nothing;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; ProfileInfo.tsx&#10;        ProfileStatusWithHooks.tsx">
+      <created>1622664606114</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1622664606115</updated>
+    </task>
+    <task id="LOCAL-00052" summary="v1.17.7 description =&gt; fix tests;&#10;use =&gt; Jest;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; ProfileStatus.test.tsx">
+      <created>1622668221638</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1622668221638</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -639,8 +646,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="v0.85 use =&gt; Hooks (useEffect);&#10;refactor =&gt; useEffect for ProfileStatus;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; ProfileStatusWithHooks.jsx" />
-    <MESSAGE value="v0.87 use =&gt; React.memo;&#10;refactor =&gt; React.memo for Posts;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;edit =&gt; MyPosts.jsx" />
     <MESSAGE value="v0.89 use =&gt; Tests, Jest, tdd;&#10;refactor =&gt; Testing of Reducer;&#10;add to npm =&gt; nothing;&#10;create =&gt; profileReducer.test.js;&#10;delete =&gt; ProfileStatus.jsx, App.test.js;&#10;edit =&gt; ProfileInfo.jsx, profileReducer.js" />
     <MESSAGE value="v0.90 use =&gt; Redux-ducks, async/await;&#10;refactor =&gt; action on Redux-ducks, async/await instead then in reducers;&#10;add to npm =&gt; nothing;&#10;create =&gt; Paginator.jsx, Paginator.module.css;&#10;delete =&gt; nothing;&#10;edit =&gt; api.js,&#10;        appReducer.js,&#10;        authReducer.js,&#10;        dialogsReducer.js,&#10;        profileReducer.js,&#10;        user.module.css,&#10;        Users.jsx,&#10;        UsersContainer.jsx,&#10;        usersReducer.js" />
     <MESSAGE value="v0.91 use =&gt; Connections with Redux DevTools;&#10;refactor =&gt; Connect store with Redux DevTools;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; reduxStore.js" />
@@ -664,6 +669,12 @@
     <MESSAGE value="v1.15 description =&gt; users on URI&#10;use =&gt; useHistory, filter, search, query string; &#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing&#10;edit =&gt; Users.tsx&#10;        UsersSearchForm.tsx" />
     <MESSAGE value="v1.17 description =&gt; Add Antd;&#10;use =&gt; Antd;&#10;add to npm =&gt; Antd;&#10;create =&gt; usersReducer.test.ts&#10;          usersReducer.thunks.test.ts;&#10;delete =&gt; HeaderContainer.tsx;&#10;edit =&gt; App.tsx&#10;        AppHeader.tsx&#10;        index.tsx" />
     <MESSAGE value="v1.17.5 description =&gt; Test for Login;&#10;use =&gt; Jest;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; HeaderContainer.tsx;&#10;edit =&gt; Login.test.tsx" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1.17.5 description =&gt; Test for Login;&#10;use =&gt; Jest;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; HeaderContainer.tsx;&#10;edit =&gt; Login.test.tsx" />
+    <MESSAGE value="v1.17.7 description =&gt; fix profile status;&#10;use =&gt; nothing;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; ProfileInfo.tsx&#10;        ProfileStatusWithHooks.tsx" />
+    <MESSAGE value="v1.17.7 description =&gt; fix tests;&#10;use =&gt; Jest;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; ProfileStatus.test.tsx" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.17.7 description =&gt; fix tests;&#10;use =&gt; Jest;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; ProfileStatus.test.tsx" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
