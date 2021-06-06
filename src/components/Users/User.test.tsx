@@ -1,7 +1,8 @@
-import { create } from "react-test-renderer"
-import User, { UserPropsType } from "./User"
-import { BrowserRouter } from "react-router-dom"
-import React, { ReactNode } from "react"
+import {create} from "react-test-renderer"
+import User, {UserPropsType} from "./User"
+import {BrowserRouter} from "react-router-dom"
+import React, {ReactNode} from "react"
+import {Button} from "antd";
 
 
 const initialState: UserPropsType = {
@@ -15,9 +16,11 @@ const initialState: UserPropsType = {
         name: 'User',
         id: 5
     },
-    followingInProgress: [1, 2, 3, 4, 5],
-    unfollowUsers: () => {},
-    followUsers: () => {},
+    followingInProgress: [5],
+    unfollowUsers: () => {
+    },
+    followUsers: () => {
+    },
 }
 
 const renderWithRedux = (node: ReactNode) => create(
@@ -26,17 +29,29 @@ const renderWithRedux = (node: ReactNode) => create(
     </BrowserRouter>,
 )
 
+beforeAll(() => {
+    window.matchMedia = window.matchMedia || function () {
+        return {
+            matches: false,
+            addListener: function () {
+            },
+            removeListener: function () {
+            }
+        };
+    };
+});
+
 describe('User test', () => {
     test('Follow', () => {
         const component = renderWithRedux(<User {...initialState} />)
-        const element = component.root.findByType("button")
+        const element = component.root.findByType(Button)
         expect(element.props.children).toBe('Unfollow')
     })
 
     test('Unfollow', () => {
         initialState.user.followed = false
         const component = renderWithRedux(<User {...initialState} />)
-        const element = component.root.findByType("button")
+        const element = component.root.findByType(Button)
         expect(element.props.children).toBe('Follow')
     })
 })

@@ -1,4 +1,4 @@
-import React, {ChangeEvent} from 'react';
+import React from 'react';
 import style from './ProfileInfo.module.css'
 import Preloader from "../../common/Preloader/Preloader";
 import userPhoto from '../../../assets/images/userPhoto.jpg'
@@ -6,6 +6,8 @@ import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 import {useDispatch, useSelector} from "react-redux";
 import {AppStateType} from "../../../redux/reduxStore";
 import {savePhoto, updateStatus} from "../../../redux/profileReducer";
+import {Button, Col, Descriptions, Row, Upload} from "antd";
+import {UploadOutlined} from '@ant-design/icons';
 
 type PropsType = {
     isOwner: boolean
@@ -30,45 +32,41 @@ const ProfileInfo: React.FC<PropsType> = ({isOwner}) => {
     let valuesOfObj = Object.values(profile.contacts)
     let isEveryNull = valuesOfObj.some(elem => elem != null)
 
-    const onMainPhotoSelected = (e: ChangeEvent<HTMLInputElement>) => {
-        e.target.files && dispatch(savePhoto(e.target.files[0]))
+    const onMainPhotoSelected = (e: any) => {
+        dispatch(savePhoto(e.file.originFileObj))
     }
     //TODO update profile (edit profile)
     return (
-        <div>
-            <div>
-                <img
-                    src='https://strana.ua/img/article/2625/70_main.jpeg'/>
-            </div>
-            <div className={style.descriptionBlock}>
+        <Row>
+            <Col span={8}>
                 <img src={profile.photos.large || userPhoto} className={style.mainPhoto}/>
-                {isOwner && <input type={'file'} onChange={onMainPhotoSelected}/>}
-                <ProfileStatusWithHooks status={status} isOwner={isOwner} updateStatus={updateStatusCb}/>
-
-                <div>
-                    <b>Name: </b>{profile.fullName}
-                </div>
-                <hr/>
-                <div>
-                    <b>About me: </b>{profile.aboutMe}
-                </div>
-                <hr/>
-                <div>
-                    <b>Contacts: </b>
-                    {isEveryNull && <ul>
+                {isOwner && <Upload onChange={onMainPhotoSelected}>
+                    <Button icon={<UploadOutlined/>} style={{marginTop: 20}}>Click to Upload</Button>
+                </Upload>}
+            </Col>
+            <Col span={16}>
+                <Descriptions title="User Info">
+                    <Descriptions.Item label="Name">{profile.fullName}</Descriptions.Item>
+                    <Descriptions.Item label="Status"><ProfileStatusWithHooks status={status} isOwner={isOwner}
+                                                                              updateStatus={updateStatusCb}/></Descriptions.Item>
+                    <Descriptions.Item label="About me">{profile.aboutMe || 'None'}</Descriptions.Item>
+                    <Descriptions.Item
+                        label="Looking for a job">{profile.lookingForAJob ? "YES" : "NO"}</Descriptions.Item>
+                    <Descriptions.Item label="Looking for a job description">
+                        {profile.lookingForAJobDescription ? profile.lookingForAJobDescription : "None"}
+                    </Descriptions.Item>
+                </Descriptions>
+                {isEveryNull && (
+                    <Descriptions title="Contacts" size='middle'>
                         {contacts.map(([key, value]) => {
-                            return value != null ? <li>{key}: {value}</li> : null;
+                            return value != null ?
+                                <Descriptions.Item label={key}>{value}</Descriptions.Item> : null;
                         })}
-                    </ul>}
-                </div>
-                <hr/>
-                <div>
-                    <br/><b>lookingForAJob: </b>{profile.lookingForAJob ? "YES" : "NO"}
-                    <br/><b>lookingForAJobDescription: </b>{profile.lookingForAJobDescription ? profile.lookingForAJobDescription : "NOPE"}
-                </div>
+                    </Descriptions>
+                )}
+            </Col>
+        </Row>
 
-            </div>
-        </div>
     )
 }
 
