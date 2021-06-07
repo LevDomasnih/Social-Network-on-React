@@ -23,6 +23,7 @@ const DialogsContainer = React.lazy(() => import("./components/Dialogs/DialogsCo
 const ProfileContainer = React.lazy(() => import("./components/Profile/ProfileContainer"))
 const UsersPage = React.lazy(() => import("./components/Users/UsersPage"))
 const Login = React.lazy(() => import("./components/Login/Login"))
+const ChatPage = React.lazy(() => import("./pages/Chat/ChatPage"))
 
 type MapPropsType = ReturnType<typeof mapStateToProps>
 type DispatchPropsType = {
@@ -72,6 +73,9 @@ class App extends React.Component<MapPropsType & DispatchPropsType> {
                                         <Link to="/news">News</Link>
                                     </Menu.Item>
                                     <Menu.Item key="6">
+                                        <Link to="/chat">Chat</Link>
+                                    </Menu.Item>
+                                    <Menu.Item key="7">
                                         <Link to="/music">Music</Link>
                                     </Menu.Item>
                                 </SubMenu>
@@ -99,6 +103,9 @@ class App extends React.Component<MapPropsType & DispatchPropsType> {
                                 <Route path="/settings" render={() => <Settings/>}/>
                                 <Route path="/login">
                                     {withSuspense(Login)}
+                                </Route>
+                                <Route path="/chat">
+                                    {withSuspense(ChatPage)}
                                 </Route>
                                 <Route path="*" render={() => <div>404 NOT FOUND</div>}/>
                             </Switch>
