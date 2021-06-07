@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v1.17.9 description =&gt; Refactor Profile page;&#10;use =&gt; Antd;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; ProfileInfo.module.css&#10;        ProfileInfo.tsx&#10;        ProfileStatusWithHooks.tsx&#10;        User.test.tsx&#10;        usersReducer.ts&#10;        UsersSearchForm.tsx">
-      <change afterPath="$PROJECT_DIR$/src/pages/Chat/ChatPage.tsx" afterDir="false" />
+    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v1.18 description =&gt; add WebSocket;&#10;use =&gt; WebSocket; &#10;add to npm =&gt; sloc;&#10;create =&gt; ChatPage.tsx;&#10;delete =&gt; nothing&#10;edit =&gt; App.tsx">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Chat/ChatPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Chat/ChatPage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -268,13 +265,6 @@
       <workItem from="1623008743953" duration="5937000" />
       <workItem from="1623083732850" duration="12000" />
       <workItem from="1623083788916" duration="4740000" />
-    </task>
-    <task id="LOCAL-00006" summary="v0.55 refactor =&gt; pagination">
-      <created>1608420636021</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1608420636021</updated>
     </task>
     <task id="LOCAL-00007" summary="v0.58 add =&gt; classnames to npm, preloader; refactor =&gt; Users">
       <created>1608470199560</created>
@@ -612,7 +602,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623011229016</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="v1.18 description =&gt; add WebSocket;&#10;use =&gt; WebSocket; &#10;add to npm =&gt; sloc;&#10;create =&gt; ChatPage.tsx;&#10;delete =&gt; nothing&#10;edit =&gt; App.tsx">
+      <created>1623095519018</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1623095519018</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -653,7 +650,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="v0.91 use =&gt; Connections with Redux DevTools;&#10;refactor =&gt; Connect store with Redux DevTools;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; reduxStore.js" />
     <MESSAGE value="v0.92 use =&gt; Testing Components;&#10;description =&gt; return App.test.js, Test Components;&#10;add to npm =&gt; react-test-renderer;&#10;create =&gt; App.test.js, ProfileStatus.test.jsx;&#10;delete =&gt; nothing;&#10;edit =&gt; App.js, index.js" />
     <MESSAGE value="v0.93 use =&gt; Paginator;&#10;description =&gt; refactor Paginator;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; Paginator.jsx&#10;        Paginator.module.css&#10;        Users.jsx&#10;        UsersContainer.jsx&#10;        usersReducer.js" />
     <MESSAGE value="v0.94 use =&gt; React.lazy and React.Suspense;&#10;description =&gt; optimization of site loading, add new HOC;&#10;add to npm =&gt; nothing;&#10;create =&gt; withSuspense.js;&#10;delete =&gt; nothing;&#10;edit =&gt; App.js" />
@@ -678,7 +674,8 @@
     <MESSAGE value="v1.17.7 description =&gt; fix tests;&#10;use =&gt; Jest;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; ProfileStatus.test.tsx" />
     <MESSAGE value="v1.17.8 description =&gt; Refactor UsersPage;&#10;use =&gt; Antd;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; user.module.css&#10;        User.tsx&#10;        Users.tsx&#10;        usersReducer.ts&#10;        UsersSearchForm.tsx" />
     <MESSAGE value="v1.17.9 description =&gt; Refactor Profile page;&#10;use =&gt; Antd;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; ProfileInfo.module.css&#10;        ProfileInfo.tsx&#10;        ProfileStatusWithHooks.tsx&#10;        User.test.tsx&#10;        usersReducer.ts&#10;        UsersSearchForm.tsx" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1.17.9 description =&gt; Refactor Profile page;&#10;use =&gt; Antd;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; ProfileInfo.module.css&#10;        ProfileInfo.tsx&#10;        ProfileStatusWithHooks.tsx&#10;        User.test.tsx&#10;        usersReducer.ts&#10;        UsersSearchForm.tsx" />
+    <MESSAGE value="v1.18 description =&gt; add WebSocket;&#10;use =&gt; WebSocket; &#10;add to npm =&gt; sloc;&#10;create =&gt; ChatPage.tsx;&#10;delete =&gt; nothing&#10;edit =&gt; App.tsx" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.18 description =&gt; add WebSocket;&#10;use =&gt; WebSocket; &#10;add to npm =&gt; sloc;&#10;create =&gt; ChatPage.tsx;&#10;delete =&gt; nothing&#10;edit =&gt; App.tsx" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
