@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v1.17.8 description =&gt; Refactor UsersPage;&#10;use =&gt; Antd;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; user.module.css&#10;        User.tsx&#10;        Users.tsx&#10;        usersReducer.ts&#10;        UsersSearchForm.tsx">
+    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v1.17.9 description =&gt; Refactor Profile page;&#10;use =&gt; Antd;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; ProfileInfo.module.css&#10;        ProfileInfo.tsx&#10;        ProfileStatusWithHooks.tsx&#10;        User.test.tsx&#10;        usersReducer.ts&#10;        UsersSearchForm.tsx">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileStatusWithHooks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileStatusWithHooks.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Users/User.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/User.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +36,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/App.tsx" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="1lSeM4vUsYQ4dFQ5vKkrl8fBZDi" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -93,7 +93,7 @@
       <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\API\profileAPI.ts" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.User test">
+  <component name="RunManager" selected="npm.test">
     <configuration name="Authorized.User authorized" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -188,9 +188,9 @@
       <item itemvalue="Jest.User test.follow" />
       <item itemvalue="Jest.User test" />
       <item itemvalue="Jest.ProfileStatus component.after creation &lt;input&gt; shouldn't be displayed" />
+      <item itemvalue="Jest.User test.Follow" />
       <item itemvalue="npm.start" />
       <item itemvalue="npm.test" />
-      <item itemvalue="Jest.User test.Follow" />
     </list>
     <recent_temporary>
       <list>
@@ -261,14 +261,9 @@
       <workItem from="1622611933127" duration="7715000" />
       <workItem from="1622661083157" duration="3149000" />
       <workItem from="1622752380869" duration="37933000" />
-      <workItem from="1623008743953" duration="2343000" />
-    </task>
-    <task id="LOCAL-00005" summary="v0.52 add =&gt; axios">
-      <created>1608398726087</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1608398726087</updated>
+      <workItem from="1623008743953" duration="5937000" />
+      <workItem from="1623083732850" duration="12000" />
+      <workItem from="1623083788916" duration="4740000" />
     </task>
     <task id="LOCAL-00006" summary="v0.55 refactor =&gt; pagination">
       <created>1608420636021</created>
@@ -606,7 +601,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622925834940</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="v1.17.9 description =&gt; Refactor Profile page;&#10;use =&gt; Antd;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; ProfileInfo.module.css&#10;        ProfileInfo.tsx&#10;        ProfileStatusWithHooks.tsx&#10;        User.test.tsx&#10;        usersReducer.ts&#10;        UsersSearchForm.tsx">
+      <created>1623011229016</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1623011229016</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -647,7 +649,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="v0.90 use =&gt; Redux-ducks, async/await;&#10;refactor =&gt; action on Redux-ducks, async/await instead then in reducers;&#10;add to npm =&gt; nothing;&#10;create =&gt; Paginator.jsx, Paginator.module.css;&#10;delete =&gt; nothing;&#10;edit =&gt; api.js,&#10;        appReducer.js,&#10;        authReducer.js,&#10;        dialogsReducer.js,&#10;        profileReducer.js,&#10;        user.module.css,&#10;        Users.jsx,&#10;        UsersContainer.jsx,&#10;        usersReducer.js" />
     <MESSAGE value="v0.91 use =&gt; Connections with Redux DevTools;&#10;refactor =&gt; Connect store with Redux DevTools;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; reduxStore.js" />
     <MESSAGE value="v0.92 use =&gt; Testing Components;&#10;description =&gt; return App.test.js, Test Components;&#10;add to npm =&gt; react-test-renderer;&#10;create =&gt; App.test.js, ProfileStatus.test.jsx;&#10;delete =&gt; nothing;&#10;edit =&gt; App.js, index.js" />
     <MESSAGE value="v0.93 use =&gt; Paginator;&#10;description =&gt; refactor Paginator;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; Paginator.jsx&#10;        Paginator.module.css&#10;        Users.jsx&#10;        UsersContainer.jsx&#10;        usersReducer.js" />
@@ -672,7 +673,8 @@
     <MESSAGE value="v1.17.7 description =&gt; fix profile status;&#10;use =&gt; nothing;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; ProfileInfo.tsx&#10;        ProfileStatusWithHooks.tsx" />
     <MESSAGE value="v1.17.7 description =&gt; fix tests;&#10;use =&gt; Jest;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; ProfileStatus.test.tsx" />
     <MESSAGE value="v1.17.8 description =&gt; Refactor UsersPage;&#10;use =&gt; Antd;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; user.module.css&#10;        User.tsx&#10;        Users.tsx&#10;        usersReducer.ts&#10;        UsersSearchForm.tsx" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1.17.8 description =&gt; Refactor UsersPage;&#10;use =&gt; Antd;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; user.module.css&#10;        User.tsx&#10;        Users.tsx&#10;        usersReducer.ts&#10;        UsersSearchForm.tsx" />
+    <MESSAGE value="v1.17.9 description =&gt; Refactor Profile page;&#10;use =&gt; Antd;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; ProfileInfo.module.css&#10;        ProfileInfo.tsx&#10;        ProfileStatusWithHooks.tsx&#10;        User.test.tsx&#10;        usersReducer.ts&#10;        UsersSearchForm.tsx" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.17.9 description =&gt; Refactor Profile page;&#10;use =&gt; Antd;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; ProfileInfo.module.css&#10;        ProfileInfo.tsx&#10;        ProfileStatusWithHooks.tsx&#10;        User.test.tsx&#10;        usersReducer.ts&#10;        UsersSearchForm.tsx" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
