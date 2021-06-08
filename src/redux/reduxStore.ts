@@ -3,11 +3,11 @@ import dialogsReducer from "./dialogsReducer"
 import sidebarReducer from "./sidebarReducer"
 import usersReducer from "./usersReducer"
 import authReducer from "./authReducer"
-import {Action, applyMiddleware, compose} from "redux"
+import {Action, applyMiddleware, combineReducers, compose, createStore} from "redux"
 import thunkMiddleware, {ThunkAction} from "redux-thunk"
-import { reducer as formReducer } from 'redux-form'
-import { createStore, combineReducers } from"redux"
+import {reducer as formReducer} from 'redux-form'
 import appReducer from "./appReducer"
+import chatReducer from "./chatReducer";
 
 
 let rootReducer = combineReducers({
@@ -18,12 +18,13 @@ let rootReducer = combineReducers({
     auth: authReducer,
     app: appReducer,
     form: formReducer,
+    chat: chatReducer
 })
 
 type RootReducerType = typeof rootReducer
 export type AppStateType = ReturnType<RootReducerType>
 
-export type InferActionTypes<T> = T extends {[key: string]: (...args: any[]) => infer U} ? U : never
+export type InferActionTypes<T> = T extends { [key: string]: (...args: any[]) => infer U } ? U : never
 
 export type BaseThunkType<A extends Action, R = Promise<void>> = ThunkAction<R, AppStateType, unknown, A>
 

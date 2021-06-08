@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v1.18 description =&gt; add WebSocket;&#10;use =&gt; WebSocket; &#10;add to npm =&gt; sloc;&#10;create =&gt; ChatPage.tsx;&#10;delete =&gt; nothing&#10;edit =&gt; App.tsx">
+    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v1.19 WIP description =&gt; WebSocket;&#10;use =&gt; WebSocket; &#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing&#10;edit =&gt; ChatPage.tsx">
+      <change afterPath="$PROJECT_DIR$/src/API/chatAPI.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/chatReducer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Chat/ChatPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Chat/ChatPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reduxStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reduxStore.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,9 +40,6 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/App.tsx" root0="FORCE_HIGHLIGHTING" />
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedIndex" value="1" />
-  </component>
   <component name="ProjectId" id="1lSeM4vUsYQ4dFQ5vKkrl8fBZDi" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="false" id="Update" />
@@ -56,7 +56,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="CONST" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Users" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/redux" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -74,10 +74,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\redux" />
       <recent name="C:\Users\User\WebstormProjects\Social-Network-on-React\src\components\Users" />
       <recent name="C:\Users\User\WebstormProjects\Social-Network-on-React\src\components\Login" />
       <recent name="C:\Users\User\WebstormProjects\Social-Network-on-React\src\redux" />
-      <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\redux" />
       <recent name="C:\Users\levdo\Documents\GitHub\my-app\src\components\Profile\ProfileInfo" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -265,13 +265,8 @@
       <workItem from="1623008743953" duration="5937000" />
       <workItem from="1623083732850" duration="12000" />
       <workItem from="1623083788916" duration="4740000" />
-    </task>
-    <task id="LOCAL-00007" summary="v0.58 add =&gt; classnames to npm, preloader; refactor =&gt; Users">
-      <created>1608470199560</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1608470199560</updated>
+      <workItem from="1623169364916" duration="636000" />
+      <workItem from="1623172340102" duration="5416000" />
     </task>
     <task id="LOCAL-00008" summary="v0.61 add =&gt; login, cookie; refactor =&gt; Header">
       <created>1608650214133</created>
@@ -609,7 +604,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623095519018</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="v1.19 WIP description =&gt; WebSocket;&#10;use =&gt; WebSocket; &#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing&#10;edit =&gt; ChatPage.tsx">
+      <created>1623100209920</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1623100209921</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -650,7 +652,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="v0.92 use =&gt; Testing Components;&#10;description =&gt; return App.test.js, Test Components;&#10;add to npm =&gt; react-test-renderer;&#10;create =&gt; App.test.js, ProfileStatus.test.jsx;&#10;delete =&gt; nothing;&#10;edit =&gt; App.js, index.js" />
     <MESSAGE value="v0.93 use =&gt; Paginator;&#10;description =&gt; refactor Paginator;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; Paginator.jsx&#10;        Paginator.module.css&#10;        Users.jsx&#10;        UsersContainer.jsx&#10;        usersReducer.js" />
     <MESSAGE value="v0.94 use =&gt; React.lazy and React.Suspense;&#10;description =&gt; optimization of site loading, add new HOC;&#10;add to npm =&gt; nothing;&#10;create =&gt; withSuspense.js;&#10;delete =&gt; nothing;&#10;edit =&gt; App.js" />
     <MESSAGE value="v0.96 download avatar for user profile;&#10;use =&gt; nothing;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; api.js&#10;        App.js&#10;        Profile.jsx&#10;        ProfileContainer.jsx&#10;        ProfileInfo.jsx&#10;        ProfileInfo.module.css&#10;        profileReducer.js" />
@@ -675,7 +676,8 @@
     <MESSAGE value="v1.17.8 description =&gt; Refactor UsersPage;&#10;use =&gt; Antd;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; user.module.css&#10;        User.tsx&#10;        Users.tsx&#10;        usersReducer.ts&#10;        UsersSearchForm.tsx" />
     <MESSAGE value="v1.17.9 description =&gt; Refactor Profile page;&#10;use =&gt; Antd;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; ProfileInfo.module.css&#10;        ProfileInfo.tsx&#10;        ProfileStatusWithHooks.tsx&#10;        User.test.tsx&#10;        usersReducer.ts&#10;        UsersSearchForm.tsx" />
     <MESSAGE value="v1.18 description =&gt; add WebSocket;&#10;use =&gt; WebSocket; &#10;add to npm =&gt; sloc;&#10;create =&gt; ChatPage.tsx;&#10;delete =&gt; nothing&#10;edit =&gt; App.tsx" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1.18 description =&gt; add WebSocket;&#10;use =&gt; WebSocket; &#10;add to npm =&gt; sloc;&#10;create =&gt; ChatPage.tsx;&#10;delete =&gt; nothing&#10;edit =&gt; App.tsx" />
+    <MESSAGE value="v1.19 WIP description =&gt; WebSocket;&#10;use =&gt; WebSocket; &#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing&#10;edit =&gt; ChatPage.tsx" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.19 WIP description =&gt; WebSocket;&#10;use =&gt; WebSocket; &#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing&#10;edit =&gt; ChatPage.tsx" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
