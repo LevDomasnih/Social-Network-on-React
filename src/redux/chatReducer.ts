@@ -1,10 +1,12 @@
 import {BaseThunkType, InferActionTypes} from "./reduxStore";
-import {chatAPI, chatMessageType} from "../API/chatAPI";
+import {chatAPI, chatMessageType, StatusType} from "../API/chatAPI";
 import {FormAction, stopSubmit} from "redux-form";
 import {Dispatch} from "redux";
 
+
 let initialState = {
-    messages: [] as Array<chatMessageType>
+    messages: [] as Array<chatMessageType>,
+    status: 'pending' as StatusType
 }
 
 type authReducerTypes = typeof initialState
@@ -20,6 +22,11 @@ const authReducer = (state = initialState, action: ActionsTypes): authReducerTyp
                     ...action.payload.messages,
                 ]
             };
+        case "STATUS_CHANGED":
+            return {
+                ...state,
+                status: action.payload.status
+            };
         default:
             return state;
     }
@@ -33,6 +40,10 @@ export const actions = {
     messagesReceived: (messages: chatMessageType[]) => ({
         type: "MESSAGES_RECEIVED",
         payload: {messages}
+    } as const),
+    statusChanged: (status: StatusType) => ({
+        type: "STATUS_CHANGED",
+        payload: {status}
     } as const)
 }
 
@@ -49,13 +60,26 @@ const newMessageHandlerCreator = (dispatch: Dispatch) => {
     return _newMessageHandler
 }
 
+let _statusChangedHandler: ((status: StatusType) => void) | null = null
+const statusChangedHandlerCreator = (dispatch: Dispatch) => {
+    if (_statusChangedHandler === null) {
+        _statusChangedHandler = (status) => {
+            dispatch(actions.statusChanged(status))
+        }
+    }
+    return _statusChangedHandler
+}
+
 export const startMessagesListening = (): ThunkType => async (dispatch) => {
     chatAPI.start()
-    chatAPI.subscribe(newMessageHandlerCreator(dispatch))
+    chatAPI.subscribe('messages-received', newMessageHandlerCreator(dispatch))
+    chatAPI.subscribe('status-changed', statusChangedHandlerCreator(dispatch))
 }
 
 export const stopMessagesListening = (): ThunkType => async (dispatch) => {
-    chatAPI.unsubscribe(newMessageHandlerCreator(dispatch))
+    chatAPI.unsubscribe('messages-received', newMessageHandlerCreator(dispatch))
+    chatAPI.unsubscribe('status-changed', statusChangedHandlerCreator(dispatch))
+    chatAPI.stop()
 }
 
 export const sendMessage = (message: string): ThunkType => async (dispatch) => {

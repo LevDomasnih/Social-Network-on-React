@@ -62,7 +62,8 @@ const Message: FC<{ message: chatMessageType }> = ({ message }) => {
 const AddMessages: FC = () => {
 
     const [message, setMessage] = useState("")
-    const [readyStatus, setReadyStatus] = useState<"ready" | "pending">("pending")
+
+    const status = useSelector((state: AppStateType) => state.chat.status)
 
     const dispatch = useDispatch()
 
@@ -78,7 +79,7 @@ const AddMessages: FC = () => {
                 <textarea onChange={(e) => setMessage(e.currentTarget.value)} value={message}/>
             </div>
             <div>
-                <button disabled={false} onClick={sendMessageHandler}>Send</button>
+                <button disabled={status !== 'ready'} onClick={sendMessageHandler}>Send</button>
             </div>
         </div>
     )
