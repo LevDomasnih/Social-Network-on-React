@@ -1,12 +1,10 @@
-import React, {FC, useState} from 'react';
-import Post from "./Post/Post";
+import React, {createElement, FC, useState} from 'react';
 import {PostType} from "../../../types/types";
-import {PostFormValuesType} from "./AddNewPostForm";
-import {Avatar, Button, Comment, Form, Input, List} from 'antd';
+import {Avatar, Button, Comment, Form, Input, List, Tooltip} from 'antd';
 import moment from 'moment';
 import {useSelector} from "react-redux";
-import {getUserProfile} from "../../../redux/profileReducer";
 import {AppStateType} from "../../../redux/reduxStore";
+import {DislikeOutlined, LikeOutlined, DislikeFilled, LikeFilled, UserOutlined} from '@ant-design/icons';
 
 const {TextArea} = Input;
 
@@ -27,6 +25,8 @@ type EditorType = {
     onSubmit: () => void
     submitting: boolean
     value: string
+    isDisabled?: boolean
+    text: string
 }
 
 type CommentListType = {
@@ -47,8 +47,6 @@ const MyPosts: React.FC<PropsType> = React.memo(({addPost, posts}) => {
     const [comments, setComments] = useState<Array<PersonProps> | []>([])
     const [value, setValue] = useState('')
     const [submitting, setSubmitting] = useState(false)
-
-
 
     const handleSubmit = () => {
         if (!value) {
@@ -82,7 +80,8 @@ const MyPosts: React.FC<PropsType> = React.memo(({addPost, posts}) => {
             <Comment
                 avatar={
                     <Avatar
-                        src={photo || ''}
+                        src={photo}
+                        icon={<UserOutlined />}
                         alt={fullName}
                     />
                 }
@@ -92,6 +91,7 @@ const MyPosts: React.FC<PropsType> = React.memo(({addPost, posts}) => {
                         onSubmit={handleSubmit}
                         submitting={submitting}
                         value={value}
+                        text={'Add comment'}
                     />
                 }
             />
@@ -102,23 +102,58 @@ const MyPosts: React.FC<PropsType> = React.memo(({addPost, posts}) => {
 
 export default MyPosts;
 
-const CommentList: FC<CommentListType> = ({comments}) => (
-    <List
+const CommentList: FC<CommentListType> = ({comments}) => {
+
+    const [likes, setLikes] = useState(0);
+    const [dislikes, setDislikes] = useState(0);
+    const [action, setAction] = useState<'liked' | 'disliked' | null>(null);
+
+    const like = () => {
+        setLikes(1);
+        setDislikes(0);
+        setAction('liked');
+    };
+
+    const dislike = () => {
+        setLikes(0);
+        setDislikes(1);
+        setAction('disliked');
+    };
+
+    const actions = [
+        <Tooltip key="comment-basic-like" title="Like">
+      <span onClick={like}>
+        {createElement(action === 'liked' ? LikeFilled : LikeOutlined)}
+          <span className="comment-action">{likes}</span>
+      </span>
+        </Tooltip>,
+        <Tooltip key="comment-basic-dislike" title="Dislike">
+      <span onClick={dislike}>
+        {React.createElement(action === 'disliked' ? DislikeFilled : DislikeOutlined)}
+          <span className="comment-action">{dislikes}</span>
+      </span>
+        </Tooltip>,
+        <span key="comment-basic-reply-to">Reply to</span>,
+    ];
+
+    return (
+        <List
         dataSource={comments}
         header={`${comments.length} ${comments.length > 1 ? 'replies' : 'reply'}`}
         itemLayout="horizontal"
-        renderItem={props => <Comment {...props} />}
+        renderItem={props => <Comment actions={actions} {...props} />}
     />
-);
+    )
+};
 
-const Editor: FC<EditorType> = ({onChange, onSubmit, submitting, value}) => (
+export const Editor: FC<EditorType> = ({onChange, onSubmit, submitting, value, isDisabled = false, text}) => (
     <>
         <Form.Item>
-            <TextArea rows={4} onChange={onChange} value={value}/>
+            <TextArea rows={2} onChange={onChange} value={value}/>
         </Form.Item>
         <Form.Item>
-            <Button htmlType="submit" loading={submitting} onClick={onSubmit} type="primary">
-                Add Comment
+            <Button htmlType="submit" loading={submitting} onClick={onSubmit} disabled={isDisabled} type="primary">
+                {text}
             </Button>
         </Form.Item>
     </>

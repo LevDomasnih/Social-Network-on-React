@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import Profile from "./Profile";
 import {useDispatch, useSelector} from "react-redux";
 import {useHistory, useParams} from 'react-router-dom';
-import {getStatus, getUserProfile} from "../../redux/profileReducer";
+import {actions, getStatus, getUserProfile} from "../../redux/profileReducer";
 import {AppStateType} from "../../redux/reduxStore";
 
 type ParamsType = {
@@ -33,6 +33,7 @@ const ProfileContainer = () => {
         if (!userId) {
             console.error("Id was a number")
         } else {
+            dispatch(actions.setUsersProfile(null))
             dispatch(getUserProfile(userId))
             dispatch(getStatus(userId))
         }

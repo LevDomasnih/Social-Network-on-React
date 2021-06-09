@@ -5,10 +5,14 @@
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/API/chatAPI.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/chatAPI.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Users/UsersPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hoc/withSuspense.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/withSuspense.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Chat/ChatPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Chat/ChatPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/chatReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/chatReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/profileReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profileReducer.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -268,6 +272,7 @@
       <workItem from="1623083788916" duration="4740000" />
       <workItem from="1623169364916" duration="636000" />
       <workItem from="1623172340102" duration="8676000" />
+      <workItem from="1623253546919" duration="12302000" />
     </task>
     <task id="LOCAL-00009" summary="v0.62 add =&gt; follow/unfollow; refactor =&gt; Users">
       <created>1608668096247</created>

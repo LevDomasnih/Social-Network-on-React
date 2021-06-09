@@ -10,7 +10,7 @@ import { initializeApp } from "./redux/appReducer"
 import Preloader from "./components/common/Preloader/Preloader"
 import store, { AppStateType } from "./redux/reduxStore"
 import { withSuspense } from "./hoc/withSuspense"
-import { Breadcrumb, Layout, Menu } from "antd"
+import {Breadcrumb, Layout, Menu, Spin} from "antd"
 import { LaptopOutlined, NotificationOutlined, UserOutlined } from "@ant-design/icons"
 import classes from "./components/Navbar/Navbar.module.css"
 import AppHeader from "./components/Header/AppHeader"
@@ -36,12 +36,13 @@ class App extends React.Component<MapPropsType & DispatchPropsType> {
     }
 
     render() {
-        if (!this.props.initialized) {
-            return <Preloader/>
-        }
+        // if (!this.props.initialized) {
+        //     return <Preloader/>
+        // }
 
         return (
-            <Layout>
+            <Spin style={{position: "fixed", maxHeight: "none"}} spinning={!this.props.initialized}>
+            <Layout style={{ minHeight: "100vh" }}>
                 <AppHeader/>
                 <Content style={{ padding: "0 50px" }}>
                     <Breadcrumb style={{ margin: "16px 0" }}>
@@ -49,13 +50,12 @@ class App extends React.Component<MapPropsType & DispatchPropsType> {
                         <Breadcrumb.Item>List</Breadcrumb.Item>
                         <Breadcrumb.Item>App</Breadcrumb.Item>
                     </Breadcrumb>
-                    <Layout className="site-layout-background" style={{ padding: "24px 0" }}>
-                        <Sider className="site-layout-background" width={200}>
+                    <Layout className="site-layout-background">
+                        <Sider className="site-layout-background" width={200} style={{ alignSelf: 'flex-start'}}>
                             <Menu
                                 mode="inline"
                                 defaultSelectedKeys={["1"]}
                                 defaultOpenKeys={["sub1"]}
-                                style={{ height: "100%" }}
                             >
                                 <SubMenu key="sub1" icon={<UserOutlined/>} title="Profile">
                                     <Menu.Item key="1">
@@ -114,6 +114,7 @@ class App extends React.Component<MapPropsType & DispatchPropsType> {
                 </Content>
                 <Footer style={{ textAlign: "center" }}>Social network on React</Footer>
             </Layout>
+            </Spin>
         )
     }
 }

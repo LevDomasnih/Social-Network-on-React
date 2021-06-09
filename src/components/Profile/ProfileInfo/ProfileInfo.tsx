@@ -1,12 +1,11 @@
 import React from 'react';
 import style from './ProfileInfo.module.css'
-import Preloader from "../../common/Preloader/Preloader";
 import userPhoto from '../../../assets/images/userPhoto.jpg'
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 import {useDispatch, useSelector} from "react-redux";
 import {AppStateType} from "../../../redux/reduxStore";
 import {savePhoto, updateStatus} from "../../../redux/profileReducer";
-import {Button, Col, Descriptions, Row, Upload} from "antd";
+import {Button, Col, Descriptions, Row, Skeleton, Upload} from "antd";
 import {UploadOutlined} from '@ant-design/icons';
 
 type PropsType = {
@@ -25,7 +24,25 @@ const ProfileInfo: React.FC<PropsType> = ({isOwner}) => {
     }
 
     if (!profile) {
-        return <Preloader/>
+        return (
+            <Row>
+                <Col span={8}>
+                    <Skeleton.Image style={{ width: 200, height: 200}} />
+                </Col>
+                <Col span={16}>
+                    <Descriptions title="User Info">
+                        <Descriptions.Item label="Name"><Skeleton.Input style={{ width: 50 }} size='small' active/></Descriptions.Item>
+                        <Descriptions.Item label="Status"><Skeleton.Input style={{ width: 50 }} size='small' active/></Descriptions.Item>
+                        <Descriptions.Item label="About me"><Skeleton.Input style={{ width: 50 }} size='small' active/></Descriptions.Item>
+                        <Descriptions.Item
+                            label="Looking for a job"><Skeleton.Input style={{ width: 50 }} size='small' active/></Descriptions.Item>
+                        <Descriptions.Item label="Looking for a job description">
+                            <Skeleton.Input style={{ width: 50 }} size='small' active/>
+                        </Descriptions.Item>
+                    </Descriptions>
+                </Col>
+            </Row>
+        )
     }
 
     const contacts = Object.entries(profile.contacts)

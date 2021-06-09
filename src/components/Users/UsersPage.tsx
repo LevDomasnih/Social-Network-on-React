@@ -1,17 +1,16 @@
 import React from 'react';
 import Users from "./Users";
-import Preloader from "../common/Preloader/Preloader";
 import {useSelector} from "react-redux";
 import {getIsFetching} from "../../redux/usersSelectors";
+import {Spin} from "antd";
 
 const UsersPage = () => {
     const isFetching = useSelector(getIsFetching)
 
     return (
-        <>
-            {isFetching ? <Preloader/> : null}
+        <Spin style={{position: "fixed", maxHeight: "none"}} spinning={isFetching}>
             <Users/>
-        </>
+        </Spin>
     )
 }
 

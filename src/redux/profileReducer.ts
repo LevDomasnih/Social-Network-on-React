@@ -42,7 +42,7 @@ type ActionType = InferActionTypes<typeof actions>
 
 export const actions = {
     addPost: (newPostText: string) => ({type: "ADD_POST", newPostText} as const),
-    setUsersProfile: (profile: ProfileType) => ({type: "SET_USER_PROFILE", profile} as const),
+    setUsersProfile: (profile: ProfileType | null) => ({type: "SET_USER_PROFILE", profile} as const),
     setStatus: (status: string) => ({type: "SET_STATUS", status} as const),
     deletePost: (postId: number) => ({type: "DELETE_POST", postId} as const),
     savePhotoSuccess: (photos: PhotosType) => ({type: "SAVE_PHOTO_SUCCESS", photos} as const),
