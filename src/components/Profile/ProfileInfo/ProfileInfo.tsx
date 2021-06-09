@@ -56,7 +56,10 @@ const ProfileInfo: React.FC<PropsType> = ({isOwner}) => {
     return (
         <Row>
             <Col span={8}>
-                <img src={profile.photos.large || userPhoto} className={style.mainPhoto}/>
+                {profile.photos.large
+                    ? <img src={profile.photos.large} className={style.mainPhoto}/>
+                    : <Skeleton.Image style={{ width: 200, height: 200}} />}
+
                 {isOwner && <Upload onChange={onMainPhotoSelected}>
                     <Button icon={<UploadOutlined/>} style={{marginTop: 20}}>Click to Upload</Button>
                 </Upload>}
