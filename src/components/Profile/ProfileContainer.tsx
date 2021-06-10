@@ -34,7 +34,7 @@ const ProfileContainer = () => {
             console.error("Id was a number")
         } else {
             dispatch(actions.setUsersProfile(null))
-            dispatch(getUserProfile(userId))
+            newUserId && dispatch(getUserProfile(userId))
             dispatch(getStatus(userId))
         }
     }

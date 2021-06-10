@@ -15,7 +15,7 @@ type PropsType = {
 const ProfileInfo: React.FC<PropsType> = ({isOwner}) => {
 
     const status = useSelector((state: AppStateType) => state.profilePage.status)
-    const profile = useSelector((state: AppStateType) => state.profilePage.profile)
+    const profile = useSelector((state: AppStateType) => isOwner ? state.profilePage.ownProfile : state.profilePage.profile)
 
     const dispatch = useDispatch()
 

@@ -7,6 +7,7 @@ let state = {
         {id: 3, message: "Lol", likesCount: 5000},
         {id: 4, message: "Kek", likesCount: 9400},
     ],
+    ownProfile: null,
     profile: null,
     status: '',
 }

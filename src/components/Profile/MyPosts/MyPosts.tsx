@@ -1,5 +1,4 @@
 import React, {createElement, FC, useState} from 'react';
-import {PostType} from "../../../types/types";
 import {Avatar, Button, Comment, Form, Input, List, Tooltip} from 'antd';
 import moment from 'moment';
 import {useSelector} from "react-redux";
@@ -9,8 +8,7 @@ import {DislikeOutlined, LikeOutlined, DislikeFilled, LikeFilled, UserOutlined} 
 const {TextArea} = Input;
 
 type PropsType = {
-    addPost: (values: string) => void
-    posts: Array<PostType>
+    isOwner: boolean
 }
 
 interface PersonProps {
@@ -33,7 +31,7 @@ type CommentListType = {
     comments: Array<PersonProps>
 }
 
-const MyPosts: React.FC<PropsType> = React.memo(({addPost, posts}) => {
+const MyPosts: React.FC<PropsType> = React.memo(({isOwner}) => {
 
     // const postsElements = posts.map((p) => <Post message={p.message} likesCount={p.likesCount}
     //                                              key={p.id}/>);
@@ -42,7 +40,7 @@ const MyPosts: React.FC<PropsType> = React.memo(({addPost, posts}) => {
     // };
 
     const fullName = useSelector((state: AppStateType) => state.profilePage.profile?.fullName)
-    const photo = useSelector((state: AppStateType) => state.profilePage.profile?.photos.small)
+    const photo = useSelector((state: AppStateType) => isOwner ? state.profilePage.ownProfile?.photos.small : state.profilePage.profile?.photos.small)
 
     const [comments, setComments] = useState<Array<PersonProps> | []>([])
     const [value, setValue] = useState('')
