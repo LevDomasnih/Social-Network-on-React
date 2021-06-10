@@ -10,6 +10,7 @@ let initialState = {
         {id: 4, message: "Kek", likesCount: 9400},
     ] as Array<PostType>,
     profile: null as ProfileType | null,
+    ownProfile: null as ProfileType | null,
     status: '',
 }
 
@@ -23,6 +24,8 @@ const profileReducer = (state = initialState, action: ActionsTypes): profileRedu
                 ...state,
                 posts: [{id: state.posts.length + 1, message: action.newPostText, likesCount: 0}, ...state.posts]
             };
+        case "SET_OWN_PROFILE":
+            return {...state, ownProfile: action.ownProfile}
         case "SET_USER_PROFILE":
             return {...state, profile: action.profile};
         case "SET_STATUS":
@@ -42,6 +45,7 @@ type ActionType = InferActionTypes<typeof actions>
 
 export const actions = {
     addPost: (newPostText: string) => ({type: "ADD_POST", newPostText} as const),
+    setOwnProfile: (ownProfile: ProfileType | null) => ({type: "SET_OWN_PROFILE", ownProfile} as const),
     setUsersProfile: (profile: ProfileType | null) => ({type: "SET_USER_PROFILE", profile} as const),
     setStatus: (status: string) => ({type: "SET_STATUS", status} as const),
     deletePost: (postId: number) => ({type: "DELETE_POST", postId} as const),
@@ -50,6 +54,11 @@ export const actions = {
 
 
 type ThunkType = BaseThunkType<ActionsTypes>
+
+export const getOwnProfile = (userId: number): ThunkType => async (dispatch) => {
+    const response = await ProfileAPI.getUserProfile(userId)
+    dispatch(actions.setOwnProfile(response))
+}
 
 export const getUserProfile = (userId: number): ThunkType => async (dispatch) => {
     const response = await ProfileAPI.getUserProfile(userId)

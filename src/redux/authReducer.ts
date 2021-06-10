@@ -2,6 +2,8 @@ import {FormAction, stopSubmit} from "redux-form";
 import {authAPI} from "../API/authAPI";
 import {ResultCodesEnum} from "../API/api";
 import {BaseThunkType, InferActionTypes} from "./reduxStore";
+import {getOwnProfile} from "./profileReducer";
+import {actions as actionsProfile} from "./profileReducer";
 
 let initialState = {
     userId: null as number | null,
@@ -43,6 +45,7 @@ export const getAuthUserData = (): ThunkType => async (dispatch) => {
     if (response.resultCode === ResultCodesEnum.Success) {
         let {id, email, login} = response.data;
         dispatch(actions.setAuthUserData(id, email, login, true))
+        await dispatch(getOwnProfile(id))
     }
 }
 
@@ -60,5 +63,6 @@ export const logout = (): ThunkType => async (dispatch) => {
     const response = await authAPI.logout()
     if (response.resultCode === ResultCodesEnum.Success) {
         dispatch(actions.setAuthUserData(null, null, null, false));
+        dispatch(actionsProfile.setOwnProfile(null))
     }
 }

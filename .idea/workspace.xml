@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v1.22 description =&gt; Many fix;&#10;use =&gt; Antd;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; App.tsx&#10;        ChatPage.tsx&#10;        MyPosts.tsx&#10;        ProfileContainer.tsx&#10;        ProfileInfo.tsx&#10;        profileReducer.ts&#10;        UsersPage.tsx&#10;        withSuspense.tsx">
+    <list default="true" id="fef8b6d0-d6a5-4720-b6ec-015a08f9c3d9" name="Default Changelist" comment="v1.22.1 description =&gt; Default avatar;&#10;use =&gt; Antd;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; ProfileInfo.tsx">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/AppHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/AppHeader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Chat/ChatPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Chat/ChatPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/authReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/authReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/profileReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profileReducer.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -264,14 +267,8 @@
       <workItem from="1623083788916" duration="4740000" />
       <workItem from="1623169364916" duration="636000" />
       <workItem from="1623172340102" duration="8676000" />
-      <workItem from="1623253546919" duration="13418000" />
-    </task>
-    <task id="LOCAL-00010" summary="v0.64 add =&gt; Api for request(DAL node); refactor =&gt; Friends in Navbar, button in Users">
-      <created>1608758252118</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1608758252118</updated>
+      <workItem from="1623253546919" duration="14098000" />
+      <workItem from="1623349845316" duration="3829000" />
     </task>
     <task id="LOCAL-00011" summary="v0.66 add =&gt; redux-thunk to npm; refactor =&gt; UsersContainer, HeaderContainer(auth), ProfileContainer - Request has come to eponymous reducer">
       <created>1609091346808</created>
@@ -609,7 +606,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623266522459</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="v1.22.1 description =&gt; Default avatar;&#10;use =&gt; Antd;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; ProfileInfo.tsx">
+      <created>1623267736872</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1623267736872</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -650,7 +654,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="v0.96 download avatar for user profile;&#10;use =&gt; nothing;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; api.js&#10;        App.js&#10;        Profile.jsx&#10;        ProfileContainer.jsx&#10;        ProfileInfo.jsx&#10;        ProfileInfo.module.css&#10;        profileReducer.js" />
     <MESSAGE value="v1.00 description =&gt; fix routers;&#10;use =&gt; react-router, switch;&#10;add to npm =&gt; nothing;&#10;create =&gt; withSuspense.js;&#10;delete =&gt; nothing;&#10;edit =&gt; App.js&#10;        index.js&#10;        Login.jsx&#10;        ProfileInfo.jsx&#10;        ProfileStatusWithHooks.jsx" />
     <MESSAGE value="v1.05 description =&gt; MORE TS;&#10;use =&gt; TypeScript;&#10;add to npm =&gt; nothing;&#10;create =&gt; types.ts;&#10;delete =&gt; nothing;&#10;edit =&gt; Default Changelist&#10;        MyPostsContainer.tsx&#10;        Paginator.tsx&#10;        Profile.tsx&#10;        ProfileContainer.tsx&#10;        ProfileInfo.tsx&#10;        profileReducer.ts&#10;        ProfileStatusWithHooks.tsx&#10;        reduxStore.ts&#10;        sidebarReducer.ts&#10;        Users.tsx&#10;        UsersContainer.tsx&#10;        usersReducer.ts&#10;        usersSelectors.ts" />
     <MESSAGE value="v1.06 description =&gt; AND MORE TS&#10;use =&gt; TypeScript&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing&#10;delete =&gt; nothing&#10;edit =&gt; appReducer.ts&#10;        authReducer.ts&#10;        dialogsReducer.ts&#10;        MyPosts.tsx&#10;        profileReducer.ts&#10;        sidebarReducer.ts&#10;        usersReducer.ts&#10;        UsersContainer.tsx&#10;        usersReducer.ts&#10;        usersSelectors.ts" />
@@ -675,7 +678,8 @@
     <MESSAGE value="v1.19 WIP description =&gt; WebSocket;&#10;use =&gt; WebSocket; &#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing&#10;edit =&gt; ChatPage.tsx" />
     <MESSAGE value="v1.20 description =&gt; WebSocket;&#10;use =&gt; WebSocket; &#10;add to npm =&gt; nothing;&#10;create =&gt; chatAPI.ts&#10;          chatReducer.ts;&#10;delete =&gt; nothing&#10;edit =&gt; ChatPage.tsx&#10;        reduxStore.ts" />
     <MESSAGE value="v1.22 description =&gt; Many fix;&#10;use =&gt; Antd;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; App.tsx&#10;        ChatPage.tsx&#10;        MyPosts.tsx&#10;        ProfileContainer.tsx&#10;        ProfileInfo.tsx&#10;        profileReducer.ts&#10;        UsersPage.tsx&#10;        withSuspense.tsx" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1.22 description =&gt; Many fix;&#10;use =&gt; Antd;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; App.tsx&#10;        ChatPage.tsx&#10;        MyPosts.tsx&#10;        ProfileContainer.tsx&#10;        ProfileInfo.tsx&#10;        profileReducer.ts&#10;        UsersPage.tsx&#10;        withSuspense.tsx" />
+    <MESSAGE value="v1.22.1 description =&gt; Default avatar;&#10;use =&gt; Antd;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; ProfileInfo.tsx" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.22.1 description =&gt; Default avatar;&#10;use =&gt; Antd;&#10;add to npm =&gt; nothing;&#10;create =&gt; nothing;&#10;delete =&gt; nothing;&#10;edit =&gt; ProfileInfo.tsx" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

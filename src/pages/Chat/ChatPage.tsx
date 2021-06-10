@@ -6,6 +6,7 @@ import {ChatMessageAPIType} from "../../API/chatAPI"
 import {Avatar, Comment, Spin} from "antd";
 import {Editor} from "../../components/Profile/MyPosts/MyPosts";
 import {NavLink} from "react-router-dom"
+import {UserOutlined} from "@ant-design/icons";
 
 
 const ChatPage: FC = () => {
@@ -83,7 +84,7 @@ const AddMessages: FC = () => {
     const [submitting, setSubmitting] = useState(false)
 
     const status = useSelector((state: AppStateType) => state.chat.status)
-    const photo = useSelector((state: AppStateType) => state.profilePage.profile?.photos.small)
+    const photo = useSelector((state: AppStateType) => state.profilePage.ownProfile?.photos.small)
 
     const sendMessageHandler = () => {
         if (!message) return
@@ -102,6 +103,7 @@ const AddMessages: FC = () => {
             avatar={
                 <Avatar
                     src={photo || ''}
+                    icon={<UserOutlined/>}
                 />
             }
             content={

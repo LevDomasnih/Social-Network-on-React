@@ -14,6 +14,7 @@ const AppHeader: FC<PropsType> = () => {
 
     const isAuth = useSelector((state: AppStateType) => state.auth.isAuth)
     const login = useSelector((state: AppStateType) => state.auth.login)
+    const photo = useSelector((state: AppStateType) => state.profilePage.ownProfile?.photos.small)
 
     const dispatch = useDispatch()
 
@@ -33,8 +34,10 @@ const AppHeader: FC<PropsType> = () => {
                 {isAuth ?
                     <>
                         <Col span={1}>
-                            <Avatar alt={login || ""} style={{ backgroundColor: "#87d068" }}
-                                    icon={<UserOutlined/>}/>
+                            <Avatar alt={login || ""}
+                                    icon={<UserOutlined/>}
+                                    src={photo}
+                            />
                         </Col>
                         <Col span={5}>
                             <Button onClick={logoutCb}>Log out</Button>
