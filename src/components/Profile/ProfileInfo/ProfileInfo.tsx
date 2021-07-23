@@ -1,6 +1,5 @@
 import React from 'react';
 import style from './ProfileInfo.module.css'
-import userPhoto from '../../../assets/images/userPhoto.jpg'
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 import {useDispatch, useSelector} from "react-redux";
 import {AppStateType} from "../../../redux/reduxStore";
