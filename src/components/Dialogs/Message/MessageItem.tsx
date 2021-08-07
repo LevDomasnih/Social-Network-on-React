@@ -1,12 +1,36 @@
 import {FC} from 'react';
-import classes from './../Dialogs.module.css'
+import {Avatar, Comment} from "antd";
+import {DialogsType, MessagesType} from "../../../redux/dialogsReducer";
 
 type PropsType = {
-    message: string
+    dialog: DialogsType
+    message: MessagesType
 }
 
-const MessageItem: FC<PropsType> = (props) => {
-    return <div className={classes.message}>{props.message}</div>;
+const MessageItem: FC<PropsType> = ({dialog: {avatar, name, id}, message}) => {
+        if (id === 13484) {
+            return <Comment
+                author={name}
+                avatar={
+                    <Avatar
+                        src={avatar}
+                    />
+                }
+                content={
+                    <p>
+                        {message.message}
+                    </p>
+                }
+            />
+        }
+        return <Comment
+            content={
+                <p>
+                    {message.message}
+                </p>
+            }
+        />
+
 }
 
 export default MessageItem;

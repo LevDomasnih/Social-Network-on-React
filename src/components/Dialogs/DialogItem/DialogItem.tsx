@@ -1,6 +1,5 @@
 import React, {FC} from 'react';
-import classes from './../Dialogs.module.css'
-import {NavLink} from "react-router-dom";
+import {Avatar, Menu} from "antd";
 
 type PropsType = {
     avatar: string
@@ -9,13 +8,15 @@ type PropsType = {
 }
 
 const DialogItem: FC<PropsType> = (props) => {
-    let path = '/dialogsElements/' + props.id;
-
-    return (
-        <div className={classes.dialog + ' ' + classes.active}>
-            <img src={props.avatar}/>
-            <NavLink to={path}>{props.name}</NavLink>
-        </div>
+    return (<>
+        <Menu.Item
+            style={{margin: "30px 15px"}} key={String(props.id)}
+            icon={<Avatar src={props.avatar}/>}
+            onClick={(e) => console.log(e)}
+        >
+            {props.name}
+        </Menu.Item>
+        </>
     )
 }
 

@@ -1,62 +1,52 @@
 import React from 'react';
 import classes from './Dialogs.module.css'
-import DialogItem from "./DialogItem/DialogItem";
 import MessageItem from "./Message/MessageItem";
-import {InjectedFormProps, reduxForm} from "redux-form";
 import {dialogsReducerType} from "../../redux/dialogsReducer";
-import {createField, Textarea} from "../common/FormsControls/FormsControls";
-import {required} from "../../utils/validators/validators";
+import {Avatar, Menu} from "antd";
+import {NavLink, useParams} from "react-router-dom";
+import {FormTextarea} from "../common/FormTextarea/FormTextarea";
 
-type NewMessageFormValuesType = {
-    newMessageBody: string
-}
-
-type NewMessageFormValuesTypeKeys = Extract<keyof NewMessageFormValuesType, string>
 
 type PropsType = {
     dialogsPage: dialogsReducerType
-    sendMessage: (messageText: string) => void
+    sendMessage: (messageText: string, dialogId: number) => void
 }
 
 const Dialogs: React.FC<PropsType> = (props) => {
+    const {dialogId} = useParams<{ dialogId?: string }>();
+    const dialog = props.dialogsPage.dialogs.filter(e => String(e.id) === dialogId)[0]
 
-    const dialogsElements = props.dialogsPage.dialogs.map((d) => <DialogItem avatar={d.avatar} name={d.name} id={d.id}
-                                                                             key={d.id}/>);
-    const messagesElements = props.dialogsPage.messages.map((m) => <MessageItem message={m.message} key={m.id}/>);
-
-    const addNewMessage = (values: { newMessageBody: string }) => {
-        props.sendMessage(values.newMessageBody)
+    const addNewMessage = (newMessageBody: string ) => {
+        props.sendMessage(newMessageBody, Number(dialogId))
     };
-
 
     return (
         <div className={classes.dialogs}>
-            <div className={classes.dialogsItems}>
-                {dialogsElements}
-            </div>
-            <div className={classes.messages}>
-                {messagesElements}
-                <AddMessageFormRedux onSubmit={addNewMessage}/>
-            </div>
+            <Menu
+                style={{width: "100%"}}
+                theme={'dark'}
+                defaultSelectedKeys={[dialogId ?? '']}
+            >
+                {props.dialogsPage.dialogs.map((d) => (
+                    <Menu.Item
+                        style={{margin: "30px 15px"}} key={d.id}
+                        icon={<Avatar src={d.avatar}/>}
+                    >
+                        <NavLink to={'/dialogs/' + d.id}>{d.name}</NavLink>
+                    </Menu.Item>
+                ))}
+            </Menu>
+            {dialogId && (
+                <div className={classes.messages}>
+                    {dialog.messages.map((message) => (
+                        <MessageItem dialog={dialog} message={message} key={message.id}/>
+                    ))}
+                    <FormTextarea status={'ready'} sendMessage={addNewMessage}/>
+                </div>
+            )}
         </div>
     )
 };
 
-const AddMessageForm: React.FC<InjectedFormProps<NewMessageFormValuesType>> = (props) => {
-    return (
-        <form onSubmit={props.handleSubmit}>
-            <div>
-                {createField<NewMessageFormValuesTypeKeys>('Enter you message...', 'newMessageBody', [required], Textarea)}
-            </div>
-            <div>
-                <button>Send Message</button>
-            </div>
-        </form>
-    )
-};
-
-const AddMessageFormRedux = reduxForm<NewMessageFormValuesType>({
-    form: 'dialogAddMessageForm'
-})(AddMessageForm);
 
 export default Dialogs;
